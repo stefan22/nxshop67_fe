@@ -35,12 +35,12 @@
 
 
 <kdb>KeystoneJS</kdb>
-<img src="frontend/public/static/keystone.png" alt="keystone backend">
+<img src="public/static/keystone.png" alt="keystone backend">
 
 <br />
 
 <kdb>Frontend</kdb>
-<img src="frontend/public/static/frontend.png" alt="screenshot 1">
+<img src="public/static/frontend.png" alt="screenshot 1">
 
 <br />
 
