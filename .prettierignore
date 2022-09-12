@@ -1,4 +1,6 @@
 .next/
 node_modules
 assets/
-___tests___
+___tests___/
+cypress/
+cypress.config.js

@@ -15,6 +15,9 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module'
   },
+  env: {
+    jest: true
+  },
   rules: {
     'react/react-in-jsx-scope': 0,
     'unused-default-export': 0,
