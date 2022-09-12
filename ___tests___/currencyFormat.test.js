@@ -1,3 +1,4 @@
+// import renderer from "react-test-renderer";
 import { GBPCurrencyFormat } from "../lib/currencyFormat"
 
 describe("currencyFormat function", () => {
@@ -11,7 +12,7 @@ describe("currencyFormat function", () => {
         expect(GBPCurrencyFormat(50000000)).toEqual("£500,000.00")
     })
 
-    it('should return: "Amount passed not a number" when passing any string type arg', () => {
+    it("should return: \"Amount passed not a number\" when passing any string type arg", () => {
         expect(GBPCurrencyFormat("111")).toEqual("Amount passed not a number")
     })
 })

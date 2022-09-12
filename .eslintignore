@@ -3,8 +3,10 @@ config.js
 .env.production
 assets/
 node_modules/
-___tests___
+___tests___/
 jest.setup.js
 .gitignore
 .babelrc
 .npmrc
+cypress/
+cypress.config.js
