@@ -1,0 +1,10 @@
+config.js
+.env
+.env.production
+assets/
+node_modules/
+___tests___
+jest.setup.js
+.gitignore
+.babelrc
+.npmrc
