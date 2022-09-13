@@ -1,0 +1,34 @@
+name: Prettier linting
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Starts linting
+        run: |
+          echo "Starts linting"
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Node setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Npm install
+        run: npm install
+
+      - name: Prettier
+        run: npm run prettier:fix
+
+      - name: e2e tests
+        uses: cypress-io/github-action@v4
+        with:
+          build: npm run build
+          start: npm run start:prod
+          wait-on: http://localhost:3003

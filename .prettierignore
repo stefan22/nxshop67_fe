@@ -2,3 +2,5 @@
 node_modules
 assets/
 ___tests___
+cypress/
+cypress.config.js

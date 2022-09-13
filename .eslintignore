@@ -8,3 +8,5 @@ jest.setup.js
 .gitignore
 .babelrc
 .npmrc
+cypress/
+cypress.config.js
