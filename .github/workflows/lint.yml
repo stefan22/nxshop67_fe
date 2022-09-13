@@ -23,7 +23,5 @@ jobs:
         run: npm install
 
       - name: prettier
-        run: npm run prettier:fix
-        with:
-          prettier_options: --write **/*.{js,jsx,ts,tsx}
-          only_changed: True
+        run: npm run prettier:fix --write **/*.{js,jsx,ts,tsx}
+       
