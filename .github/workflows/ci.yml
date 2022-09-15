@@ -16,23 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-
       - name: Node setup
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.19.3'
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: subdir/package-lock.json
 
       - name: NPM install
         run: npm install
