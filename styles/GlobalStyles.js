@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import '@fontsource/be-vietnam'
 
 const GlobalStyles = createGlobalStyle`
   root, html {
