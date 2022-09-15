@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import GlobalStyles from '../styles/GlobalStyles'
 
 const DynamicHeader = dynamic(() => import('./Header'), {
   ssr: true
@@ -40,6 +42,7 @@ const InnerWrapperSl = styled.div`
 const Layout = ({ children }) => {
   return (
     <PageWrapperSl>
+      <GlobalStyles />
       <Head>
         <title>NxShop67</title>
         <meta
@@ -52,6 +55,10 @@ const Layout = ({ children }) => {
       <InnerWrapperSl>{children}</InnerWrapperSl>
     </PageWrapperSl>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.any
 }
 
 export default Layout

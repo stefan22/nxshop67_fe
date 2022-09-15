@@ -1,5 +1,4 @@
-// it lets me get cypress up and running for now
-// but essentially I need products data from GQL backend for fe to run
+// it gets cypress up and running for now
 
 describe('App', () => {
 
