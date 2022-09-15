@@ -46,7 +46,7 @@
 
 <figure>
  <video width='834' height='422' controls poster='public/static/keystone.png'>
-<source src='https://res.cloudinary.com/dak4fznwo/video/upload/ac_none,b_rgb:f0f2e2,c_scale,e_fade:1000,w_702/v1663138172/nxshop67_PRODUCTS_ffbve6.mov' type='video/mov'>
+<source src='https://res.cloudinary.com/demo/video/upload/c_pad,h_360,w_640/g_south_east,l_cloudinary_icon,w_100/lfjlima8js8wiorkj4y7.mp4' type='video/mov'>
 </video>
 </figure>
 

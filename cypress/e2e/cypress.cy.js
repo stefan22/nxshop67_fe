@@ -1,9 +1,6 @@
-// it lets me get cypress up and running for now
-// but essentially I need products data from GQL backend for fe to run
-
 describe('App', () => {
 
-  it('Adds Cypress settings to project and passes CI ___tests___', () => {
+  it('Both Jest & Cypress up/running w/ Prettier in CI', () => {
     cy.visit('http://localhost:3003')
     cy.wait(2000);
     cy.fixture("product").should("deep.equal",
