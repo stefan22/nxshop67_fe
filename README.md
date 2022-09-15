@@ -45,7 +45,7 @@
 <br />
 
 <figure>
- <video width='834' height='422' controls poster='public/static/keystone.png'>
+ <video width='834' height='422' controls poster="public/static/frontend.png">
 <source src='https://res.cloudinary.com/demo/video/upload/c_pad,h_360,w_640/g_south_east,l_cloudinary_icon,w_100/lfjlima8js8wiorkj4y7.mp4' type='video/mov'>
 </video>
 </figure>
