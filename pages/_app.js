@@ -1,12 +1,11 @@
 // @ts-check
 import { ApolloProvider } from '@apollo/client'
-import Layout from '../components/Layout'
-import routeNProgress from '../lib/nProgress/routNProgress'
-import withData from '../lib/withData'
+import Layout from '@/components/Layout'
+import routeNProgress from '@/lib/nProgress/routNProgress'
+import withData from '@/lib/withData'
 // styles
-import '../styles/reset.css'
-import GlobalStyles from '../styles/GlobalStyles'
-import '../lib/nProgress/nprogress.css'
+import '@/styles/reset.css'
+import '@/lib/nProgress/nprogress.css'
 
 const App = ({ Component, pageProps, apollo }) => {
   // on route changes with NProgress, show the loading bar
@@ -14,7 +13,6 @@ const App = ({ Component, pageProps, apollo }) => {
   return (
     <ApolloProvider client={apollo}>
       <Layout>
-        <GlobalStyles />
         <Component {...pageProps} />
       </Layout>
     </ApolloProvider>

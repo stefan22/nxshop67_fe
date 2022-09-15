@@ -6,6 +6,8 @@ require('dotenv').config()
 
 const nextConfig = {
   reactStrictMode: true,
+  // fixes page rendering issues on page refresh in nextjs/webpack5
+  webpack5: false,
   env: {
     BASE_URL: process.env.FRONTEND_URL || 'http://localhost:3003'
   },
@@ -17,7 +19,8 @@ const nextConfig = {
     },
     experimental: {
       swcPlugins: [['next-superjson-plugin', {}]],
-      experimentalDecorators: true
+      experimentalDecorators: true,
+      styledComponents: true
     }
   }
 }
