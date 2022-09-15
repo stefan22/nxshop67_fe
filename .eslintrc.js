@@ -34,7 +34,7 @@ module.exports = {
     'react/jsx-no-useless-fragment': 0,
     'import/no-mutable-exports': 0,
     'import/extensions': [
-      'error',
+      0,
       'ignorePackages',
       {
         ts: 'never',
