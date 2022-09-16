@@ -27,15 +27,18 @@ const GlobalStyles = createGlobalStyle`
     /* font sizes */
     --fontSizeSmall: 0.87rem;
     --fontSizeBase: 10px;
+    --fontSizeTxt: 1.25rem;
     --fontSizeRegular: 1.5rem;
     --fontSizeMedium: 2rem;
-    --fontSizeLarge: 2.5rem;
+    --fontSizeLarge: 3rem;
     --lineHeightSmall: calc(0.8 * var(--ratio));
     /* font default */
     font-size: var(--fontSizeBase);
     
     /* other */
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
+    --bs2: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+    --bs3: 0 6px 10px 0 rgb(169,3,3,.21), 0 1px 18px 0 rgb(209,11,11,.12), 0 3px 5px -1px rgb(116,9,9,.25);
     width: 100%;
     height: 100%;
     margin: 0;
@@ -68,6 +71,11 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: -0.003em;
     line-height: var(--ratio);
     background-color: var(--offWhite);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: #fff 0 1px 1px;
+
+
     width: 100%;
     min-height: 100%;
     margin: 0;
