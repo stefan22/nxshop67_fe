@@ -2,15 +2,10 @@
 
 :lollipop: A React/NextJS application [0N-GING&nbsp; ..:snail:]
 
-
-
 ## :paperclip: Install
 
-:lollipop: Type `cd frontend && npm install` from root.                                          
-:lollipop: Type `npm run dev` to open in port 3003.
-
-
-
+:lollipop: Type `npm install`                                        
+:lollipop: Type `npm run dev`  // opens in port 3003.
 
 ## :paperclip: Front-end
 
@@ -19,7 +14,6 @@
 ## :paperclip: Back-end
 
 :lollipop: Keystone CMS, Mongo Atlas and GQL
-
 
 :lollipop: __<a href="https://keystonejs.com" target="_blank">See KeystoneJS docs/guides</a>__
 
@@ -33,22 +27,16 @@ Generally follows these steps:
 
 <br />
 
+#### <kdb>KeystoneJS</kdb>
 
-<kdb>KeystoneJS</kdb>
 <img src="public/static/keystone.png" alt="keystone backend">
 
 <br />
 
-<kdb>Frontend</kdb>
-<img src="public/static/frontend.png" alt="screenshot 1">
+#### <kdb>Frontend s2</kdb>
+
+<img src="public/static/frontend2.png" alt="screenshot 2">
 
 <br />
-
-<figure>
- <video width='834' height='422' controls poster="public/static/frontend.png">
-<source src='https://res.cloudinary.com/demo/video/upload/c_pad,h_360,w_640/g_south_east,l_cloudinary_icon,w_100/lfjlima8js8wiorkj4y7.mp4' type='video/mov'>
-</video>
-</figure>
-
 
 <kbd>__Sl__</kbd>
