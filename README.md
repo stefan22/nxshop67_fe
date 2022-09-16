@@ -1,4 +1,4 @@
-# NxShop67  :convenience_store:
+# NxShop67  :convenience_store:  |  [![CI - Runs Prettier, Cypress and Jest test files](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml/badge.svg)](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml)
 
 :lollipop: A React/NextJS application [0N-GING&nbsp; ..:snail:]
 
