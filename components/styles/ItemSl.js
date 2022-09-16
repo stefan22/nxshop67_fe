@@ -10,6 +10,7 @@ const Item = styled.div`
   width: 460px;
   padding: 3rem 1.5rem;
   margin-bottom: 7rem;
+  z-index: 1;
   @media screen and (max-width: 1419px) {
     /* 2 columns - product takes half the width */
     width: 48%;
