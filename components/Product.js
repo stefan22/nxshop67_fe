@@ -2,7 +2,7 @@ import Link from 'next/link'
 import ItemSl from './styles/ItemSl'
 import PriceTag from './styles/PriceTag'
 import TitleSl from './styles/TitleSl'
-import OnSaleSl from '@/components/styles/OnSaleSl'
+import OnSaleSl from './styles/OnSaleSl'
 import { GBPCurrencyFormat as poundFormat } from '../lib/currencyFormat'
 
 const Product = ({ product }) => {

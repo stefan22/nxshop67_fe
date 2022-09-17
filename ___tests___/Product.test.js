@@ -1,6 +1,6 @@
-import { render } from "@testing-library/react"
-import { MockedProvider } from "@apollo/client/testing"
-import Product from "../components/Product"
+import { render } from '@testing-library/react'
+import { MockedProvider } from '@apollo/client/testing'
+import Product from '../components/Product'
 
 const singleProduct = () => ({
     id: "abc123",
@@ -20,6 +20,7 @@ const singleProduct = () => ({
 const product = singleProduct()
 
 describe("<Product />", () => {
+
     beforeEach(() => {
         render(
             <MockedProvider>
