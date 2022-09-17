@@ -54,6 +54,13 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0 solid;
+    box-shadow: none;
+    outline: none;
+    &:focus,&:active {
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
   }
   
   p,
@@ -74,8 +81,6 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: #fff 0 1px 1px;
-
-
     width: 100%;
     min-height: 100%;
     margin: 0;
@@ -91,10 +96,19 @@ const GlobalStyles = createGlobalStyle`
       scroll-behavior: smooth
     }
   }
-
-  :focus {
-    outline: 1px solid var(--color-lightGray);
-    outline-offset: 1px solid var(--color-lightGray);
+  
+  #__next {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  form {
+    border-radius: 4px;
+    height: 450px;
+    width: 400px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
   }
   
   button {
@@ -108,18 +122,18 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--black);
     padding: .5em 1.5em .7em;
     border-width: 1px;
-  }
-
-  .buttonDark {
-    border-color: var(--black);
+    
+    .buttonDark {
+      border-color: var(--black);
+    }
   }
   
   a {
     text-decoration: none;
     color: var(--black);
-  }
-  a:hover {
-    text-decoration: underline;
+    a:hover {
+      text-decoration: underline;
+    }
   }
   
   /* utilities */
