@@ -25,9 +25,7 @@ App.getInitialProps = async ({ Component, ctx }) => {
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx)
   }
-  // exposes the query to the user
   pageProps.query = ctx.query
-  // exposes apollo client to the user
   return { pageProps }
 }
 

@@ -3,14 +3,17 @@
  */
 
 const nextConfig = {
-  reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
-    experimental: {
-      swcPlugins: [['next-superjson-plugin', {}]],
-      experimentalDecorators: true
+  reactStrictMode: false,
+  swcMinify: true,
+  experimental: {
+    swcMinifyDebugOptions: {
+      compress: {
+        defaults: true,
+        side_effects: false
+      }
     }
-  }
+  },
+  compiler: {}
 }
 
 module.exports = nextConfig
