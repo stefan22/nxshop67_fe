@@ -1,3 +1,3 @@
-const Orders = () => <h1>Orders page</h1>
+const Signin = () => <h1>Orders page</h1>
 
-export default Orders
+export default Signin
