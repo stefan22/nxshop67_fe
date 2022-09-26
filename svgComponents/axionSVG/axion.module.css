@@ -1,0 +1,66 @@
+.svg {
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  max-width: 360px;
+  height: auto;
+  width: 100%;
+  animation: wave 560ms ease-in-out;
+  fill: hsl(0deg 100% 48% / 86%);
+  z-index: 10;
+  mix-blend-mode: multiply;
+  stroke: darkred;
+  stroke-linecap: round;
+  stroke-dasharray: 3px;
+  stroke-width: 1px;
+}
+
+.arm {
+  transform-origin: 130px 106px;
+}
+
+.svg:hover .arm {
+  animation: wave 560ms ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-25deg);
+    fill: hsla(216, 89%, 25%, 0.77);
+  }
+
+  40% {
+    transform: rotate(10deg);
+    fill: #b82f2f;
+  }
+
+  60% {
+    transform: rotate(-25deg);
+    fill: #ffffff;
+  }
+
+  80% {
+    transform: rotate(10deg);
+    fill: rgb(244, 97, 97);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    fill: #b82f2f;
+  }
+}
+
+@media (max-width: 500px) {
+  .svg:hover .arm {
+    animation: none;
+  }
+
+  .svg:hover .arm {
+    animation: wave 560ms ease-in-out;
+  }
+}

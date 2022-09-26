@@ -1,12 +1,12 @@
+import React from 'react'
 import { useQuery } from '@apollo/client'
 import styled from 'styled-components'
 import gql from 'graphql-tag'
 import Product from './Product'
-// import LoadingSpinner from '../lib/loadingSpinner/LoadingSpinner'
 import ErrorMessage from '../lib/ErrorMessage'
 
-const allProductsQuery = gql`
-  query allProducts {
+export const allProductsQuery = gql`
+  query allProductsQuery {
     allProducts {
       id
       name

@@ -1,5 +1,5 @@
 // import renderer from "react-test-renderer";
-import { GBPCurrencyFormat } from "../lib/currencyFormat"
+import { GBPCurrencyFormat } from "@/lib/currencyFormat"
 
 describe("currencyFormat function", () => {
     it('should return a type string value of "£0.01" when given num 1', () => {

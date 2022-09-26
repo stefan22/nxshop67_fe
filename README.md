@@ -1,11 +1,11 @@
-# NxShop67  :convenience_store:  |  [![CI - Runs Prettier, Cypress and Jest test files](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml/badge.svg)](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml)
+# NxShop67 :convenience_store: | [![CI - Runs Prettier, Cypress and Jest test files](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml/badge.svg)](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml)
 
 :lollipop: A React/NextJS application [0N-GING&nbsp; ..:snail:]
 
 ## :paperclip: Install
 
-:lollipop: Type `npm install`                                        
-:lollipop: Type `npm run dev`  // opens in port 3003.
+:lollipop: Type `npm install`  
+:lollipop: Type `npm run dev` // opens in port 3003.
 
 ## :paperclip: Front-end
 
@@ -15,9 +15,10 @@
 
 :lollipop: Keystone CMS, Mongo Atlas and GQL
 
-:lollipop: __<a href="https://keystonejs.com" target="_blank">See KeystoneJS docs/guides</a>__
+:lollipop: **<a href="https://keystonejs.com" target="_blank">See KeystoneJS docs/guides</a>**
 
 Generally follows these steps:
+
 1. Create a DB
 2. Create a KeystoneJS account.
 3. Create app: `npx create-keystone-app`
@@ -39,4 +40,4 @@ Generally follows these steps:
 
 <br />
 
-<kbd>__Sl__</kbd>
+<kbd>**Sl**</kbd>

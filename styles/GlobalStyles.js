@@ -39,10 +39,11 @@ const GlobalStyles = createGlobalStyle`
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
     --bs2: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
     --bs3: 0 6px 10px 0 rgb(169,3,3,.21), 0 1px 18px 0 rgb(209,11,11,.12), 0 3px 5px -1px rgb(116,9,9,.25);
+    --bs4: 0 0 5px 3px rgba(0, 0, 0, 0.05);
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0; 
   }
   
   /* outside root */

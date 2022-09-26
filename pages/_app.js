@@ -1,15 +1,16 @@
-// @ts-check
+import React from 'react'
 import { ApolloProvider } from '@apollo/client'
 import Layout from '@/components/Layout'
-import routeNProgress from '@/lib/nProgress/routNProgress'
+import routeNProgress from '@/lib/nProgress/routeNProgress'
 import withData from '@/lib/withData'
 // styles
 import '@/styles/reset.css'
 import '@/lib/nProgress/nprogress.css'
 
+// on route changes anim
+routeNProgress()
+
 const App = ({ Component, pageProps, apollo }) => {
-  // on route changes with NProgress, show the loading bar
-  routeNProgress()
   return (
     <ApolloProvider client={apollo}>
       <Layout>

@@ -108,6 +108,7 @@ dist
 
 .idea/
 
+xassets/
 assets/
 
 .eslintignore

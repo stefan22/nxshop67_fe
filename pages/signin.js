@@ -1,3 +1,5 @@
-const Signin = () => <h1>Orders page</h1>
+import React from 'react'
+
+const Signin = () => <h1>Signin</h1>
 
 export default Signin

@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import ItemSl from './styles/ItemSl'
 import PriceTag from './styles/PriceTag'
