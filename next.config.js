@@ -3,17 +3,17 @@
  */
 
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    swcMinifyDebugOptions: {
-      compress: {
-        defaults: true,
-        side_effects: false
-      }
-    }
+  compiler: {
+    styledComponents: true
   },
-  compiler: {}
+  env: {
+    GQL_PRODUCT_ENDPOINT_PROD:
+      process.env.GQL_PRODUCT_ENDPOINT_PROD || '',
+    GQL_PRODUCT_ENDPOINT_DEV: process.env.GQL_PRODUCT_ENDPOINT_DEV,
+    FRONTEND_URL_DEV: process.env.FRONTEND_URL_DEV
+  }
 }
 
 module.exports = nextConfig

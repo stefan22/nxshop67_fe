@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
-      "@/pages/*": ["pages/*"],
       "@/components/*": ["components/*"],
+      "@/cstyles/*": ["components/styles/*"],
+      "@/graphql/*": ["graphql/*"],
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"],
-      "@/cstyles/*": ["components/styles/*"]
+      "@/pages/*": ["pages/*"],
+      "@/assets/*": ["assets/*"],
+      "@/svgComponents/*": ["svgComponents/*"],
+      "@/styles/*": ["styles/*"]
     }
   },
 

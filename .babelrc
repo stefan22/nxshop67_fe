@@ -1,4 +1,27 @@
 {
-  "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true }]]
+  "presets": [["@babel/preset-react"], "@babel/preset-env"],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/transform-runtime",
+      {
+        "runtimeHelpers": true
+      }
+    ],
+    ["styled-components", { "ssr": true }]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
 }

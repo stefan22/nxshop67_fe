@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import NavSl from './styles/NavSl'
 
@@ -6,11 +7,11 @@ const Nav = () => {
     <NavSl>
       <Link href="/products">Products</Link>
 
-      <Link href="/sale">Sale</Link>
-
-      <Link href="/signin">Orders</Link>
-
       <Link href="/account">Account</Link>
+
+      <Link href="/order">Order</Link>
+
+      <Link href="/signin">Signin</Link>
 
       <Link href="/cart">Cart</Link>
     </NavSl>

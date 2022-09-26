@@ -1,4 +1,4 @@
-name: CI - Runs Prettier, Cypress and Jest test files
+name: CI - Runs ESLint, Prettier, and Cypress, Jest test files
 
 on:
   push:
@@ -13,32 +13,38 @@ jobs:
         run: |
           echo "____________Starting CI _________________"
 
-      - name: Checkout
+      - name: Checkout #1
         uses: actions/checkout@v3
 
-      - name: Node setup
+      - name: Node setup #2
         uses: actions/setup-node@v3
         with:
           node-version: 16
-        
-      - name: NPM install
+
+      - name: NPM install #3
         run: npm install
 
-      - name: Prettier
-        run: npm run prettier:fix
+      # lint first
+      - name: Run ESLint #4
+        run: eslint . --ext .js,.jsx,.ts,.tsx
 
-      # run cypress ___tests___
-      - name: E2E ___tests___
+      # prettier after
+      - name: Prettier #5
+        with:
+          prettier: npm run prettier
+
+      # cypress ___tests___
+      - name: E2E ___tests___ #6
         uses: cypress-io/github-action@v4
         with:
           build: npm run build
           start: npm run start
           wait-on: http://localhost:3003
 
-      # jest ___tests___ same as cy
-      - name: Jest run
+      # jest ___tests___
+      - name: Jest run #7
         run: npm test
 
-      - name: Jobs done
+      - name: Jobs done #8
         run: |
           echo "___________All Jobs done! _________________"

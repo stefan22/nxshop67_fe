@@ -1,3 +1,4 @@
+import React from 'react'
 import Document, { Html, Head, NextScript, Main } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -13,7 +14,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en-CA">
+      <Html lang="en-UK">
         <Head />
         <body>
           <Main />

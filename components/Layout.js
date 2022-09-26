@@ -1,12 +1,9 @@
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
+import Header from './Header'
 import GlobalStyles from '../styles/GlobalStyles'
-
-const DynamicHeader = dynamic(() => import('./Header'), {
-  ssr: true
-})
 
 const PageWrapperSl = styled.div`
   display: flex;
@@ -31,12 +28,6 @@ const InnerWrapperSl = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 1.5rem;
-  @media screen and (max-width: 1419px) {
-    //width: 100%;
-  }
-  @media screen and (max-width: 1340px) {
-    //padding: 0;
-  }
 `
 
 const Layout = ({ children }) => {
@@ -50,8 +41,7 @@ const Layout = ({ children }) => {
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-
-      <DynamicHeader />
+      <Header />
       <InnerWrapperSl>{children}</InnerWrapperSl>
     </PageWrapperSl>
   )
