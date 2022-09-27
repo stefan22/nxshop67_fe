@@ -38,7 +38,7 @@ const CreateProduct = () => {
     price: 0
   })
 
-  const [createProduct, { loading, error, data }] = useMutation(
+  const [createProduct, { loading, error }] = useMutation(
     createProductMutation
   )
 
