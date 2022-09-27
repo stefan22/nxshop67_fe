@@ -1,4 +1,4 @@
-# NxShop67 :convenience_store: | [![CI - Runs Prettier, Cypress and Jest test files](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml/badge.svg)](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml)
+# NxShop67  :convenience_store:  |  [![CI - Runs Prettier, Cypress and Jest test files](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml/badge.svg)](https://github.com/stefan22/nxshop67_fe/actions/workflows/ci.yml) [![DeepScan grade](https://deepscan.io/api/teams/16862/projects/22444/branches/662143/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16862&pid=22444&bid=662143)
 
 :lollipop: A React/NextJS application [0N-GING&nbsp; ..:snail:]
 
