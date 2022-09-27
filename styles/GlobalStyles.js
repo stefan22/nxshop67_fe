@@ -4,17 +4,20 @@ import '@fontsource/be-vietnam'
 const GlobalStyles = createGlobalStyle`
   root, html {
     /* colors */
-    --black: #050505;
-    --grey: #717171;
+    --black: #212244;
+    --grey: #69697b;
     --gray: #9d9d9d;
     /* white */
     --white: #ffffff;
     --offWhite: #fafafa;
+    --ghostwhite: #eaeaea;
     /* red/orange */
-    --red: #ff0000;
+    --red: #f94a3d;
     --darkRed: #cf2e2e;
-    --amber: #fcb900;
-    --orange: #ff6900;
+    --orange: #ff9401;
+    --amber: #ffcf03;
+    --yellow: #ffe507;
+    --lightred: #fdecec;
     /* blues */
     --lightBlue: #8ed1fc;
     --darkBlue: #0693e3;

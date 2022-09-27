@@ -24,14 +24,13 @@ jobs:
       - name: NPM install #3
         run: npm install
 
-      # lint first
+      # lint
       - name: Run ESLint #4
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: npm run lint
 
       # prettier after
       - name: Prettier #5
-        with:
-          prettier: npm run prettier
+        run: npm run prettier
 
       # cypress ___tests___
       - name: E2E ___tests___ #6
