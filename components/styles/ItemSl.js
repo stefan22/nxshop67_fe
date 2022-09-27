@@ -37,7 +37,7 @@ const Item = styled.div`
     margin: 0 auto;
     width: 100%;
     height: 440px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   p {

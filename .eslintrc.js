@@ -20,6 +20,7 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 0,
+    'next/link-passhref': 0,
     'unused-default-export': 0,
     'react/prop-types': 0,
     'import/no-unresolved': 0,
