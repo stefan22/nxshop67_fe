@@ -30,8 +30,7 @@ jobs:
 
       # prettier after
       - name: Prettier #5
-        with:
-          prettier: npm run prettier
+        run: npm run prettier
 
       # cypress ___tests___
       - name: E2E ___tests___ #6

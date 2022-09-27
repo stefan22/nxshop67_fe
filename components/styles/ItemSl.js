@@ -24,11 +24,18 @@ const Item = styled.div`
   @media screen and (max-width: 736px) {
     /* up to before ipad mini single column */
     inline-size: 100%;
+    box-shadow: none;
     width: 476px;
     padding: 0;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    h2 {
+      font-size: var(--fontSizeLarge);
+    }
+    h3 {
+      text-align: center;
+    }
   }
 
   img {
