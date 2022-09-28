@@ -10,13 +10,17 @@ module.exports = {
   plugins: ['react', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
+      sourceType: 'module'
     },
     ecmaVersion: 13,
     sourceType: 'module'
   },
   env: {
-    jest: true
+    jest: true,
+    browser: true,
+    es6: true,
+    node: true
   },
   rules: {
     'react/react-in-jsx-scope': 0,
