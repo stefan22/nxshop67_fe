@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 
+import React from 'react'
 import { render } from '@testing-library/react'
 import { MockedProvider } from '@apollo/react-testing'
 import Product from '../components/Product'
@@ -49,8 +50,8 @@ describe("<Product />", () => {
         const expectedId = product.id;
         expect(product.id).toEqual(expectedId)
     })
-    // it("should have an image src prop", () => {
-    //     //const imgSrc = product.photo.image.publicUrlTransformed;
-    //     //expect(product.photo.image.publicUrlTransformed).toContain(imgSrc)
-    // })
+    it("should have an image src prop", () => {
+        const imgSrc = product.photo.image.publicUrlTransformed;
+        expect(product.photo.image.publicUrlTransformed).toContain(imgSrc)
+    })
 })
