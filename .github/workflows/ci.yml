@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
 
+  pull_request:
+    branches:
+      - main
+
 jobs:
   prettier:
     runs-on: ubuntu-latest
@@ -14,15 +18,15 @@ jobs:
           echo "____________Starting CI _________________"
 
       - name: Checkout #1
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Node setup #2
-        uses: actions/setup-node@v3
+      # cypress ___tests___
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
         with:
-          node-version: 16
-
-      - name: NPM install #3
-        run: npm install
+          build: npm run build
+          config: pageLoadTimeout=100000,baseUrl=http://localhost:3003
+          start: npm run dev
 
       # lint
       - name: Run ESLint #4
@@ -31,14 +35,6 @@ jobs:
       # prettier after
       - name: Prettier #5
         run: npm run prettier
-
-      # cypress ___tests___
-      - name: E2E ___tests___ #6
-        uses: cypress-io/github-action@v4
-        with:
-          build: npm run build
-          start: npm run start
-          wait-on: http://localhost:3003
 
       # jest ___tests___
       - name: Jest run #7

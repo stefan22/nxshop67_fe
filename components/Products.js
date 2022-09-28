@@ -39,8 +39,9 @@ const Products = () => {
   if (error) return <ErrorMessage error={error} />
 
   const { allProducts } = data
+
   return (
-    <ProductsListSl>
+    <ProductsListSl data-test="all-products">
       {allProducts?.map(product => (
         <Product key={product.id} product={product} />
       ))}

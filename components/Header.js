@@ -4,7 +4,7 @@ import Link from 'next/link'
 import HeaderSl from './styles/HeaderSl'
 import Nav from './Nav'
 import Image from 'next/image'
-import shop from '@/assets/images/shop76.jpg'
+import shop from '@/assets/shop76.jpg'
 
 const Bar = styled.div`
   width: 100%;
@@ -36,9 +36,9 @@ const LogoBoxSl = styled.div`
 
 const Header = () => {
   return (
-    <HeaderSl>
+    <HeaderSl data-test="top-navigation">
       <Bar>
-        <LogoBoxSl>
+        <LogoBoxSl data-test="logo">
           <Link href={'/'} passHref>
             <a>
               <Image
