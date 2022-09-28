@@ -1,13 +1,26 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "moduleResolution": "node",
+    "module": "es2020",
+    "lib": ["es2020", "DOM", "dom.iterable"],
+    "target": "es2020",
+    "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowJs": true,
+
     "paths": {
       "@/components/*": ["components/*"],
       "@/cstyles/*": ["components/styles/*"],
       "@/graphql/*": ["graphql/*"],
       "@/lib/*": ["lib/*"],
       "@/pages/*": ["pages/*"],
-      "@/assets/*": ["assets/*"],
+      "@/assets/*": ["assets/images/*"],
       "@/svgComponents/*": ["svgComponents/*"],
       "@/styles/*": ["styles/*"]
     }

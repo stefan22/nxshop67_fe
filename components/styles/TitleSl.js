@@ -10,14 +10,15 @@ const TitleSl = styled.h3`
   z-index: 10;
 
   a {
-    background: var(--red);
+    background: var(--darkgrey);
     display: block;
     mix-blend-mode: darken;
-    font-size: 4rem;
+    font-size: var(--fontSizeLarge);
     text-align: center;
     color: var(--white);
     padding: 0;
-    width: 100%;
+    width: 99%;
+    margin: 0 auto;
   }
 `
 

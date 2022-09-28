@@ -1,11 +1,18 @@
-// it gets cypress up and running for now
+// it gets cypress up and running w/ci
 
-describe('App', () => {
+describe('starting application: landing page', () => {
 
-  it('Adds Cypress settings to project and passes CI ___tests___', () => {
-    cy.visit('http://localhost:3003')
-    cy.wait(2000);
-    cy.fixture("product").should("deep.equal",
-      {name: "Vans", desc: "OFF THE WALL", price: "£300.00"})
+  beforeEach(() => {
+    cy.visit('/');
+    cy.wait(7000)
   })
+
+  it('should have top navigation menu links', () => {
+    cy.get('[data-test="menu-links"] a').should('have.length', 5)
+  })
+
+  it('should have site logo', () => {
+    cy.get('[data-test="logo"]').should('be.visible', true)
+  })
+
 })
