@@ -5,12 +5,17 @@ const GlobalStyles = createGlobalStyle`
   root, html {
     /* colors */
     --black: #212244;
+    --darkgrey:#333333;
+    --medgrey: #707070;
     --grey: #69697b;
     --gray: #9d9d9d;
+    --dgray:#f3f2f2;
+    --itembg: #dedede;
     /* white */
     --white: #ffffff;
     --offWhite: #fafafa;
     --ghostwhite: #eaeaea;
+    --goldengray: #868181;
     /* red/orange */
     --red: #f94a3d;
     --darkRed: #cf2e2e;
@@ -156,16 +161,21 @@ const GlobalStyles = createGlobalStyle`
     font-style: italic;
     color: var(--gray);
   }
+  
+  h2 {
+    padding: 1rem;
+    background: var(--offWhite);
+  }
 
   .heading_H3 {
     font-size: var(--fontSizeMedium);
     font-variant-caps: all-small-caps;
-    color: var(--gray);
-    padding: 5px 3px;
+    color: var(--goldengray);
+    padding: 1rem 1rem 1.5rem;
     border-top-width: medium;
     background-color: var(--offWhite);
     line-height: var(--lineHeightSmall);
-    margin-block-end: 3rem;
+    margin-block-end: 1rem;
     font-weight: 400;
   }
 

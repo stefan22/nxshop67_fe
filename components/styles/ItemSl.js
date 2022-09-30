@@ -1,20 +1,18 @@
 import styled from 'styled-components'
 
 const Item = styled.div`
-  background: var(--offWhite);
-  border: 1px solid var(--offWhite);
+  background: var(--itembg);
+  border: 1px solid var(--medgrey);
   position: relative;
   display: flex;
-  box-shadow: var(--bs4);
+  box-shadow: var(--bs);
   flex-direction: column;
-  width: 460px;
-  padding: 3rem 1.5rem;
+  width: 350px;
+  padding: 0;
   cursor: pointer;
   margin-bottom: 7rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1;
-  transition: all 0.5s ease;
+  transition: all 400ms linear 0ms;
 
   @media screen and (max-width: 1419px) {
     /* 2 columns - product takes half the width */
@@ -30,7 +28,7 @@ const Item = styled.div`
     /* up to before ipad mini single column */
     inline-size: 100%;
     box-shadow: none;
-    width: 476px;
+    border: none;
     padding: 0;
     height: auto;
     margin-left: auto;
@@ -41,12 +39,13 @@ const Item = styled.div`
 
     h3 {
       text-align: center;
+      margin-bottom: 0;
     }
   }
 
   &:hover {
     box-shadow: var(--bs5);
-    border-bottom: 1px solid #f7f7f7b5;
+    border: 1px solid var(--itembg);
   }
 
   img {
