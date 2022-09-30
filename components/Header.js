@@ -12,7 +12,13 @@ const Header = () => {
       <Navrap>
         <Link href={'/'} passHref>
           <a>
-            <Image src={shop} width={57} height={56} alt={'logo'} />
+            <Image
+              data-test="logo"
+              src={shop}
+              width={57}
+              height={56}
+              alt={'logo'}
+            />
           </a>
         </Link>
         <Nav />

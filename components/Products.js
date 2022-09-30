@@ -1,26 +1,8 @@
 import React from 'react'
-import { useQuery } from '@apollo/client'
 import styled from 'styled-components'
-import gql from 'graphql-tag'
 import Product from './Product'
+import useAllProducts from '@/graphql/allProductsQuery'
 import ErrorMessage from '../lib/ErrorMessage'
-
-export const allProductsQuery = gql`
-  query allProductsQuery {
-    allProducts {
-      id
-      name
-      price
-      description
-      photo {
-        id
-        image {
-          publicUrlTransformed
-        }
-      }
-    }
-  }
-`
 
 const ProductsListSl = styled.div`
   display: flex;
@@ -34,12 +16,14 @@ const ProductsListSl = styled.div`
 `
 
 const Products = () => {
-  const { data, error, loading } = useQuery(allProductsQuery)
-  if (loading) return <p>Loading...</p>
+  const { allProds, allProdsLoading, allProdsError } =
+    useAllProducts()
 
-  if (error) return <ErrorMessage error={error} />
+  if (allProdsLoading) return <p>Loading...</p>
 
-  const { allProducts } = data
+  if (allProdsError) return <ErrorMessage error={allProdsError} />
+
+  const { allProducts } = allProds
 
   return (
     <ProductsListSl data-test="all-products">
