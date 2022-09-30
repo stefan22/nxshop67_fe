@@ -36,7 +36,7 @@ Generally follows these steps:
 
 #### <kdb>Frontend s2</kdb>
 
-<img src="public/static/frontend2.png" alt="screenshot 2">
+<img src="assets/images/nxshop67.png" alt="shop frontend">
 
 <br />
 

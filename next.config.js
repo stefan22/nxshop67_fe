@@ -10,7 +10,8 @@ const nextConfig = {
   },
   env: {
     GQL_PRODUCT_ENDPOINT_PROD:
-      process.env.GQL_PRODUCT_ENDPOINT_PROD || 'http://localhost:3000/api/graphql',
+      process.env.GQL_PRODUCT_ENDPOINT_PROD ||
+      'http://localhost:3000/api/graphql',
     GQL_PRODUCT_ENDPOINT_DEV: process.env.GQL_PRODUCT_ENDPOINT_DEV,
     FRONTEND_URL: process.env.FRONTEND_URL
   }

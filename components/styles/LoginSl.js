@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import Arrows from '../../public/static/arrows.png'
 
 const LoginSl = styled.div`
   max-width: 1200px;

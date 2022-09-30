@@ -4,26 +4,25 @@ const OnSaleSl = styled.span`
   display: flex;
   flex-direction: column;
   padding: 0;
-  line-height: 2;
   position: absolute;
-  top: 13%;
-  left: 5%;
-  font-weight: 900;
+  top: 12%;
+  left: 1%;
+  font-weight: 400;
   margin-block-start: 6rem;
-  box-shadow: var(--bs3);
-  font-size: var(--fontSizeTxt);
+  box-shadow: var(--bs5);
   justify-content: center;
   align-items: center;
   align-content: center;
   overflow: hidden;
-  width: 67px;
-  height: 67px;
-  text-shadow: none;
-  color: white;
-  transform: scale3d(112%, 112%, 112%);
+  width: 53px;
+  height: 53px;
+  color: var(--white);
   background-color: var(--red);
   border-radius: 50%;
   z-index: 3;
+  text-align: center;
+  font-size: var(--fontSizeTxt);
+  line-height: 1.35;
 `
 
 export default OnSaleSl
