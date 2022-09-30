@@ -1,7 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
-import ErrorMessage from '@/lib/ErrorMessage'
 
 const singleProductQuery = gql`
   query singleProductQuery($id: ID!) {
@@ -13,21 +12,20 @@ const singleProductQuery = gql`
   }
 `
 
-export default function SingleProductQuery({ id }) {
-  const { data, loading, error } = useQuery(singleProductQuery, {
+export default function useSingleProduct({ id }) {
+  const {
+    data: singleProd,
+    loading: singleProdLoading,
+    error: singleProdError
+  } = useQuery(singleProductQuery, {
     variables: {
       id
     }
   })
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <ErrorMessage error={error} />
-
-  return (
-    <>
-      <h2>{data?.Product.name}</h2>
-      <p>{data?.Product.price}</p>
-      <p>{data?.Product.description}</p>
-    </>
-  )
+  return {
+    singleProd,
+    singleProdLoading,
+    singleProdError
+  }
 }
