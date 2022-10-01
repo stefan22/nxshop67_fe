@@ -26,7 +26,7 @@ const Products = () => {
   const { allProducts } = allProds
 
   return (
-    <ProductsListSl data-test="all-products">
+    <ProductsListSl data-testid="all-products">
       {allProducts?.map(product => (
         <Product key={product.id} product={product} />
       ))}

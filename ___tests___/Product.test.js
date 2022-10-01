@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import React from 'react'
-import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
 import { MockedProvider } from '@apollo/react-testing'
 import Product from '../components/Product'
 
@@ -11,13 +11,13 @@ const singleProduct = () => ({
     id: "abc123",
     price: "£7.70",
     user: null,
-    name: "Hot hat",
+    name: "ABC",
     description: "Very nice hat",
     photo: {
         id:"abc123",
-        altText: "it is a hat",
+        altText: "hat item",
         image: {
-            publicUrlTransformed: "hot_hat.jpg"
+            publicUrlTransformed: "item.jpg"
         }
     }
 })
@@ -26,32 +26,54 @@ const product = singleProduct()
 
 describe("<Product />", () => {
 
-    beforeAll(() => {
-        render(
-            <MockedProvider>
-                <Product product={product} />
-            </MockedProvider>
+    it("should render product name in page", () => {
+        const { container, debug } = render(
+          <MockedProvider>
+              <Product product={product} />
+          </MockedProvider>
         )
+        const expectedProductName = screen.getAllByText('ABC')[0]
+        expect(expectedProductName).toBeInTheDocument()
     })
 
-    it("should render product name in page", () => {
-        const expectedName = product.name;
-        expect(product.name).toEqual(expectedName)
-    })
     it("should render product description in page", () => {
-        const expectedDesc = product.description;
-        expect(product.description).toEqual(expectedDesc)
+        const { container, debug } = render(
+          <MockedProvider>
+              <Product product={product} />
+          </MockedProvider>
+        )
+        const desc = screen.getByText('Very nice hat')
+        expect(desc).toBeInTheDocument()
     })
-    it("should render product price in page", () => {
-        const expectedPrice = product.price;
-        expect(product.price).toEqual(expectedPrice)
+
+    it("should have an <a /> tag with atributes", () => {
+        const { container, debug } = render(
+          <MockedProvider>
+              <Product product={product} />
+          </MockedProvider>
+        )
+        const linkTag = container.querySelector('a');
+        expect(linkTag).toHaveAttribute('href','/product/abc123')
+        expect(linkTag).toHaveTextContent(product.name)
     })
-    it("should render product id in page", () => {
-        const expectedId = product.id;
-        expect(product.id).toEqual(expectedId)
+
+    it("should have an image with src and alt attributes", () => {
+        const { container, debug } = render(
+          <MockedProvider>
+              <Product product={product} />
+          </MockedProvider>
+        )
+        const picImg = container.querySelector('picture > img')
+        expect(picImg).toHaveAttribute('src','item.jpg')
+        expect(picImg).toHaveAttribute('alt','ABC')
     })
-    it("should have an image src prop", () => {
-        const imgSrc = product.photo.image.publicUrlTransformed;
-        expect(product.photo.image.publicUrlTransformed).toContain(imgSrc)
+
+    it('product container matches the snapshot', () => {
+        const { container } = render(
+          <MockedProvider>
+              <Product product={product} />
+          </MockedProvider>
+        )
+        expect(container).toMatchSnapshot();
     })
 })

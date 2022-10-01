@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import useSingleProduct from '@/graphql/singleProductQuery'
 import ErrorMessage from '@/lib/ErrorMessage'
+import ProductDetails from '@/components/ProductDetails'
 
 const SingleProduct = () => {
   const router = useRouter()
@@ -15,17 +16,7 @@ const SingleProduct = () => {
 
   const { Product } = singleProd
 
-  return (
-    <>
-      <h2>{Product?.name}</h2>
-      <p>{Product?.price}</p>
-      <p>{Product?.description}</p>
-    </>
-  )
+  return <ProductDetails product={Product} />
 }
 
-const Product = () => {
-  return <SingleProduct />
-}
-
-export default Product
+export default SingleProduct

@@ -8,12 +8,12 @@ import shop from '@/assets/shop67.png'
 
 const Header = () => {
   return (
-    <HeaderSl data-test="top-navigation">
+    <HeaderSl data-testid="top-navigation">
       <Navrap>
         <Link href={'/'} passHref>
           <a>
             <Image
-              data-test="logo"
+              data-testid="logo"
               src={shop}
               width={57}
               height={56}

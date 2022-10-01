@@ -7,6 +7,12 @@ const singleProductQuery = gql`
       name
       price
       description
+      photo {
+        id
+        image {
+          publicUrlTransformed
+        }
+      }
     }
   }
 `

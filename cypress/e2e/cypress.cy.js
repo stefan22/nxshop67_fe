@@ -8,11 +8,11 @@ describe('starting application: landing page', () => {
   })
 
   it('should have top navigation menu links', () => {
-    cy.get('[data-test="menu-links"] a').should('have.length', 5)
+    cy.get('[data-testid="menu-links"] a').should('have.length', 4)
   })
 
   it('should have site logo', () => {
-    cy.get('[data-test="logo"]').should('be.visible', true)
+    cy.get('[data-testid="logo"]').should('be.visible', true)
   })
 
 })
