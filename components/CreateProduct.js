@@ -1,35 +1,13 @@
 import React from 'react'
 import Router from 'next/router'
-import gql from 'graphql-tag'
-import { useMutation } from '@apollo/client'
 import useForm from '../lib/useForm'
 import allProductsQuery from './Products'
+
 import FormSl from './styles/FormSl'
 import LoginSl from './styles/LoginSl'
 import AxionSVG from '../svgComponents/axionSVG/AxionSVG'
 import ErrorMessage from '../lib/ErrorMessage'
-
-export const createProductMutation = gql`
-  mutation createProductMutation(
-    $name: String!
-    $description: String!
-    $price: Int!
-  ) {
-    createProduct(
-      data: {
-        name: $name
-        description: $description
-        price: $price
-        status: "in-stock"
-      }
-    ) {
-      id
-      name
-      description
-      price
-    }
-  }
-`
+import useCreateProduct from "@/graphql/createProductMutation";
 
 const CreateProduct = () => {
   const { input, resetForm, handleChange } = useForm({
@@ -37,10 +15,12 @@ const CreateProduct = () => {
     description: '',
     price: 0
   })
+  const [
+    createProduct,
+    createProductLoading,
+    createProductError,
 
-  const [createProduct, { loading, error }] = useMutation(
-    createProductMutation
-  )
+  ] = useCreateProduct()
 
   return (
     <LoginSl>
@@ -84,10 +64,10 @@ const CreateProduct = () => {
           <h1>Sign in</h1>
         </div>
 
-        <ErrorMessage error={error} />
+        <ErrorMessage error={createProductError} />
 
         {/*//form-fields*/}
-        <fieldset disabled={loading} aria-busy={loading}>
+        <fieldset disabled={createProductLoading} aria-busy={createProductLoading}>
           <label htmlFor="name">
             Name:
             <input
