@@ -12,8 +12,6 @@ const Nav = () => {
       <Link href="/order">Order</Link>
 
       <Link href="/signin">Signin</Link>
-
-      <Link href="/cart">Cart</Link>
     </NavSl>
   )
 }

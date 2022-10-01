@@ -6,12 +6,14 @@ const createProductMutation = gql`
     $name: String!
     $description: String!
     $price: Int!
+    $image: Upload
   ) {
     createProduct(
       data: {
         name: $name
         description: $description
         price: $price
+        photo: { create: { image: $image, altText: $name }},
         status: "in-stock"
       }
     ) {
