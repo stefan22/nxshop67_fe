@@ -13,7 +13,7 @@ const createProductMutation = gql`
         name: $name
         description: $description
         price: $price
-        photo: { create: { image: $image, altText: $name }},
+        photo: { create: { image: $image, altText: $name } }
         status: "in-stock"
       }
     ) {
@@ -31,11 +31,7 @@ const useCreateProduct = () => {
     { loading: createProductLoading, error: createProductError }
   ] = useMutation(createProductMutation)
 
-  return [
-    createProduct,
-    createProductLoading,
-    createProductError
-  ]
+  return [createProduct, createProductLoading, createProductError]
 }
 
 export default useCreateProduct
