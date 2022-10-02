@@ -8,7 +8,7 @@ import { GBPCurrencyFormat as poundFormat } from '../lib/currencyFormat'
 
 const Product = ({ product }) => {
   return (
-    <ItemSl data-test="product">
+    <ItemSl data-testid="product">
       <h2>{product?.name}</h2>
       <h3 className="heading_H3">{product?.description}</h3>
       <OnSaleSl>ON-SALE!</OnSaleSl>
