@@ -4,7 +4,7 @@ import NavSl from './styles/NavSl'
 
 const Nav = () => {
   return (
-    <NavSl data-test="menu-links">
+    <NavSl data-testid="menu-links">
       <Link href="/products">Products</Link>
 
       <Link href="/account">Account</Link>
