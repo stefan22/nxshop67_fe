@@ -1,46 +1,21 @@
 import React from 'react'
 import Router from 'next/router'
-import gql from 'graphql-tag'
-import { useMutation } from '@apollo/client'
 import useForm from '../lib/useForm'
-import allProductsQuery from './Products'
 import FormSl from './styles/FormSl'
 import LoginSl from './styles/LoginSl'
 import AxionSVG from '../svgComponents/axionSVG/AxionSVG'
 import ErrorMessage from '../lib/ErrorMessage'
-
-export const createProductMutation = gql`
-  mutation createProductMutation(
-    $name: String!
-    $description: String!
-    $price: Int!
-  ) {
-    createProduct(
-      data: {
-        name: $name
-        description: $description
-        price: $price
-        status: "in-stock"
-      }
-    ) {
-      id
-      name
-      description
-      price
-    }
-  }
-`
+import useCreateProduct from '@/graphql/createProductMutation'
 
 const CreateProduct = () => {
   const { input, resetForm, handleChange } = useForm({
     name: '',
     description: '',
-    price: 0
+    price: 0,
+    image: ''
   })
-
-  const [createProduct, { loading, error }] = useMutation(
-    createProductMutation
-  )
+  const [createProduct, createProductLoading, createProductError] =
+    useCreateProduct()
 
   return (
     <LoginSl>
@@ -55,7 +30,7 @@ const CreateProduct = () => {
 
           <h2 className="login-sub-title">Welcome back!</h2>
           <div className="redirect-signup">
-            How do you add a new product to your database?
+            In order to add a new product to database:
             <br />
             Fill out the <b>product form</b>, and press &quot;
             <b>Add Product</b>&quot; button.
@@ -67,12 +42,7 @@ const CreateProduct = () => {
       <FormSl
         onSubmit={async event => {
           event.preventDefault()
-          let res = await createProduct(
-            { variables: input },
-            {
-              refetchQueries: [{ query: allProductsQuery }]
-            }
-          )
+          let res = await createProduct({ variables: input })
           resetForm(input)
 
           await Router.push({
@@ -84,10 +54,13 @@ const CreateProduct = () => {
           <h1>Sign in</h1>
         </div>
 
-        <ErrorMessage error={error} />
+        <ErrorMessage error={createProductError} />
 
         {/*//form-fields*/}
-        <fieldset disabled={loading} aria-busy={loading}>
+        <fieldset
+          disabled={createProductLoading}
+          aria-busy={createProductLoading}
+        >
           <label htmlFor="name">
             Name:
             <input
