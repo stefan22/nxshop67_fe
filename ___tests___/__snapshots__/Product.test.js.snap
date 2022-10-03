@@ -3,7 +3,7 @@
 exports[`<Product /> product container matches the snapshot 1`] = `
 <div>
   <div
-    class="ItemSl__Item-sc-1s91ler-0 gVQryV"
+    class="ItemSl__Item-sc-1s91ler-0 fOpZCC"
     data-testid="product"
   >
     <h2>
@@ -15,7 +15,7 @@ exports[`<Product /> product container matches the snapshot 1`] = `
       Very nice hat
     </h3>
     <span
-      class="OnSaleSl-sc-17gb5te-0 fyniQW"
+      class="OnSaleSl-sc-17gb5te-0 iteiVV"
     >
       ON-SALE!
     </span>
@@ -29,7 +29,7 @@ exports[`<Product /> product container matches the snapshot 1`] = `
       />
     </picture>
     <h3
-      class="TitleSl-sc-fwsgza-0 kFZlbu"
+      class="TitleSl-sc-fwsgza-0 jwcPpF"
     >
       <a
         href="/product/abc123"
@@ -38,7 +38,7 @@ exports[`<Product /> product container matches the snapshot 1`] = `
       </a>
     </h3>
     <span
-      class="PriceTag-sc-vp1xmv-0 dpkGEc"
+      class="PriceTag-sc-vp1xmv-0 fsIMEb"
     >
       Amount passed not a number
     </span>
