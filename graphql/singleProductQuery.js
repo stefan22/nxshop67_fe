@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
 
-const singleProductQuery = gql`
+export const singleProductQuery = gql`
   query singleProductQuery($id: ID!) {
     Product(where: { id: $id }) {
       name

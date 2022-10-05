@@ -66,6 +66,8 @@ describe("<Product />", () => {
         const picImg = container.querySelector('picture > img')
         expect(picImg).toHaveAttribute('src','item.jpg')
         expect(picImg).toHaveAttribute('alt','ABC')
+        const productImage = screen.getByAltText(product.name);
+        expect(productImage).toBeInTheDocument()
     })
 
     it('product container matches the snapshot', () => {

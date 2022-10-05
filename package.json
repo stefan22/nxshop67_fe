@@ -10,7 +10,7 @@
     "lint": "next lint --no-cache",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "test": "NODE_ENV=test jest --watch",
+    "test": "NODE_ENV=test jest",
     "cypress:open": "cypress open"
   },
   "author": "sl",
@@ -38,8 +38,7 @@
     "reset-css": "^5.0.1",
     "resolve-url-loader": "^5.0.0",
     "styled-components": "^5.2.1",
-    "update": "^0.7.4",
-    "waait": "^1.0.5"
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@apollo/react-testing": "^4.0.0",
