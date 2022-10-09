@@ -3,7 +3,6 @@ import { useCurrentUser } from '@/graphql/currentUserQuery'
 
 const Account = () => {
   const { currentUser } = useCurrentUser()
-  console.log('user ', currentUser) //id,name,email
 
   return (
     <>

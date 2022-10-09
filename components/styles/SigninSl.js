@@ -56,7 +56,7 @@ const SigninSl = styled.div`
             ::before {
               content: '?';
               width: 25px;
-              height:25px;
+              height: 25px;
               border-radius: 50%;
               margin-right: 3px;
               padding: 2px;
@@ -75,7 +75,6 @@ const SigninSl = styled.div`
             background-color: var(--dgray);
             padding: 10px 20px;
           }
-
         }
         .buttons-group {
           display: flex;
@@ -83,7 +82,8 @@ const SigninSl = styled.div`
           width: 100%;
           flex-direction: column;
           margin: 3rem 0;
-          .submit-button,.login__no-account {
+          .submit-button,
+          .login__no-account {
             display: flex;
             width: 100%;
             justify-content: center;
@@ -98,7 +98,6 @@ const SigninSl = styled.div`
       }
     }
   }
-  
 `
 
 export default SigninSl
