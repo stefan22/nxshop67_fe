@@ -5,7 +5,7 @@ import { useCurrentUser } from '@/graphql/currentUserQuery'
 
 const Nav = () => {
   const { currentUser } = useCurrentUser()
-  console.log('user ', currentUser) //id,name,email
+
   return (
     <NavSl data-testid="menu-links">
       <Link href="/products">Products</Link>
