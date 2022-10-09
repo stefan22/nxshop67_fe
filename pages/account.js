@@ -1,14 +1,14 @@
 import React from 'react'
-import { useCurrentUser } from '@/graphql/currentUserQuery'
+import { useCurrentUser } from '../graphql/currentUserQuery'
 
 const Account = () => {
-  const { currentUser } = useCurrentUser()
+  const { currentUser, loading } = useCurrentUser()
+
+  if (loading) return <p>Loading...</p>
 
   return (
     <>
-      <h1>{currentUser?.name} account </h1>
-      <p>{currentUser?.email}</p>
-      <p>{currentUser?.id}</p>
+      <h1>account {currentUser?.name || 'no name'} </h1>
     </>
   )
 }

@@ -21,7 +21,7 @@ describe('starting application: landing page', () => {
     cy.url().should('include', '/products');
   })
 
-  it('should route user to sign in with clicking signin', () => {
+  it('should route user to sign in when clicking signin', () => {
     cy.get('[data-testid="menu-links"] a[href="/signin"]').click();
     cy.url().should('include', '/signin')
   })

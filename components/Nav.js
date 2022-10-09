@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import NavSl from './styles/NavSl'
-import { useCurrentUser } from '@/graphql/currentUserQuery'
+import { useCurrentUser } from '../graphql/currentUserQuery'
 
 const Nav = () => {
   const { currentUser } = useCurrentUser()
