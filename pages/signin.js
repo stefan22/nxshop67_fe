@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
-import SigninSl from '@/cstyles/SigninSl'
-import useForm from '@/lib/useForm'
+import SigninSl from '../components/styles/SigninSl'
+import useForm from '../lib/useForm'
 import { gql } from 'graphql-tag'
 import { useMutation } from '@apollo/client'
 import { currentUserQuery } from '@/graphql/currentUserQuery'
@@ -51,6 +51,8 @@ const Signin = () => {
       })
     }
   }
+
+  if (loading) return <p>Loading...</p>
 
   return (
     <SigninSl>
