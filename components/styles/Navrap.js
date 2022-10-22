@@ -33,6 +33,11 @@ const Navrap = styled.div`
       }
     }
   }
+  button {
+    padding: 1.5rem 3rem;
+    color: var(--black);
+    line-height: 1;
+  }
 `
 
 export default Navrap

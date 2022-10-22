@@ -1,4 +1,4 @@
-name: CI - Runs ESLint, Prettier, and Cypress, Jest test files
+name: CI - Runs ESLint, Prettier, and  Jest test files
 
 on:
   push:
@@ -19,14 +19,6 @@ jobs:
 
       - name: Checkout #1
         uses: actions/checkout@v2
-
-      # cypress ___tests___
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          build: npm run build
-          config: pageLoadTimeout=100000,baseUrl=http://localhost:3003
-          start: npm run dev
 
       # lint
       - name: Run ESLint #4
