@@ -7,11 +7,11 @@
     "dev": "next -p 3003",
     "build": "next build",
     "start": "next start -p 3003",
+    "coverage": "jest --coverage",
     "lint": "next lint --no-cache",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "test": "NODE_ENV=test jest",
-    "cypress:open": "cypress open"
+    "test": "NODE_ENV=test jest --watchAll"
   },
   "author": "sl",
   "dependencies": {
@@ -62,7 +62,6 @@
     "babel-plugin-superjson-next": "^0.4.2",
     "babel-plugin-transform-imports": "^2.0.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "cypress": "^10.9.0",
     "dotenv-load": "^2.0.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.2",
