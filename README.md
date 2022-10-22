@@ -5,7 +5,8 @@
 ## :paperclip: Install
 
 :lollipop: Type `npm install`  
-:lollipop: Type `npm run dev` // opens in port 3003.
+:lollipop: Type `npm run dev` // opens in port 3003.         
+:lollipop: Node v16.17.0
 
 ## :paperclip: Front-end
 
