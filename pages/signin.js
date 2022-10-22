@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Router from "next/router";
-import SigninSl from "../components/styles/SigninSl";
-import useForm from "../lib/useForm";
-import { gql } from "graphql-tag";
-import { useMutation } from "@apollo/client";
-import { currentUserQuery } from "@/graphql/currentUserQuery";
+import React, { useState } from 'react'
+import Router from 'next/router'
+import SigninSl from '../components/styles/SigninSl'
+import useForm from '../lib/useForm'
+import { gql } from 'graphql-tag'
+import { useMutation } from '@apollo/client'
+import { currentUserQuery } from '@/graphql/currentUserQuery'
 
 const signinMutation = gql`
   mutation signinMutation($email: String!, $password: String!) {
@@ -31,7 +31,7 @@ const Signin = () => {
     password: ''
   })
 
-  const [signin, { loading }] = useMutation(signinMutation, {
+  const [signin] = useMutation(signinMutation, {
     variables: input,
     refetchQueries: [{ query: currentUserQuery }]
   })
@@ -40,7 +40,8 @@ const Signin = () => {
     e.preventDefault()
     let response = await signin()
     resetForm(input)
-    const { code, message, item } = response.data.authenticateUserWithPassword
+    const { code, message, item } =
+      response.data.authenticateUserWithPassword
     if (code === 'FAILURE') {
       setError({ message })
     } else if (item?.id) {
@@ -50,8 +51,6 @@ const Signin = () => {
       })
     }
   }
-
-  if (loading) return <p>Loading...</p>
 
   return (
     <SigninSl>
