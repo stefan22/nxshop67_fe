@@ -1,80 +1,106 @@
-import React, { useState } from 'react'
-import Router from 'next/router'
-import SigninSl from '../components/styles/SigninSl'
-import useForm from '../lib/useForm'
-import { gql } from 'graphql-tag'
+import React from 'react'
+import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
-import { currentUserQuery } from '@/graphql/currentUserQuery'
+import useForm from '../lib/useForm'
+import SigninSl from '../components/styles/SigninSl'
+import SignIn from './signin'
+import Link from 'next/link'
 
-const signinMutation = gql`
-  mutation signinMutation($email: String!, $password: String!) {
-    authenticateUserWithPassword(email: $email, password: $password) {
-      ... on UserAuthenticationWithPasswordSuccess {
-        item {
-          id
-          email
-          name
-        }
-      }
-      ... on UserAuthenticationWithPasswordFailure {
-        code
-        message
-      }
+const signupMutation = gql`
+  mutation signupMutation(
+    $email: String!
+    $name: String!
+    $password: String!
+  ) {
+    createUser(
+      data: { email: $email, name: $name, password: $password }
+    ) {
+      id
+      email
+      name
     }
   }
 `
 
 const SignUp = () => {
-  const [error, setError] = useState({ message: '' })
   const { input, handleChange, resetForm } = useForm({
     email: '',
+    name: '',
     password: ''
   })
-
-  const [signin] = useMutation(signinMutation, {
-    variables: input,
-    refetchQueries: [{ query: currentUserQuery }]
-  })
-
+  const [signup, { data, loading, error }] = useMutation(
+    signupMutation,
+    {
+      variables: input
+    }
+  )
   const handleSubmit = async e => {
     e.preventDefault()
-    let response = await signin()
+    // eslint-disable-next-line no-console
+    await signup().catch(err => console.log(err))
     resetForm(input)
-    const { code, message, item } =
-      response.data.authenticateUserWithPassword
-    if (code === 'FAILURE') {
-      setError({ message })
-    } else if (item?.id) {
-      setError({ message: '' })
-      await Router.push({
-        pathname: `/account`
-      })
-    }
+  }
+
+  if (data?.createUser) {
+    return (
+      <div
+        style={{
+          width: '100%',
+          flexDirection: 'column',
+          display: 'flex',
+          height: '100%',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <p>Successfully signed up with {data?.createUser.email}</p>
+        <SignIn />
+      </div>
+    )
   }
 
   return (
     <SigninSl>
       <div className="login">
         <header>
-          <h1>Signin</h1>
-          <p>Welcome Back!</p>
-          {error?.message ? error.message : ''}
+          <h1>Signup</h1>
+          <p>Simple registration process!</p>
         </header>
+        <p className="error-message">
+          {error?.message ? error.message : ''}
+        </p>
         <div className="login__body">
           <form method="POST" onSubmit={handleSubmit}>
             <fieldset>
+              <section className="input-field">
+                <label htmlFor="name">
+                  Name:
+                  <input
+                    type="name"
+                    autoComplete="current-name"
+                    placeholder="Name"
+                    name="name"
+                    required
+                    value={input.name}
+                    onChange={handleChange}
+                  />
+                </label>
+              </section>
               <section className="input-field">
                 <label htmlFor="email">
                   Email:
                   <input
                     type="email"
+                    autoComplete="current-email"
                     placeholder="Email"
                     name="email"
+                    required
                     value={input.email}
                     onChange={handleChange}
                   />
                 </label>
               </section>
+
               <section className="input-field">
                 <label htmlFor="password">
                   Password:
@@ -83,18 +109,24 @@ const SignUp = () => {
                     type="password"
                     placeholder="Password"
                     name="password"
+                    required
+                    autoComplete="current-password"
                     value={input.password}
                     onChange={handleChange}
                   />
                 </label>
               </section>
+
               <div className="buttons-group">
                 <section className="submit-button">
-                  <button type="submit">Sign in</button>
+                  <button type="submit">Sign up</button>
                 </section>
+
                 <section className="login__no-account">
-                  <p>Don&apos;t have an account?</p>
-                  <button type="button">Sign up</button>
+                  <p>Already have an account?</p>
+                  <Link href="/signin">
+                    <button type="button">Sign in</button>
+                  </Link>
                 </section>
               </div>
             </fieldset>
