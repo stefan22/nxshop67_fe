@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Router from 'next/router'
-import Link from 'next/link'
 import SigninSl from '../components/styles/SigninSl'
 import useForm from '../lib/useForm'
-import ErrorMessage from '../lib/ErrorMessage'
 import { gql } from 'graphql-tag'
 import { useMutation } from '@apollo/client'
 import { currentUserQuery } from '@/graphql/currentUserQuery'
@@ -26,13 +24,14 @@ const signinMutation = gql`
   }
 `
 
-const Signin = () => {
+const SignUp = () => {
+  const [error, setError] = useState({ message: '' })
   const { input, handleChange, resetForm } = useForm({
     email: '',
     password: ''
   })
 
-  const [signin, { data, loading }] = useMutation(signinMutation, {
+  const [signin] = useMutation(signinMutation, {
     variables: input,
     refetchQueries: [{ query: currentUserQuery }]
   })
@@ -40,15 +39,18 @@ const Signin = () => {
   const handleSubmit = async e => {
     e.preventDefault()
     let response = await signin()
-    await Router.push({ pathname: '/account' })
     resetForm(input)
+    const { code, message, item } =
+      response.data.authenticateUserWithPassword
+    if (code === 'FAILURE') {
+      setError({ message })
+    } else if (item?.id) {
+      setError({ message: '' })
+      await Router.push({
+        pathname: `/account`
+      })
+    }
   }
-
-  const error =
-    data?.authenticateUserWithPassword.__typename ===
-    'UserAuthenticateWithPasswordFailure'
-      ? data?.authenticateUserWithPassword
-      : undefined
 
   return (
     <SigninSl>
@@ -60,7 +62,6 @@ const Signin = () => {
         </header>
         <div className="login__body">
           <form method="POST" onSubmit={handleSubmit}>
-            <ErrorMessage error={error} />
             <fieldset>
               <section className="input-field">
                 <label htmlFor="email">
@@ -93,9 +94,7 @@ const Signin = () => {
                 </section>
                 <section className="login__no-account">
                   <p>Don&apos;t have an account?</p>
-                  <Link href="/signup">
-                    <button type="button">Sign up</button>
-                  </Link>
+                  <button type="button">Sign up</button>
                 </section>
               </div>
             </fieldset>
@@ -106,4 +105,4 @@ const Signin = () => {
   )
 }
 
-export default Signin
+export default SignUp
