@@ -114,8 +114,8 @@ const GlobalStyles = createGlobalStyle`
   
   form {
     border-radius: 4px;
-    height: 450px;
-    width: 400px;
+    min-height: 400px;
+    width: 100%;
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
@@ -186,6 +186,15 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-weight: 400;
     margin-block-start: 1.5rem;
+  }
+  .error-message {
+    text-align: center;
+    line-height: 2;
+    color: var(--red);
+    margin: 0;
+    height: 30px;
+    width: 100%;
+    display: block;
   }
 `
 

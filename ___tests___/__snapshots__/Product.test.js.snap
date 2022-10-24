@@ -42,6 +42,15 @@ exports[`<Product /> product container matches the snapshot 1`] = `
     >
       Amount passed not a number
     </span>
+    <div
+      class="buttonList"
+    >
+      <a
+        href="/update?id=abc123"
+      >
+        Edit -
+      </a>
+    </div>
   </div>
 </div>
 `;
