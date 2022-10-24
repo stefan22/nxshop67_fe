@@ -41,6 +41,8 @@ const SignUp = () => {
     resetForm(input)
   }
 
+  if (loading) return <p>Loading...</p>
+
   if (data?.createUser) {
     return (
       <div

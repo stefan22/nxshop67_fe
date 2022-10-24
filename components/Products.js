@@ -19,17 +19,19 @@ const Products = () => {
   const { allProds, allProdsLoading, allProdsError } =
     useAllProducts()
 
-  if (allProdsLoading) return <p>Loading...</p>
-
   if (allProdsError) return <ErrorMessage error={allProdsError} />
 
   const { allProducts } = allProds
 
   return (
     <ProductsListSl data-testid="all-products">
-      {allProducts?.map(product => (
-        <Product key={product.id} product={product} />
-      ))}
+      {allProdsLoading ? (
+        <p>Loading...</p>
+      ) : (
+        allProducts?.map(product => (
+          <Product key={product.id} product={product} />
+        ))
+      )}
     </ProductsListSl>
   )
 }
