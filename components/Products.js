@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Product from './Product'
-import useAllProducts from '@/graphql/allProductsQuery'
+import useAllProducts from '../graphql/allProductsQuery'
 import ErrorMessage from '../lib/ErrorMessage'
 
 const ProductsListSl = styled.div`
