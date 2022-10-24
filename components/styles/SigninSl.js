@@ -10,7 +10,6 @@ const SigninSl = styled.div`
   header {
     display: flex;
     background: var(--offWhite);
-    border: 1px solid var(--ghostwhite);
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -34,23 +33,35 @@ const SigninSl = styled.div`
   .login {
     border: 1px solid var(--ghostwhite);
     padding: 0;
+    width: 100%;
+    min-height: 600px;
+    max-width: 460px;
+    @media screen and (max-width: 736px) {
+      border: none;
+    }
+
     .login__body {
-      padding: 4rem 2rem;
+      padding: 2rem 2rem 2rem;
       background-color: var(--offWhite);
+      @media screen and (max-width: 736px) {
+        padding: 4rem 0;
+      }
       form {
         display: flex;
         flex-direction: column;
         height: auto;
         min-height: 300px;
+        width: 100%;
+
         .input-field {
-          width: 96%;
-          margin: 0 auto;
-          padding: 1rem;
+          width: 100%;
+          margin: 2rem 0 2rem;
+          padding: 0;
           position: relative;
           span {
             position: absolute;
             right: 15px;
-            top: 15px;
+            top: 5px;
             cursor: pointer;
             font-size: var(--fontSizeSmall);
             ::before {
@@ -81,18 +92,35 @@ const SigninSl = styled.div`
           justify-content: center;
           width: 100%;
           flex-direction: column;
-          margin: 3rem 0;
+          margin: 7rem 0 2rem;
+
           .submit-button,
           .login__no-account {
             display: flex;
             width: 100%;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
+          }
+          .submit-button {
+            display: flex;
+            button {
+              padding: 10px 20px;
+              width: 100%;
+              line-height: 1;
+            }
           }
           .login__no-account {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-content: center;
             width: 100%;
+            button {
+              padding: 10px 20px;
+              width: 100%;
+              line-height: 1;
+              background-color: var(--red);
+            }
           }
         }
       }

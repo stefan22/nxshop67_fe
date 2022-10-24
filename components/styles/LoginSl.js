@@ -32,7 +32,6 @@ const LoginSl = styled.div`
     @media screen and (max-width: 1279px) {
       display: none;
     }
-
     .left-item {
       text-align: center;
       color: #595959;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Product from './Product'
-import useAllProducts from '@/graphql/allProductsQuery'
+import useAllProducts from '../graphql/allProductsQuery'
 import ErrorMessage from '../lib/ErrorMessage'
 
 const ProductsListSl = styled.div`
@@ -19,17 +19,17 @@ const Products = () => {
   const { allProds, allProdsLoading, allProdsError } =
     useAllProducts()
 
-  if (allProdsLoading) return <p>Loading...</p>
-
   if (allProdsError) return <ErrorMessage error={allProdsError} />
-
-  const { allProducts } = allProds
 
   return (
     <ProductsListSl data-testid="all-products">
-      {allProducts?.map(product => (
-        <Product key={product.id} product={product} />
-      ))}
+      {allProdsLoading ? (
+        <p>Loading...</p>
+      ) : (
+        allProds?.allProducts?.map(product => (
+          <Product key={product.id} product={product} />
+        ))
+      )}
     </ProductsListSl>
   )
 }
