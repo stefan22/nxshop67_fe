@@ -10,7 +10,7 @@
     "coverage": "jest --coverage",
     "lint": "next lint --no-cache",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
-    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "prettier": "prettier -w '**/*.{js,jsx,ts,tsx}'",
     "test": "NODE_ENV=test jest --watchAll"
   },
   "author": "sl",
