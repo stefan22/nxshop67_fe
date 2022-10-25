@@ -5,12 +5,16 @@ const Item = styled.div`
   border: 1px solid var(--medgrey);
   position: relative;
   display: flex;
+  overflow: auto;
   box-shadow: var(--bs);
   flex-direction: column;
   width: 350px;
+  height: 440px;
+  box-sizing: border-box;
   padding: 0;
   cursor: pointer;
   margin-bottom: 7rem;
+  justify-content: space-between;
   z-index: 1;
   transition: all 400ms linear 0ms;
 
@@ -30,7 +34,7 @@ const Item = styled.div`
     box-shadow: none;
     border: none;
     padding: 0;
-    height: auto;
+    //height: auto;
     margin-left: auto;
     margin-right: auto;
     h2 {
@@ -44,8 +48,12 @@ const Item = styled.div`
   }
 
   &:hover {
-    box-shadow: var(--bs5);
-    border: 1px solid var(--itembg);
+    filter: sepia(0.22);
+    mix-blend-mode: darken;
+    background: #eee7da;
+    h3 span {
+      color: #e16740;
+    }
   }
 
   img {
@@ -53,7 +61,7 @@ const Item = styled.div`
     display: flex;
     margin: 0 auto;
     width: 100%;
-    height: 440px;
+    height: auto;
     object-fit: cover;
   }
 
@@ -72,7 +80,6 @@ const Item = styled.div`
     align-items: center;
     overflow: hidden;
     width: 70px;
-    height: 70px;
     background-color: var(--red);
     border-radius: 50%;
 
