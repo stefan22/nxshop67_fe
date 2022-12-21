@@ -12,30 +12,10 @@
 
 :lollipop: ReactJS, NextJS, Apollo Client, Styled components
 
-## :paperclip: Back-end
-
-:lollipop: Keystone CMS, Mongo Atlas and GQL
-
-:lollipop: **<a href="https://keystonejs.com" target="_blank">See KeystoneJS docs/guides</a>**
-
-Generally follows these steps:
-
-1. Create a DB
-2. Create a KeystoneJS account.
-3. Create app: `npx create-keystone-app`
-4. Link DB <-> CMS account passing DB env vars.
-5. It will then create an AdminUI, and generate a GQL API based on
-   the schema/data passed.
 
 <br />
 
-#### <kdb>KeystoneJS</kdb>
-
-<img src="public/static/keystone.png" alt="keystone backend">
-
-<br />
-
-#### <kdb>Frontend s2</kdb>
+#### <kdb>Frontend</kdb>
 
 <img src="assets/images/nxshop67.png" alt="shop frontend">
 
