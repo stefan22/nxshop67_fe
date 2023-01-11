@@ -16,13 +16,12 @@
 
     "paths": {
       "@/components/*": ["components/*"],
-      "@/cstyles/*": ["components/styles/*"],
+      "@/styles/*": ["components/styles/*"],
       "@/graphql/*": ["graphql/*"],
       "@/lib/*": ["lib/*"],
       "@/pages/*": ["pages/*"],
       "@/assets/*": ["assets/images/*"],
-      "@/svgComponents/*": ["svgComponents/*"],
-      "@/styles/*": ["styles/*"]
+      "@/svgComponents/*": ["svgComponents/*"]
     }
   },
 

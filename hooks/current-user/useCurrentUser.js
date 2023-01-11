@@ -1,16 +1,5 @@
-import { gql, useQuery } from '@apollo/client'
-
-export const currentUserQuery = gql`
-  query {
-    authenticatedItem {
-      ... on User {
-        id
-        email
-        name
-      }
-    }
-  }
-`
+import { useQuery } from '@apollo/client'
+import { currentUserQuery } from './currentUserQuery'
 
 const useCurrentUser = () => {
   const {

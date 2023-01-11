@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import useSingleProduct from '@/graphql/singleProductQuery'
+import { useSingleProduct } from '../../hooks/single-product'
 import ErrorMessage from '@/lib/ErrorMessage'
 import ProductDetails from '@/components/product-details'
 
