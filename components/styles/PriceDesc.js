@@ -20,4 +20,4 @@ const PriceDesc = styled.h3`
   }
 `
 
-export default PriceDesc;
+export default PriceDesc

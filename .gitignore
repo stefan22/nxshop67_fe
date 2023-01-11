@@ -107,7 +107,8 @@ dist
 .tern-port
 
 .idea/
-assets/
+assets/images/all-productsx
+assets/images/other
 xassets/
 backend/
 

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const Item = styled.div`
   background: var(--itembg);
+  background: #e6e6e6;
   border: 1px solid var(--medgrey);
   position: relative;
   display: flex;
@@ -48,9 +49,9 @@ const Item = styled.div`
   }
 
   &:hover {
-    filter: sepia(0.22);
+    filter: brightness(1.1);
     mix-blend-mode: darken;
-    background: #eee7da;
+    background: #f8f9fa;
     h3 span {
       color: #e16740;
     }
