@@ -14,14 +14,15 @@
 
 :lollipop: ReactJS, NextJS, Apollo Client, Styled components
 
-:paperclip: headless cms backend /graphql - mongo atlas
+## Back-end :paperclip: headless cms/ graphql - mongo atlas
 
 
 <img src="public/static/keystone.png" alt="keystone backend">
 
+
 <br />
 
-#### <kdb>Frontend s2</kdb>
+#### <kdb>Frontend</kdb>
 
 <img src="assets/images/nxshop67.png" alt="shop frontend">
 
