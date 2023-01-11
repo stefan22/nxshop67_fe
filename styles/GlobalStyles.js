@@ -138,6 +138,10 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   
+  img,picture {
+    height: auto;
+  }
+  
   a {
     text-decoration: none;
     color: var(--black);
@@ -171,12 +175,13 @@ const GlobalStyles = createGlobalStyle`
     font-size: var(--fontSizeMedium);
     font-variant-caps: all-small-caps;
     color: var(--goldengray);
-    padding: 1rem 1rem 1.5rem;
+    padding: 0;
+    margin-top: 1.75rem;
     border-top-width: medium;
     background-color: var(--offWhite);
     line-height: var(--lineHeightSmall);
-    margin-block-end: 1rem;
     font-weight: 400;
+    
   }
 
   p {

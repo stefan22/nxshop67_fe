@@ -30,22 +30,20 @@ const InnerWrapperSl = styled.div`
   padding: 0 1.5rem;
 `
 
-const Layout = ({ children }) => {
-  return (
-    <PageWrapperSl>
-      <GlobalStyles />
-      <Head>
-        <title>NxShop67</title>
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width"
-        />
-      </Head>
-      <Header />
-      <InnerWrapperSl>{children}</InnerWrapperSl>
-    </PageWrapperSl>
-  )
-}
+const Layout = ({ children }) => (
+  <PageWrapperSl>
+    <GlobalStyles />
+    <Head>
+      <title>NxShop67</title>
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+      />
+    </Head>
+    <Header />
+    <InnerWrapperSl>{children}</InnerWrapperSl>
+  </PageWrapperSl>
+)
 
 Layout.propTypes = {
   children: PropTypes.any
