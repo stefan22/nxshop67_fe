@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCurrentUser } from '../graphql/currentUserQuery'
+import { useCurrentUser } from '../hooks/current-user'
 
 const Account = () => {
   const { currentUser, loading } = useCurrentUser()

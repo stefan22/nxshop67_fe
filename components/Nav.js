@@ -3,7 +3,7 @@ import Link from 'next/link'
 import NavSl from './styles/NavSl'
 import SignOut from './SignOut'
 
-import { useCurrentUser } from '../graphql/currentUserQuery'
+import { useCurrentUser } from '../hooks/current-user'
 
 const Nav = () => {
   const { currentUser } = useCurrentUser()

@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import useSingleProduct from '../graphql/singleProductQuery'
+import { useSingleProduct } from '../hooks/single-product'
 import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
 

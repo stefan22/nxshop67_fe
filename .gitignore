@@ -114,3 +114,6 @@ backend/
 
 .eslintignore
 .prettierignore
+.prettierrc
+next-env.d.ts
+.babelrc
