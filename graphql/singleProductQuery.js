@@ -1,28 +1,29 @@
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
 
-export const singleProductQuery = gql`
+const SingleProductQuery = gql`
   query singleProductQuery($id: ID!) {
     Product(where: { id: $id }) {
       name
       price
       description
       photo {
-        id
         image {
+          filename
           publicUrlTransformed
         }
+        altText
       }
     }
   }
 `
 
-export default function useSingleProduct({ id }) {
+export default function useSingleProduct(id) {
   const {
     data: singleProd,
     loading: singleProdLoading,
     error: singleProdError
-  } = useQuery(singleProductQuery, {
+  } = useQuery(SingleProductQuery, {
     variables: {
       id
     }
