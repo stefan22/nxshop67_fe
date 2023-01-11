@@ -10,13 +10,14 @@ const PriceTag = styled.span`
   letter-spacing: 1px;
   font-size: 2.5rem;
   display: inline-block;
+  max-width: fit-content;
   position: absolute;
   box-shadow: var(--bs5);
   top: 90px;
-  right: 0;
+  right: 10px;
   @media screen and (max-width: 736px) {
     top: 107px;
-    right: 0;
+    right: 10px;
   }
 `
 

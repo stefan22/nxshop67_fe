@@ -8,7 +8,7 @@ const OnSaleSl = styled.span`
   top: 12%;
   left: 1%;
   font-weight: 400;
-  margin-block-start: 6rem;
+  // margin-block-start: 6rem;
   box-shadow: var(--bs5);
   justify-content: center;
   align-items: center;
