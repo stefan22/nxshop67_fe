@@ -1,11 +1,11 @@
 import React from 'react'
 import { ApolloProvider } from '@apollo/client'
 import Layout from '../components/Layout'
-import routeNProgress from '../lib/nProgress/routeNProgress'
+import routeNProgress from '../components/nProgress/routeNProgress'
 import withApollo from '../lib/withData'
 // styles
 import '../styles/reset.css'
-import '../lib/nProgress/nprogress.css'
+import '../components/nProgress/nprogress.css'
 
 // on route changes anim
 routeNProgress()

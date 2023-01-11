@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import HeaderSl from './styles/HeaderSl'
+import HeaderSl from '@/styles/HeaderSl'
 import Nav from './Nav'
-import Navrap from '@/cstyles/Navrap'
+import Navrap from '@/styles/Navrap'
 import Image from 'next/image'
 import shop from '../assets/images/products/shop67.png'
 

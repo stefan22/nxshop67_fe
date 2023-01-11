@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
 import SignInUp from '@/components/SignInUp'
-import useForm from '../lib/useForm'
+import { useForm } from '../hooks/form'
 import { gql } from 'graphql-tag'
 import { useMutation } from '@apollo/client'
-import { currentUserQuery } from '@/graphql/currentUserQuery'
+import { currentUserQuery } from '../hooks/current-user'
 
 const signinMutation = gql`
   mutation signinMutation($email: String!, $password: String!) {

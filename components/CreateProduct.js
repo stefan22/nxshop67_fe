@@ -1,11 +1,11 @@
 import React from 'react'
 import Router from 'next/router'
-import useForm from '../lib/useForm'
+import useForm from '../hooks/form/useForm'
 import FormSl from './styles/FormSl'
 import LoginSl from './styles/LoginSl'
-import AxionSVG from '../svgComponents/axionSVG/AxionSVG'
+import AxionSVG from './axionSVG/AxionSVG'
 import ErrorMessage from '../lib/ErrorMessage'
-import useCreateProduct from '@/graphql/createProductMutation'
+import { useCreateProduct } from '../hooks/create-product'
 
 const CreateProduct = () => {
   const { input, resetForm, handleChange } = useForm({
