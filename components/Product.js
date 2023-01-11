@@ -6,12 +6,10 @@ import TitleSl from './styles/TitleSl'
 import OnSaleSl from './styles/OnSaleSl'
 import { GBPCurrencyFormat as poundFormat } from '../lib/currencyFormat'
 
-const Product = ({ product }) => {
-  return (
-    <ItemSl data-testid="product">
-      <h2>{product?.name}</h2>
-      <h3 className="heading_H3">{product?.description}</h3>
-      <OnSaleSl>ON-SALE!</OnSaleSl>
+const Product = ({ product }) => (
+  <ItemSl data-testid="product">
+    <OnSaleSl>ON-SALE!</OnSaleSl>
+    <Link href={`/product/${product?.id}`}>
       <picture>
         <source srcSet={product?.photo?.image.publicUrlTransformed} />
         <img
@@ -19,26 +17,23 @@ const Product = ({ product }) => {
           alt={product?.name}
         />
       </picture>
+    </Link>
+    <PriceTag>{poundFormat(product?.price)}</PriceTag>
+    <TitleSl>
+      <span>{product?.name}</span>
 
-      <TitleSl>
-        <Link href={`/product/${product?.id}`}>{product?.name}</Link>
-      </TitleSl>
-      <PriceTag>{poundFormat(product?.price)}</PriceTag>
-
-      <div className="buttonList">
-        <Link
-          href={{
-            pathname: '/update',
-            query: {
-              id: product?.id
-            }
-          }}
-        >
-          Edit -
-        </Link>
-      </div>
-    </ItemSl>
-  )
-}
+      <Link
+        href={{
+          pathname: '/update',
+          query: {
+            id: product?.id
+          }
+        }}
+      >
+        Edit
+      </Link>
+    </TitleSl>
+  </ItemSl>
+)
 
 export default Product

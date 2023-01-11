@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProductDetails /> renders product details data 1`] = `
+exports[`<DetailsItem /> renders product details data 1`] = `
 <div>
   <div
     data-testid="product-details"

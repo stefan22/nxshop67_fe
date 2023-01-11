@@ -20,6 +20,7 @@ const useCurrentUser = () => {
   } = useQuery(currentUserQuery)
 
   if (userLoading) return <p>Loading...</p>
+  // eslint-disable-next-line no-console
   if (userError) return console.log(userError)
 
   return {
