@@ -1,25 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ApolloProvider } from '@apollo/client'
 import Layout from '../components/Layout'
-import routeNProgress from '../components/nProgress/routeNProgress'
+import routeNProgress from '../components/nProgress'
 import withApollo from '../lib/withData'
 // styles
 import '../styles/reset.css'
-import '../components/nProgress/nprogress.css'
 
-// on route changes anim
-routeNProgress()
+let pageProps = {}
 
-const App = ({ Component, pageProps, apollo }) => (
-  <ApolloProvider client={apollo}>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  </ApolloProvider>
-)
+const App = ({ Component, pageProps, apollo }) => {
+  useEffect(() => {
+    routeNProgress()
+    return () => routeNProgress
+  }, [pageProps])
+
+  return (
+    <ApolloProvider client={apollo}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ApolloProvider>
+  )
+}
 
 App.getInitialProps = async ({ Component, ctx }) => {
-  let pageProps = {}
   // eslint-disable-next-line no-console
   console.log('page props ', pageProps)
 
