@@ -7,20 +7,19 @@
 
 import Router from 'next/router'
 import NProgress from 'nprogress'
-
-const routeNProgress = () => {
+export const routeNProgress = () => {
+  NProgress.configure({
+    easing: 'ease',
+    speed: 850
+  })
   Router.events.on('routeChangeStart', () => {
     NProgress.set(0, 0)
-    NProgress.inc(0.15)
   })
   Router.events.on('routeChangeComplete', () => {
-    NProgress.set(0.94)
+    NProgress.set(1)
     NProgress.done(true)
   })
   Router.events.on('routeChangeError', () => {
-    NProgress.set(0.0)
-    NProgress.inc(0.15)
+    NProgress.remove()
   })
 }
-
-export default routeNProgress

@@ -22,7 +22,6 @@ const Products = () => {
   if (allProdsLoading) return <p>Loading...</p>
   if (allProdsError) return <ErrorMessage error={allProdsError} />
 
-
   return (
     <ProductsListSl data-testid="all-products">
       {allProds?.allProducts.map(product => (
