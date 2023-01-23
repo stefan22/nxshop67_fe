@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const FormSl = styled.form`
+const FormProductStyles = styled.form`
   border: 5px solid var(--white);
   padding: 0 5rem;
   font-size: var(--fontSizeTxt);
@@ -9,7 +9,6 @@ const FormSl = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 612px;
   height: auto;
   justify-content: center;
   @media screen and (max-width: 736px) {
@@ -104,4 +103,4 @@ const FormSl = styled.form`
   }
 `
 
-export default FormSl
+export default FormProductStyles

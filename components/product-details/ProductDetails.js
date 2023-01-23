@@ -1,8 +1,8 @@
 import React from 'react'
-import DetailsItem from './DetailsItem'
+import ProductDetailsStyles from './ProductDetails.styles'
 
 export const ProductDetails = ({ product }) => (
-  <DetailsItem data-testid="product-details">
+  <ProductDetailsStyles data-testid="product-details">
     <picture>
       <img
         src={product?.photo.image.publicUrlTransformed}
@@ -14,5 +14,5 @@ export const ProductDetails = ({ product }) => (
     <h2>{product?.name}</h2>
     <p>{product?.price}</p>
     <p>{product?.description}</p>
-  </DetailsItem>
+  </ProductDetailsStyles>
 )

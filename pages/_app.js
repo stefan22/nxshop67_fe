@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { ApolloProvider } from '@apollo/client'
-import Layout from '../components/Layout'
 import routeNProgress from '../components/nProgress'
 import withApollo from '../lib/withData'
+import Layout from '@/components/layout'
 // styles
 import '../styles/reset.css'
 
