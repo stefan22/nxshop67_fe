@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const DetailsItem = styled.div`
+const Details = styled.div`
   img {
     max-width: 510px;
     width: 100%;
@@ -11,4 +11,4 @@ const DetailsItem = styled.div`
   }
 `
 
-export default DetailsItem
+export default Details
