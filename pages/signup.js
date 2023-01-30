@@ -1,7 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
-import useForm from '../hooks/useForm'
+import { useForm } from '../hooks/form'
 import SigninSl from '../components/styles/SigninSl'
 import SignIn from './signin'
 import Link from 'next/link'
