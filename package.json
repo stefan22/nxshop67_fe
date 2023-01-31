@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "",
   "private": true,
+  "homepage": ".",
   "main": "index.js",
+  "exports":  "./public/*",
   "scripts": {
     "dev": "next -p 3003",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start -p 3003",
     "coverage": "jest --coverage",
     "test": "NODE_ENV=test jest --watchAll",

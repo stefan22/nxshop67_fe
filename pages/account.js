@@ -9,6 +9,15 @@ const Account = () => {
   return (
     <>
       <h1>account {currentUser?.name || 'no name'} </h1>
+      <p>
+        Good time to complete hsekpng: - folder structure started it:
+        new folder with js file and style components and index.js
+        updated backend packages should update fntend pckgs see if
+        tests work with comps path module after eslint-config next
+        chngs bring evrthng up to speed and move to cart/checkout
+        after forms also dont need this page atm actually leave for
+        now any selling of items to me from bkend cms
+      </p>
     </>
   )
 }

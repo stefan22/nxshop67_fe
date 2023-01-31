@@ -4,7 +4,7 @@ const Details = styled.div`
   img {
     max-width: 510px;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     object-fit: contain;
   }
   @media screen and (max-width: 736px) {

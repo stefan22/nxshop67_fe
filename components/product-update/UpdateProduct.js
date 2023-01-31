@@ -1,12 +1,10 @@
 import { useSingleProduct } from '../../hooks/single-product'
-import { useProductUpdate } from '../../hooks/product-update'
-import FormProductStyles from './FormProduct.styles'
-import ProductUpdateStyles from '@/components/product-update/ProductUpdate.styles'
+import { ProductUpdate, FormContainer } from './UpdateProduct.styles'
 import ErrorMessage from '@/lib/ErrorMessage'
 import useForm from '../../hooks/form/useForm'
 
 export const UpdateProduct = ({ id }) => {
-  const { input, handleChange } = useForm({
+  const { handleChange } = useForm({
     name: '',
     description: '',
     price: 0
@@ -21,15 +19,14 @@ export const UpdateProduct = ({ id }) => {
 
   return (
     <div className="product-update">
-      {!singleProdLoading && (
-        <ProductUpdateStyles>
-          <p>NAME: {Product.name}</p>
-          <p>DESC: {Product.description}</p>
-          <p>PRICE: {Product.price}</p>
-          <p>IMG SRC: {Product.photo.image.publicUrlTransformed}</p>
-        </ProductUpdateStyles>
-      )}
-      <FormProductStyles>
+      <ProductUpdate>
+        <p>NAME: {Product.name}</p>
+        <p>DESC: {Product.description}</p>
+        <p>PRICE: {Product.price}</p>
+        <p>IMG SRC: {Product.photo.image.publicUrlTransformed}</p>
+      </ProductUpdate>
+
+      <FormContainer>
         <div className="login-title__mobile">
           <h1>Sign in</h1>
         </div>
@@ -83,7 +80,7 @@ export const UpdateProduct = ({ id }) => {
         <button disabled type="submit">
           Update Product
         </button>
-      </FormProductStyles>
+      </FormContainer>
     </div>
   )
 }

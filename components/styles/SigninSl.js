@@ -7,6 +7,7 @@ const SigninSl = styled.div`
   width: 100%;
   max-width: 920px;
   height: auto;
+  transition: all linear 0.3s 50ms;
   header {
     display: flex;
     background: var(--offWhite);
@@ -15,7 +16,8 @@ const SigninSl = styled.div`
     align-content: center;
     text-align: center;
     h1 {
-      margin: 1rem 0;
+      margin: 3.5rem 0 0;
+      font-size: 3.75rem;
     }
     p {
       display: flex;
@@ -26,16 +28,16 @@ const SigninSl = styled.div`
       font-size: var(--fontSizeMedium);
       font-weight: 400;
       width: 100%;
-      height: 60px;
-      background-color: var(--lightred);
+      height: 50px;
     }
   }
   .login {
     border: 1px solid var(--ghostwhite);
+
     padding: 0;
     width: 100%;
     min-height: 600px;
-    max-width: 460px;
+    max-width: 480px;
     @media screen and (max-width: 736px) {
       border: none;
     }
@@ -58,21 +60,13 @@ const SigninSl = styled.div`
           margin: 2rem 0 2rem;
           padding: 0;
           position: relative;
+
           span {
             position: absolute;
-            right: 15px;
-            top: 5px;
+            right: 5px;
+            top: 1px;
             cursor: pointer;
-            font-size: var(--fontSizeSmall);
-            ::before {
-              content: '?';
-              width: 25px;
-              height: 25px;
-              border-radius: 50%;
-              margin-right: 3px;
-              padding: 2px;
-              background-color: var(--lightred);
-            }
+            font-size: var(--fontSizeTxt);
           }
 
           label {
@@ -84,7 +78,8 @@ const SigninSl = styled.div`
 
           input {
             background-color: var(--dgray);
-            padding: 10px 20px;
+            padding: 9px 20px;
+            border: 1px solid lightgray;
           }
         }
         .buttons-group {
@@ -104,9 +99,14 @@ const SigninSl = styled.div`
           .submit-button {
             display: flex;
             button {
-              padding: 10px 20px;
+              font-size: 1.75rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
               width: 100%;
-              line-height: 1;
+              line-height: 1.5;
+              height: 42px;
             }
           }
           .login__no-account {
@@ -116,9 +116,14 @@ const SigninSl = styled.div`
             align-content: center;
             width: 100%;
             button {
-              padding: 10px 20px;
+              font-size: 1.75rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
               width: 100%;
-              line-height: 1;
+              line-height: 1.5;
+              height: 42px;
               background-color: var(--red);
             }
           }

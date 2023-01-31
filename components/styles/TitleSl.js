@@ -3,8 +3,9 @@ import styled from 'styled-components'
 const TitleSl = styled.h3`
   display: flex;
   line-height: var(--lineHeightNormal);
-  transform: translateY(-30px) skew(-5deg) rotate(-1deg);
-  height: 45px;
+  perspective: 200px;
+  transform: translateY(-15px) skew(-5deg) rotate(-1deg);
+  height: 52px;
   box-sizing: border-box;
   margin: 0;
   max-width: 99%;

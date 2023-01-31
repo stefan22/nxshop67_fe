@@ -1,28 +1,28 @@
 import React from 'react'
 import Link from 'next/link'
-import HeaderSl from '@/styles/HeaderSl'
-import Nav from './Nav'
+import HeaderContainer from './Header.styles'
+import Nav from '../Nav'
 import Navrap from '@/styles/Navrap'
 import Image from 'next/image'
-import shop from '../assets/images/products/shop67.png'
+import shop from '@/assets/products/shop67.png'
 
 const Header = () => (
-  <HeaderSl data-testid="top-navigation">
+  <HeaderContainer data-testid="top-navigation">
     <Navrap>
       <Link href={'/'} passHref>
         <a>
           <Image
             data-testid="logo"
             src={shop}
-            width={57}
-            height={56}
+            width={51}
+            height={50}
             alt={'logo'}
           />
         </a>
       </Link>
       <Nav />
     </Navrap>
-  </HeaderSl>
+  </HeaderContainer>
 )
 
 export default Header

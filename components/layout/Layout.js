@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import Header from '../Header'
+import Header from '../header'
 import GlobalStyles from '../../styles/GlobalStyles'
 import { PageWrapperSl, InnerWrapperSl } from './Layout.styles'
 

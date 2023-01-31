@@ -5,7 +5,7 @@ const OnSaleSl = styled.span`
   flex-direction: column;
   padding: 0;
   position: absolute;
-  top: 12%;
+  top: 40%;
   left: 1%;
   font-weight: 400;
   // margin-block-start: 6rem;
