@@ -1,14 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-import HeaderContainer from './Header.styles'
+import { HeaderContainer, Navwrap } from './Header.styles'
 import Nav from '../Nav'
-import Navrap from '@/styles/Navrap'
 import Image from 'next/image'
 import shop from '@/assets/products/shop67.png'
 
 const Header = () => (
   <HeaderContainer data-testid="top-navigation">
-    <Navrap>
+    <Navwrap>
       <Link href={'/'} passHref>
         <a>
           <Image
@@ -21,7 +20,7 @@ const Header = () => (
         </a>
       </Link>
       <Nav />
-    </Navrap>
+    </Navwrap>
   </HeaderContainer>
 )
 

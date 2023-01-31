@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client'
 import gql from 'graphql-tag'
 import Router from 'next/router'
-import { currentUserQuery } from '../hooks/current-user'
+import { currentUserQuery } from '../../hooks/current-user/currentUserQuery'
 
 const signOutMutation = gql`
   mutation signOutMutation {
