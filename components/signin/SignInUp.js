@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import SigninSl from './styles/SigninSl'
+import SignInUpContainer from './SignInUp.styles'
 
 const SignInUp = ({
   handleSubmit,
@@ -12,7 +12,7 @@ const SignInUp = ({
   btnIntroMsg,
   heading
 }) => (
-  <SigninSl>
+  <SignInUpContainer>
     <div className="login">
       <header>
         <h1>Signin</h1>
@@ -69,7 +69,7 @@ const SignInUp = ({
         </form>
       </div>
     </div>
-  </SigninSl>
+  </SignInUpContainer>
 )
 
 export default SignInUp

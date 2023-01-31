@@ -1,14 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
-import ItemSl from './styles/ItemSl'
-import PriceTag from './styles/PriceTag'
-import TitleSl from './styles/TitleSl'
-import OnSaleSl from './styles/OnSaleSl'
-import { GBPCurrencyFormat as poundFormat } from '../lib/currencyFormat'
+import {
+  TitleContainer,
+  OnSaleContainer,
+  PriceTag,
+  ItemContainer
+} from './Product.styles'
+import { GBPCurrencyFormat as poundFormat } from '@/lib/currencyFormat'
 
 const Product = ({ product }) => (
-  <ItemSl data-testid="product">
-    <OnSaleSl>ON-SALE!</OnSaleSl>
+  <ItemContainer data-testid="product">
+    <OnSaleContainer>ON-SALE!</OnSaleContainer>
     <Link href={`/product/${product?.id}`}>
       <picture>
         <source srcSet={product?.photo?.image.publicUrlTransformed} />
@@ -19,7 +21,7 @@ const Product = ({ product }) => (
       </picture>
     </Link>
     <PriceTag>{poundFormat(product?.price)}</PriceTag>
-    <TitleSl>
+    <TitleContainer>
       <span>{product?.name}</span>
 
       <Link
@@ -32,8 +34,8 @@ const Product = ({ product }) => (
       >
         Edit
       </Link>
-    </TitleSl>
-  </ItemSl>
+    </TitleContainer>
+  </ItemContainer>
 )
 
 export default Product

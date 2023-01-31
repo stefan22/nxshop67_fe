@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const SigninSl = styled.div`
+const SignInUpContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -133,4 +133,4 @@ const SigninSl = styled.div`
   }
 `
 
-export default SigninSl
+export default SignInUpContainer

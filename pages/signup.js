@@ -1,8 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
-import { useForm } from '../hooks/form'
-import SigninSl from '../components/styles/SigninSl'
+import useForm from '../hooks/form'
 import SignIn from './signin'
 import Link from 'next/link'
 
@@ -62,80 +61,78 @@ const SignUp = () => {
   }
 
   return (
-    <SigninSl>
-      <div className="login">
-        <header>
-          <h1>Signup</h1>
-          <p>Simple registration process!</p>
-        </header>
-        <p className="error-message">
-          {error?.message ? error.message : ''}
-        </p>
-        <div className="login__body">
-          <form method="POST" onSubmit={handleSubmit}>
-            <fieldset>
-              <section className="input-field">
-                <label htmlFor="name">
-                  Name:
-                  <input
-                    type="name"
-                    autoComplete="current-name"
-                    placeholder="Name"
-                    name="name"
-                    required
-                    value={input.name}
-                    onChange={handleChange}
-                  />
-                </label>
-              </section>
-              <section className="input-field">
-                <label htmlFor="email">
-                  Email:
-                  <input
-                    type="email"
-                    autoComplete="current-email"
-                    placeholder="Email"
-                    name="email"
-                    required
-                    value={input.email}
-                    onChange={handleChange}
-                  />
-                </label>
+    <div className="login">
+      <header>
+        <h1>Signup</h1>
+        <p>Simple registration process!</p>
+      </header>
+      <p className="error-message">
+        {error?.message ? error.message : ''}
+      </p>
+      <div className="login__body">
+        <form method="POST" onSubmit={handleSubmit}>
+          <fieldset>
+            <section className="input-field">
+              <label htmlFor="name">
+                Name:
+                <input
+                  type="name"
+                  autoComplete="current-name"
+                  placeholder="Name"
+                  name="name"
+                  required
+                  value={input.name}
+                  onChange={handleChange}
+                />
+              </label>
+            </section>
+            <section className="input-field">
+              <label htmlFor="email">
+                Email:
+                <input
+                  type="email"
+                  autoComplete="current-email"
+                  placeholder="Email"
+                  name="email"
+                  required
+                  value={input.email}
+                  onChange={handleChange}
+                />
+              </label>
+            </section>
+
+            <section className="input-field">
+              <label htmlFor="password">
+                Password:
+                <span>Password Reset</span>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                  autoComplete="current-password"
+                  value={input.password}
+                  onChange={handleChange}
+                />
+              </label>
+            </section>
+
+            <div className="buttons-group">
+              <section className="submit-button">
+                <button type="submit">Sign up</button>
               </section>
 
-              <section className="input-field">
-                <label htmlFor="password">
-                  Password:
-                  <span>Password Reset</span>
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    required
-                    autoComplete="current-password"
-                    value={input.password}
-                    onChange={handleChange}
-                  />
-                </label>
+              <section className="login__no-account">
+                <p>Already have an account?</p>
+                <Link href="/signin">
+                  <button type="button">Sign in</button>
+                </Link>
               </section>
-
-              <div className="buttons-group">
-                <section className="submit-button">
-                  <button type="submit">Sign up</button>
-                </section>
-
-                <section className="login__no-account">
-                  <p>Already have an account?</p>
-                  <Link href="/signin">
-                    <button type="button">Sign in</button>
-                  </Link>
-                </section>
-              </div>
-            </fieldset>
-          </form>
-        </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
-    </SigninSl>
+    </div>
   )
 }
 

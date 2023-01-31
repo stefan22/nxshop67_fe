@@ -1,10 +1,12 @@
 import React from 'react'
 import Router from 'next/router'
-import useForm from '../hooks/form/useForm'
-import FormSl from './styles/FormSl'
-import LoginSl from './styles/LoginSl'
-import ErrorMessage from '../lib/ErrorMessage'
-import { useCreateProduct } from '../hooks/create-product'
+import useForm from '../../hooks/form'
+import {
+  ProductContainer,
+  LoginContainer
+} from './CreateProduct.styles'
+import ErrorMessage from '@/lib/ErrorMessage'
+import { useCreateProduct } from '../../hooks/create-product'
 
 const CreateProduct = () => {
   const { input, resetForm, handleChange } = useForm({
@@ -17,7 +19,7 @@ const CreateProduct = () => {
     useCreateProduct()
 
   return (
-    <LoginSl>
+    <LoginContainer>
       {/*//leftside container*/}
       <div className="loginLeftContainer">
         <div className="left-item">
@@ -38,7 +40,7 @@ const CreateProduct = () => {
       </div>
 
       {/*//rightside container*/}
-      <FormSl
+      <ProductContainer
         onSubmit={async event => {
           event.preventDefault()
           let res = await createProduct({ variables: input })
@@ -115,8 +117,8 @@ const CreateProduct = () => {
         <button onClick={() => resetForm(input)} type="button">
           Reset Form
         </button>
-      </FormSl>
-    </LoginSl>
+      </ProductContainer>
+    </LoginContainer>
   )
 }
 
