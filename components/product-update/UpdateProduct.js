@@ -47,7 +47,7 @@ export const UpdateProduct = ({ id }) => {
               id="name"
               required={true}
               onChange={handleChange}
-              value={Product?.name}
+              value={Product.name}
             />
           </label>
 
@@ -60,7 +60,7 @@ export const UpdateProduct = ({ id }) => {
               id="price"
               required={true}
               onChange={handleChange}
-              value={Product?.price}
+              value={Product.price}
             />
           </label>
 
@@ -72,7 +72,7 @@ export const UpdateProduct = ({ id }) => {
               id="description"
               required={true}
               onChange={handleChange}
-              value={Product?.description}
+              value={Product.description}
             />
           </label>
         </fieldset>
