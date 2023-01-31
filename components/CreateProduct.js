@@ -3,7 +3,6 @@ import Router from 'next/router'
 import useForm from '../hooks/form/useForm'
 import FormSl from './styles/FormSl'
 import LoginSl from './styles/LoginSl'
-import AxionSVG from './axionSVG/AxionSVG'
 import ErrorMessage from '../lib/ErrorMessage'
 import { useCreateProduct } from '../hooks/create-product'
 
@@ -22,18 +21,18 @@ const CreateProduct = () => {
       {/*//leftside container*/}
       <div className="loginLeftContainer">
         <div className="left-item">
-          <AxionSVG width={400} height={400} />
-
           <div className="login-title">
-            <h1>Create a new product</h1>
+            <h1>Usr accnt new itm selling form</h1>
           </div>
 
-          <h2 className="login-sub-title">Welcome back!</h2>
+          <h2 className="login-sub-title">have 2 finish p theme!</h2>
           <div className="redirect-signup">
-            In order to add a new product to database:
+            New product to db by user of the acct: (sell) aproval req.
+            Other form deals w user selling/ editing already approvd
+            listing - no image needed there
             <br />
-            Fill out the <b>product form</b>, and press &quot;
-            <b>Add Product</b>&quot; button.
+            edit btn should b shown only to owner of itm when signed
+            in. - keeping both forms for now
           </div>
         </div>
       </div>

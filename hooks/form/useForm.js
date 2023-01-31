@@ -41,7 +41,6 @@ const useForm = (
     )
 
   return {
-    input,
     resetForm,
     handleChange
   }

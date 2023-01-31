@@ -6,18 +6,17 @@ const Item = styled.div`
   border: 1px solid var(--medgrey);
   position: relative;
   display: flex;
-  overflow: auto;
   box-shadow: var(--bs);
   flex-direction: column;
   width: 350px;
-  height: 440px;
+  height: 430px;
   box-sizing: border-box;
   padding: 0;
   cursor: pointer;
   margin-bottom: 7rem;
   justify-content: space-between;
   z-index: 1;
-  transition: all 400ms linear 0ms;
+  transition: all 300ms linear 0ms;
 
   @media screen and (max-width: 1419px) {
     /* 2 columns - product takes half the width */
@@ -35,7 +34,7 @@ const Item = styled.div`
     box-shadow: none;
     border: none;
     padding: 0;
-    //height: auto;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     h2 {
@@ -62,8 +61,8 @@ const Item = styled.div`
     display: flex;
     margin: 0 auto;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    align-self: center;
+    height: fit-content;
   }
 
   p {

@@ -137,9 +137,22 @@ const GlobalStyles = createGlobalStyle`
       border-color: var(--black);
     }
   }
-  
-  img,picture {
-    height: auto;
+ 
+  picture {
+    height: fit-content;
+    display: flex;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  picture img:hover {
+    filter:hue-rotate(
+      10deg
+    );
   }
   
   a {
@@ -155,6 +168,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: var(--fontSizeLarge);
     color: var(--black);
     font-weight: 400;
+    font-size: 3rem;
     margin-block-start: 4.5rem, var(--space);
   }
 

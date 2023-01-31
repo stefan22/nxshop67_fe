@@ -13,6 +13,7 @@ const LoginSl = styled.div`
   min-height: 69vh;
   text-align: left;
   border-radius: 12px;
+  transition: all linear 0.3s;
   background-color: #eee;
   @media screen and (max-width: 1279px) {
     background: transparent;

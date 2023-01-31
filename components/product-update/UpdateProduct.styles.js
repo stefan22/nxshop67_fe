@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const FormProductStyles = styled.form`
+const FormContainer = styled.form`
   border: 5px solid var(--white);
   padding: 0 5rem;
   font-size: var(--fontSizeTxt);
@@ -16,7 +16,6 @@ const FormProductStyles = styled.form`
     width: 100%;
     border: none;
   }
-
   .login-title__mobile {
     display: none;
     @media screen and (max-width: 1279px) {
@@ -103,4 +102,14 @@ const FormProductStyles = styled.form`
   }
 `
 
-export default FormProductStyles
+const ProductUpdate = styled.div`
+  display: flex;
+  line-height: var(--lineHeightNormal);
+  box-sizing: border-box;
+  margin: 0;
+  flex-direction: column;
+  z-index: 10;
+  margin-bottom: 3rem;
+`
+
+export { FormContainer, ProductUpdate }
