@@ -1,5 +1,4 @@
 import gql from 'graphql-tag'
-import { useMutation } from '@apollo/client'
 
 export const createProductMutation = gql`
   mutation createProductMutation(

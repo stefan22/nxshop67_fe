@@ -1,4 +1,3 @@
-import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
 
 export const singleProductQuery = gql`
