@@ -1,27 +1,7 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:import/recommended',
-    'next',
-    'next/core-web-vitals',
-    'prettier'
-  ],
-  plugins: ['react', 'prettier'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-      sourceType: 'module'
-    },
-    ecmaVersion: 13,
-    sourceType: 'module'
-  },
-  env: {
-    jest: true,
-    browser: true,
-    es6: true,
-    node: true
-  },
+  root: true,
+  extends: ['next', 'prettier'],
+  plugins: ['prettier'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'next/link-passhref': 0,
