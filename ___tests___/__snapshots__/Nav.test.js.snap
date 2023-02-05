@@ -3,7 +3,7 @@
 exports[`Nav menu nav menu when user is signed in 1`] = `
 <div>
   <ul
-    class="NavSl-sc-gqsck-0 eWpGRM"
+    class="NavStyles-sc-gqsck-0 eWpGRM"
     data-testid="menu-links"
   >
     <a
@@ -33,7 +33,7 @@ exports[`Nav menu nav menu when user is signed in 1`] = `
 exports[`Nav menu nav menu when user not signed in 1`] = `
 <div>
   <ul
-    class="NavSl-sc-gqsck-0 eWpGRM"
+    class="NavStyles-sc-gqsck-0 eWpGRM"
     data-testid="menu-links"
   >
     <a

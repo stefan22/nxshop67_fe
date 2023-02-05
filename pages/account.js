@@ -2,13 +2,13 @@ import React from 'react'
 import { useCurrentUser } from '../hooks/current-user'
 
 const Account = () => {
-  const { currentUser, loading } = useCurrentUser()
+  const { currentUser, userLoading } = useCurrentUser()
 
-  if (loading) return <p>Loading...</p>
+  if (userLoading) return <p>Loading...</p>
 
   return (
     <>
-      <h1>account {currentUser?.name || 'no name'} </h1>
+      <h1>Welcome {currentUser?.name || 'no name'} </h1>
       <p>
         Good time to complete hsekpng: - folder structure started it:
         new folder with js file and style components and index.js

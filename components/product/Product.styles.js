@@ -21,7 +21,7 @@ const TitleContainer = styled.h3`
     transition: color 0.3s linear 0ms;
     color: var(--white);
     padding: 0;
-    width: 86%;
+    width: 85%;
     margin: 0 auto;
   }
   a {
@@ -34,7 +34,7 @@ const TitleContainer = styled.h3`
     border-top: 1px solid #818181;
     border-bottom: 1px solid #818181;
     transition: text-decoration 0.35s ease 0ms;
-    width: 13%;
+    width: 14%;
     line-height: 44px;
     text-shadow: none;
     &:hover {
@@ -51,7 +51,7 @@ const PriceTag = styled.span`
   padding: 5px;
   line-height: 1.1;
   letter-spacing: 1px;
-  font-size: 2.5rem;
+  font-size: var(--fontSizeMedium);
   width: 50%;
   display: inline-block;
   max-width: fit-content;
@@ -64,7 +64,6 @@ const PriceTag = styled.span`
   @media screen and (max-width: 736px) {
     top: 5%;
     right: 5%;
-    font-size: 3rem;
   }
 `
 
@@ -76,7 +75,6 @@ const OnSaleContainer = styled.span`
   top: 40%;
   left: 1%;
   font-weight: 400;
-  // margin-block-start: 6rem;
   box-shadow: var(--bs5);
   justify-content: center;
   align-items: center;
@@ -95,16 +93,13 @@ const OnSaleContainer = styled.span`
 
 const ItemContainer = styled.div`
   background: var(--itembg);
-  background: #e6e6e6;
   border: 1px solid var(--medgrey);
   position: relative;
   display: flex;
   box-shadow: var(--bs);
   flex-direction: column;
   width: 350px;
-  height: 430px;
-  box-sizing: border-box;
-  padding: 0;
+  height: auto;
   cursor: pointer;
   margin-bottom: 7rem;
   justify-content: space-between;
@@ -113,7 +108,8 @@ const ItemContainer = styled.div`
 
   @media screen and (max-width: 1419px) {
     /* 2 columns - product takes half the width */
-    width: 48%;
+    width: 310px;
+    height: auto;
     h2,
     p {
       justify-content: center;

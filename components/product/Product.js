@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   TitleContainer,
@@ -12,9 +13,14 @@ const Product = ({ product }) => (
   <ItemContainer data-testid="product">
     <OnSaleContainer>ON-SALE!</OnSaleContainer>
     <Link href={`/product/${product?.id}`}>
-      <picture>
+      <picture
+      >
         <source srcSet={product?.photo?.image.publicUrlTransformed} />
         <img
+          width={348}
+          height={410}
+          layout="fill"
+          // objectFit="cover"
           src={product?.photo?.image.publicUrlTransformed}
           alt={product?.name}
         />
