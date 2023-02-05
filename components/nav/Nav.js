@@ -10,15 +10,15 @@ const Nav = () => {
 
   return (
     <NavContainer data-testid="menu-links">
-      <Link href="./products">Products</Link>
+      <Link href="/products">Products</Link>
       {currentUser && (
         <>
-          <Link href="./account">Account</Link>
-          <Link href="./order">Order</Link>
+          <Link href="/account">Account</Link>
+          <Link href="/order">Order</Link>
           <SignOut />
         </>
       )}
-      {!currentUser && <Link href="./signin">Signin</Link>}
+      {!currentUser && <Link href="/signin">Signin</Link>}
     </NavContainer>
   )
 }
