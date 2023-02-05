@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react'
 import { ApolloProvider } from '@apollo/client'
-import routeNProgress from '../components/nProgress'
+import routeNProgress from '../components/n-progress'
 import withApollo from '../lib/withData'
 import Layout from '@/components/layout'
 // styles
 import '../styles/reset.css'
 
-let pageProps = {}
-
 const App = ({ Component, pageProps, apollo }) => {
   useEffect(() => {
     routeNProgress()
     return () => routeNProgress
-  }, [pageProps])
+  }, [])
+  const side = process.browser ? 'client' : 'server'
 
   return (
     <ApolloProvider client={apollo}>
@@ -24,6 +23,7 @@ const App = ({ Component, pageProps, apollo }) => {
 }
 
 App.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = {}
   // eslint-disable-next-line no-console
   console.log('page props ', pageProps)
 

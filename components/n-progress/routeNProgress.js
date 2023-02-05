@@ -1,8 +1,6 @@
 /*
  *  @routeNProgress
- *  It runs on "Route page change" and it renders page loading
- *  progress animation
- *
+ *  It runs on "Routes/page changes"
  * */
 
 import Router from 'next/router'
@@ -12,6 +10,7 @@ export const routeNProgress = () => {
     easing: 'ease',
     speed: 850
   })
+
   Router.events.on('routeChangeStart', () => {
     NProgress.set(0, 0)
   })
