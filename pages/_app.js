@@ -11,7 +11,6 @@ const App = ({ Component, pageProps, apollo }) => {
     routeNProgress()
     return () => routeNProgress
   }, [])
-  const side = process.browser ? 'client' : 'server'
 
   return (
     <ApolloProvider client={apollo}>

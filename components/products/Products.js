@@ -5,8 +5,7 @@ import { useAllProducts } from '../../hooks/all-products'
 import ErrorMessage from '@/lib/ErrorMessage'
 
 const Products = () => {
-  const { allProds, allProdsLoading, allProdsError } =
-    useAllProducts()
+  const { allProds, allProdsLoading, allProdsError } = useAllProducts()
 
   if (allProdsLoading) return <p>Loading...</p>
   if (allProdsError) return <ErrorMessage error={allProdsError} />

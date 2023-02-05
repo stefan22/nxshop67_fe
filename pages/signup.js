@@ -6,14 +6,8 @@ import SignIn from './signin'
 import Link from 'next/link'
 
 const signupMutation = gql`
-  mutation signupMutation(
-    $email: String!
-    $name: String!
-    $password: String!
-  ) {
-    createUser(
-      data: { email: $email, name: $name, password: $password }
-    ) {
+  mutation signupMutation($email: String!, $name: String!, $password: String!) {
+    createUser(data: { email: $email, name: $name, password: $password }) {
       id
       email
       name
@@ -27,12 +21,9 @@ const SignUp = () => {
     name: '',
     password: ''
   })
-  const [signup, { data, loading, error }] = useMutation(
-    signupMutation,
-    {
-      variables: input
-    }
-  )
+  const [signup, { data, loading, error }] = useMutation(signupMutation, {
+    variables: input
+  })
   const handleSubmit = async e => {
     e.preventDefault()
     // eslint-disable-next-line no-console
@@ -66,9 +57,7 @@ const SignUp = () => {
         <h1>Signup</h1>
         <p>Simple registration process!</p>
       </header>
-      <p className="error-message">
-        {error?.message ? error.message : ''}
-      </p>
+      <p className="error-message">{error?.message ? error.message : ''}</p>
       <div className="login__body">
         <form method="POST" onSubmit={handleSubmit}>
           <fieldset>

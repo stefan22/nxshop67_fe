@@ -1,29 +1,19 @@
-import { useSingleProduct } from '../../hooks/single-product'
 import { ProductUpdate, FormContainer } from './UpdateProduct.styles'
-import ErrorMessage from '@/lib/ErrorMessage'
 import useForm from '../../hooks/form/useForm'
 
-export const UpdateProduct = ({ id }) => {
-  const { handleChange } = useForm({
-    name: '',
-    description: '',
-    price: 0
-  })
-  const { singleProd, singleProdLoading, singleProdError } =
-    useSingleProduct(id)
+export const UpdateProduct = () => {
+  //passing id in useForm
+  const { input, loading, handleChange } = useForm()
 
-  if (singleProdLoading) return <p>Loading...</p>
-  if (singleProdError) return <p>{singleProdError}</p>
-
-  const { Product } = singleProd
+  if (loading) return <p>Loading...</p>
 
   return (
     <div className="product-update">
       <ProductUpdate>
-        <p>NAME: {Product.name}</p>
-        <p>DESC: {Product.description}</p>
-        <p>PRICE: {Product.price}</p>
-        <p>IMG SRC: {Product.photo.image.publicUrlTransformed}</p>
+        <p>NAME: {input?.name}</p>
+        <p>DESC: {input?.description}</p>
+        <p>PRICE: {input?.price}</p>
+        <p>IMG SRC: {input?.photo?.image.publicUrlTransformed}</p>
       </ProductUpdate>
 
       <FormContainer>
@@ -31,13 +21,7 @@ export const UpdateProduct = ({ id }) => {
           <h1>Sign in</h1>
         </div>
 
-        <ErrorMessage error={singleProdError} />
-
-        {/*//form-fields*/}
-        <fieldset
-          disabled={singleProdLoading}
-          aria-busy={singleProdLoading}
-        >
+        <fieldset>
           <label htmlFor="name">
             Name:
             <input
@@ -46,8 +30,8 @@ export const UpdateProduct = ({ id }) => {
               name="name"
               id="name"
               required={true}
-              onChange={handleChange}
-              value={Product.name}
+              value={input?.name}
+              onChange={e => handleChange(e)}
             />
           </label>
 
@@ -59,8 +43,8 @@ export const UpdateProduct = ({ id }) => {
               name="price"
               id="price"
               required={true}
-              onChange={handleChange}
-              value={Product.price}
+              onChange={e => handleChange(e)}
+              value={input?.price}
             />
           </label>
 
@@ -71,8 +55,8 @@ export const UpdateProduct = ({ id }) => {
               name="description"
               id="description"
               required={true}
-              onChange={handleChange}
-              value={Product.description}
+              onChange={e => handleChange(e)}
+              value={input?.description}
             />
           </label>
         </fieldset>

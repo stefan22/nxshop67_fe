@@ -1,20 +1,13 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import {
-  TitleContainer,
-  OnSaleContainer,
-  PriceTag,
-  ItemContainer
-} from './Product.styles'
+import { TitleContainer, OnSaleContainer, PriceTag, ItemContainer } from './Product.styles'
 import { GBPCurrencyFormat as poundFormat } from '@/lib/currencyFormat'
 
 const Product = ({ product }) => (
   <ItemContainer data-testid="product">
     <OnSaleContainer>ON-SALE!</OnSaleContainer>
     <Link href={`/product/${product?.id}`}>
-      <picture
-      >
+      <picture>
         <source srcSet={product?.photo?.image.publicUrlTransformed} />
         <img
           width={348}

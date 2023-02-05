@@ -44,9 +44,7 @@ const SignInPage = () => {
       setError({
         message: data?.authenticateUserWithPassword.message
       })
-    } else if (
-      data?.authenticateUserWithPassword.code !== 'FAILURE'
-    ) {
+    } else if (data?.authenticateUserWithPassword.code !== 'FAILURE') {
       await Router.push({ pathname: '/account' })
     }
     resetForm(input)
