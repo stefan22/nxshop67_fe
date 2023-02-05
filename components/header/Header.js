@@ -10,13 +10,7 @@ const Header = () => (
     <Navwrap>
       <Link href={'/'} passHref>
         <a>
-          <Image
-            data-testid="logo"
-            src={shop}
-            width={51}
-            height={50}
-            alt={'logo'}
-          />
+          <Image data-testid="logo" src={shop} width={51} height={50} alt={'logo'} />
         </a>
       </Link>
       <Nav />

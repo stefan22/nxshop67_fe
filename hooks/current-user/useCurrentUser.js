@@ -4,11 +4,7 @@ import { currentUserQuery } from './currentUserQuery'
 
 const useCurrentUser = () => {
   const [loading, setLoading] = useState(true)
-  const {
-    data: currentUser,
-    loading: userLoading,
-    error: userError
-  } = useQuery(currentUserQuery)
+  const { data: currentUser, loading: userLoading, error: userError } = useQuery(currentUserQuery)
 
   useEffect(() => {
     setLoading(false)

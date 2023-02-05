@@ -14,7 +14,6 @@ const Nav = () => {
       {currentUser && (
         <>
           <Link href="/account">Account</Link>
-          <Link href="/order">Order</Link>
           <SignOut />
         </>
       )}

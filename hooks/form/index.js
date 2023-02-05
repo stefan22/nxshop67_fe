@@ -1,3 +1,4 @@
-import useForm from './useForm'
+import useEditProduct from './useEditProduct'
+import useCreateProduct from './useCreateProduct'
 
-export default useForm
+export { useEditProduct, useCreateProduct }

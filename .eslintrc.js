@@ -34,10 +34,7 @@ module.exports = {
     'prefer-arrow-callback': 0,
     'react/jsx-filename-extension': 0,
     'react/jsx-curly-brace-presence': 0,
-    'no-unused-vars': [
-      0,
-      { args: 'after-used', argsIgnorePattern: '^_' }
-    ],
+    'no-unused-vars': [0, { args: 'after-used', argsIgnorePattern: '^_' }],
     'react/function-component-definition': [
       'error',
       {

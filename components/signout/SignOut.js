@@ -1,6 +1,5 @@
 import { useMutation } from '@apollo/client'
 import gql from 'graphql-tag'
-import Router from 'next/router'
 import { useRouter } from 'next/router'
 import { currentUserQuery } from '../../hooks/current-user/currentUserQuery'
 

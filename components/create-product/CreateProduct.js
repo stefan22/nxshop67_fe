@@ -1,26 +1,19 @@
 import React from 'react'
 import Router from 'next/router'
 import useForm from '../../hooks/form'
-import {
-  ProductContainer,
-  LoginContainer
-} from './CreateProduct.styles'
+import { ProductContainer, LoginContainer } from './CreateProduct.styles'
 import ErrorMessage from '@/lib/ErrorMessage'
 import { useCreateProduct } from '../../hooks/create-product'
 
+/*
+ *  I have remove routed page linked to this component atm
+ * */
 const CreateProduct = () => {
-  const { input, resetForm, handleChange } = useForm({
-    name: '',
-    description: '',
-    price: 0,
-    image: ''
-  })
-  const [createProduct, createProductLoading, createProductError] =
-    useCreateProduct()
+  const { input, resetForm, handleChange } = useForm()
+  const [createProduct, createProductLoading, createProductError] = useCreateProduct()
 
   return (
     <LoginContainer>
-      {/*//leftside container*/}
       <div className="loginLeftContainer">
         <div className="left-item">
           <div className="login-title">
@@ -29,12 +22,10 @@ const CreateProduct = () => {
 
           <h2 className="login-sub-title">have 2 finish p theme!</h2>
           <div className="redirect-signup">
-            New product to db by user of the acct: (sell) aproval req.
-            Other form deals w user selling/ editing already approvd
-            listing - no image needed there
+            New product to db by user of the acct: (sell) aproval req. Other form deals w user selling/
+            editing already approvd listing - no image needed there
             <br />
-            edit btn should b shown only to owner of itm when signed
-            in. - keeping both forms for now
+            edit btn should b shown only to owner of itm when signed in. - keeping both forms for now
           </div>
         </div>
       </div>
@@ -58,10 +49,7 @@ const CreateProduct = () => {
         <ErrorMessage error={createProductError} />
 
         {/*//form-fields*/}
-        <fieldset
-          disabled={createProductLoading}
-          aria-busy={createProductLoading}
-        >
+        <fieldset disabled={createProductLoading} aria-busy={createProductLoading}>
           <label htmlFor="name">
             Name:
             <input
@@ -77,13 +65,7 @@ const CreateProduct = () => {
 
           <label htmlFor="image">
             Image:
-            <input
-              type="file"
-              name="image"
-              id="image"
-              className="image-upload"
-              onChange={handleChange}
-            />
+            <input type="file" name="image" id="image" className="image-upload" onChange={handleChange} />
           </label>
 
           <label htmlFor="price">
