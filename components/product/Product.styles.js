@@ -2,13 +2,11 @@ import styled from 'styled-components'
 
 const TitleContainer = styled.h3`
   display: flex;
-  line-height: var(--lineHeightNormal);
   perspective: 200px;
   transform: translate(6px, -5px) skew(-10deg) rotate(-1deg);
   height: 44px;
-  box-sizing: border-box;
   margin: 0;
-  max-width: 95%;
+  max-width: 96%;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 10;
 
@@ -17,30 +15,35 @@ const TitleContainer = styled.h3`
     display: block;
     line-height: 44px;
     mix-blend-mode: darken;
-    font-size: var(--fontSizeMedium);
+    font-size: var(--fontxt);
     text-align: center;
     transition: color 0.3s linear 0ms;
     color: var(--white);
     padding: 0;
-    width: 81%;
+    width: 78%;
+    box-shadow: var(--bs4);
     margin: 0 auto;
   }
   a {
     padding: 0 5px;
     color: #fff;
-    box-sizing: border-box;
     background: #1565c0;
-    border-top-right-radius: 2px;
+    border-top-right-radius: 1px;
     border-bottom-right-radius: 2px;
-    border-top: 1px solid #818181;
-    border-bottom: 1px solid #818181;
-    transition: text-decoration 0.35s ease 0ms;
-    width: 18%;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--grey);
+    box-shadow: var(--bs5);
+    width: 21%;
+    font-weight: 300;
+    font-size: var(--fontone);
     line-height: 44px;
     text-shadow: none;
+    perspective: 200px;
+    letter-spacing: 0.5px;
+    perspective-origin: 20px center;
     &:hover {
-      text-decoration: underline;
-    }
+      text-decoration: none;
+      background: var(--medgrey);
   }
 `
 
@@ -83,10 +86,10 @@ const OnSaleContainer = styled.span`
   background-color: var(--red);
   border-radius: 50%;
   z-index: 20;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0.005);
-  transform: skew(10deg, -15deg) translate(0px, 15px) perspective(400px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0.005);
+  transform: skew(7deg, -15deg) translate(1px, 15px) perspective(400px);
   text-align: center;
-  font-size: var(--fontSizeBase);
+  font-size: var(--fontbase);
   line-height: 1.25;
   @media screen and (max-width: 736px) {
     transition: all 0.2s linear 0ms;
@@ -168,10 +171,10 @@ const ItemContainer = styled.div`
   .buttonList {
     display: grid;
     width: 100%;
-    border-top: 1px solid var(--lightGray);
+    border-top: 1px solid var(--dgray);
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1px;
-    background: var(--lightGray);
+    background: var(--dgray);
 
     & > * {
       background: white;

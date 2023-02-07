@@ -1,4 +1,3 @@
-import useEditProduct from './useEditProduct'
-import useCreateProduct from './useCreateProduct'
+import useForm from './useForm'
 
-export { useEditProduct, useCreateProduct }
+export { useForm }

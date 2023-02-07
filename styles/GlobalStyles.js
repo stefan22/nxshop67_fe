@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --itemho: #f8f9fa;
     /* white */
     --white: #ffffff;
-    --offWhite: #fafafa;
+    --offwhite: #fafafa;
     --ghostwhite: #eaeaea;
     --goldengray: #868181;
     /* red/orange */
@@ -25,8 +25,8 @@ const GlobalStyles = createGlobalStyle`
     --yellow: #ffe507;
     --lightred: #fdecec;
     /* blues */
-    --lightBlue: #8ed1fc;
-    --darkBlue: #0693e3;
+    --lightblue: #8ed1fc;
+    --darkblue: #0693e3;
     
     /* vars */
    --measure: 60ch; /* max inline size */
@@ -34,15 +34,15 @@ const GlobalStyles = createGlobalStyle`
     --ratio: 1.5;  /* line height */
     
     /* font sizes */
-    --fontSizeSmall: 0.87rem;
-    --fontSizeBase: 10px;
-    --fontSizeTxt: 1.25rem;
-    --fontSizeRegular: 1.5rem;
-    --fontSizeMedium: 2rem;
-    --fontSizeLarge: 3rem;
-    --lineHeightSmall: calc(0.8 * var(--ratio));
-    /* font default */
-    font-size: var(--fontSizeBase);
+    --fontsmall: 0.87rem;
+    --fontbase: 10px;
+    --fontone: 1rem;
+    --fontxt: 1.2rem;
+    --fontregular: 1.5rem;
+    --fontmedium: 2.5rem;
+    --fontlarge: 3rem;
+    --lineheightsmall: calc(0.8 * var(--ratio));
+   
     
     /* other */
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
@@ -74,7 +74,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    font-size: var(--fontSizeTxt);
+    font-size: var(--fontxt);
     color: var(--black);
     font-family: 'Be Vietnam Pro', sans-serif;
     line-height: var(--ratio);
@@ -107,11 +107,9 @@ const GlobalStyles = createGlobalStyle`
   
   button {
     font-size: inherit;
-    font-weight: 700;
+    font-weight: 400;
     display: inline-block;
     cursor: pointer;
-    line-height: var(--fontSizeSmall);
-    font-family: var(--font-special);
     color: var(--white);
     background-color: var(--black);
     padding: .5em 1.5em .7em;
@@ -132,6 +130,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--black);
+    font-weight: 400;
     a:hover {
       text-decoration: underline;
     }
@@ -139,15 +138,15 @@ const GlobalStyles = createGlobalStyle`
   
   /* utilities */
   .heading_H1 {
-    font-size: var(--fontSizeLarge);
+    font-size: var(--fontlarge);
     color: var(--black);
     font-weight: 400;
-    font-size: var(--fontSizeLarge);
+    font-size: var(--fontlarge);
     margin-block-start: 4.5rem, var(--space);
   }
 
   .heading_H2 {
-    font-size: var(--fontSizeMedium);
+    font-size: var(--fontmedium);
     margin: 0;
     font-weight: 400;
     font-style: italic;
@@ -160,14 +159,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .heading_H3 {
-    font-size: var(--fontSizeMedium);
+    font-size: var(--fontmedium);
     font-variant-caps: all-small-caps;
     color: var(--goldengray);
     padding: 0;
     margin-top: 1.75rem;
     border-top-width: medium;
     background-color: var(--offWhite);
-    line-height: var(--lineHeightSmall);
+    line-height: var(--lineheightsmall);
     font-weight: 400;
     
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Router from 'next/router'
-import useForm from '../../hooks/form'
+import useAddForm from '../../hooks/form'
 import { ProductContainer, LoginContainer } from './CreateProduct.styles'
 import ErrorMessage from '@/lib/ErrorMessage'
 import { useCreateProduct } from '../../hooks/create-product'
@@ -9,7 +9,7 @@ import { useCreateProduct } from '../../hooks/create-product'
  *  I have remove routed page linked to this component atm
  * */
 const CreateProduct = () => {
-  const { input, resetForm, handleChange } = useForm()
+  const { input, resetForm, handleChange } = useAddForm()
   const [createProduct, createProductLoading, createProductError] = useCreateProduct()
 
   return (

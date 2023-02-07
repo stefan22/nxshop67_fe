@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const FormContainer = styled.form`
   border: 5px solid var(--white);
   padding: 0 5rem;
-  font-size: var(--fontSizeTxt);
+  font-size: var(--fontxt);
   line-height: normal;
   font-weight: 400;
   display: flex;
@@ -20,7 +20,7 @@ const FormContainer = styled.form`
     display: none;
     @media screen and (max-width: 1279px) {
       display: block;
-      font-size: var(--fontSizeMedium);
+      font-size: var(--fontmedium);
       text-align: center;
       width: 100%;
       margin: 0 0 2rem;
@@ -32,7 +32,7 @@ const FormContainer = styled.form`
 
   label {
     display: block;
-    font-size: var(--fontSizeRegular);
+    font-size: var(--fontregular);
     line-height: 1.15;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -65,13 +65,13 @@ const FormContainer = styled.form`
     background: var(--red);
     margin: 0.75rem 0;
     color: var(--white);
-    font-size: var(--fontSizeTxt);
+    font-size: var(--fontxt);
     border: 0;
     font-weight: 400;
     padding: 1rem 2rem;
   }
   button {
-    font-size: var(--fontSizeRegular);
+    font-size: var(--fontregular);
     line-height: 1.25;
     border-radius: 4px;
     font-weight: 600;
@@ -104,7 +104,6 @@ const FormContainer = styled.form`
 
 const ProductUpdate = styled.div`
   display: flex;
-  line-height: var(--lineHeightNormal);
   box-sizing: border-box;
   margin: 0;
   flex-direction: column;
