@@ -4,24 +4,25 @@ const TitleContainer = styled.h3`
   display: flex;
   line-height: var(--lineHeightNormal);
   perspective: 200px;
-  transform: translateY(-15px) skew(-5deg) rotate(-1deg);
-  height: 52px;
+  transform: translate(6px, -5px) skew(-10deg) rotate(-1deg);
+  height: 44px;
   box-sizing: border-box;
   margin: 0;
-  max-width: 99%;
+  max-width: 95%;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 10;
 
   span {
     background: var(--darkgrey);
     display: block;
+    line-height: 44px;
     mix-blend-mode: darken;
-    font-size: var(--fontSizeLarge);
+    font-size: var(--fontSizeMedium);
     text-align: center;
     transition: color 0.3s linear 0ms;
     color: var(--white);
     padding: 0;
-    width: 85%;
+    width: 81%;
     margin: 0 auto;
   }
   a {
@@ -34,7 +35,7 @@ const TitleContainer = styled.h3`
     border-top: 1px solid #818181;
     border-bottom: 1px solid #818181;
     transition: text-decoration 0.35s ease 0ms;
-    width: 14%;
+    width: 18%;
     line-height: 44px;
     text-shadow: none;
     &:hover {
@@ -45,13 +46,11 @@ const TitleContainer = styled.h3`
 
 const PriceTag = styled.span`
   background: var(--darkgrey);
-  transform: rotate(3deg) perspective(80px);
+  transform: rotate(2deg) perspective(200px);
   color: white;
   color(--black);
-  padding: 5px;
-  line-height: 1.1;
-  letter-spacing: 1px;
-  font-size: var(--fontSizeMedium);
+  padding: 0 3px;
+  font-size: var(--fontSizeRegular);
   width: 50%;
   display: inline-block;
   max-width: fit-content;
@@ -59,7 +58,7 @@ const PriceTag = styled.span`
   border: 1px solid #333;
   box-shadow: var(--b);
   overflow: hidden;
-  top: 90px;
+  top: 5%;
   right: 10px;
   @media screen and (max-width: 736px) {
     top: 5%;
@@ -72,76 +71,65 @@ const OnSaleContainer = styled.span`
   flex-direction: column;
   padding: 0;
   position: absolute;
-  top: 40%;
+  bottom: 13%;
   left: 1%;
   font-weight: 400;
   box-shadow: var(--bs5);
   justify-content: center;
   align-items: center;
-  align-content: center;
-  overflow: hidden;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   color: var(--white);
   background-color: var(--red);
   border-radius: 50%;
-  z-index: 3;
+  z-index: 20;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0.005);
+  transform: skew(10deg, -15deg) translate(0px, 15px) perspective(400px);
   text-align: center;
-  font-size: var(--fontSizeTxt);
-  line-height: 1.35;
+  font-size: var(--fontSizeBase);
+  line-height: 1.25;
+  @media screen and (max-width: 736px) {
+    transition: all 0.2s linear 0ms;
+    width: 38px;
+    height: 38px;
+  }
+  @media screen and (max-width: 699px) {
+    transform: skew(10deg, -15deg) translate(0px, 35px) perspective(400px);
+  }
 `
 
 const ItemContainer = styled.div`
   background: var(--itembg);
   border: 1px solid var(--medgrey);
-  position: relative;
   display: flex;
+  position: relative;
+  bottom: 0;
   box-shadow: var(--bs);
   flex-direction: column;
-  width: 350px;
-  height: auto;
   cursor: pointer;
   margin-bottom: 7rem;
   justify-content: space-between;
   z-index: 1;
   transition: all 300ms linear 0ms;
-
-  @media screen and (max-width: 1419px) {
-    /* 2 columns - product takes half the width */
-    width: 310px;
-    height: auto;
-    h2,
-    p {
-      justify-content: center;
-      display: flex;
-    }
+  @media screen and (max-width: 845px) {
+    width: 330px;
+  }
+  @media screen and (max-width: 699px) {
+    width: 440px;
   }
 
-  @media screen and (max-width: 736px) {
-    /* up to before ipad mini single column */
-    inline-size: 100%;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    h2 {
-      font-size: var(--fontSizeLarge);
-    }
-
-    h3 {
-      text-align: center;
-      margin-bottom: 0;
-    }
+  picture {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
   }
 
   &:hover {
     filter: brightness(1.1);
     mix-blend-mode: darken;
-    background: #f8f9fa;
+    background: var(--itemho);
     h3 span {
-      color: #e16740;
+      color: var(--satred);
     }
   }
 

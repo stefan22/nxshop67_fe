@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { TitleContainer, OnSaleContainer, PriceTag, ItemContainer } from './Product.styles'
 import { GBPCurrencyFormat as poundFormat } from '@/lib/currencyFormat'
 
@@ -8,12 +9,12 @@ const Product = ({ product }) => (
     <OnSaleContainer>ON-SALE!</OnSaleContainer>
     <Link href={`/product/${product?.id}`}>
       <picture>
-        <source srcSet={product?.photo?.image.publicUrlTransformed} />
-        <img
-          width={348}
-          height={410}
-          layout="fill"
-          // objectFit="cover"
+        <Image
+          layout="intrinsic"
+          objectFit="cover"
+          loading="lazy"
+          width={267}
+          height={294}
           src={product?.photo?.image.publicUrlTransformed}
           alt={product?.name}
         />

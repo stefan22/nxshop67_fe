@@ -4,29 +4,25 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
-  height: 88px;
-  margin-bottom: 5vh;
-  @media screen and (max-width: 736px) {
-    margin-bottom: 0;
-  }
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  margin: 0 0 8vh;
 `
 
 const Navwrap = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  height: 57px;
-  vertical-align: middle;
   padding: 0;
   max-width: 1440px;
   margin: 0 auto;
-  flex-wrap: nowrap;
-  flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid var(--ghostwhite);
-  object-fit: cover;
-  mix-blend-mode: normal;
+  > a {
+    width: 67px;
+    height: 45px;
+  }
+
   ul > a {
     padding: 1.5rem 3rem;
     line-height: 1;
@@ -34,13 +30,21 @@ const Navwrap = styled.div`
     list-style: none;
   }
 
-  a {
-    margin-left: 1rem;
-    cursor: pointer;
-    & > div > img {
-      transition: mix-blend-mode 700ms linear 0ms;
+  div {
+    display: flex;
+    transform: translateX(13px);
+    width: 40px;
+    height: 45px;
+    vertical-align: sub;
+    @media screen and (max-width: 736px) {
+      transform: translateX(0);
+    }
+
+    img {
+      transition: mix-blend-mode 400ms linear 0ms;
       mix-blend-mode: normal;
       &:hover {
+        cursor: pointer;
         mix-blend-mode: luminosity;
       }
     }

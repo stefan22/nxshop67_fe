@@ -27,10 +27,7 @@
 
 
 #### Back-end :paperclip: separate
-headless cms/ graphql - mongo atlas
-
-
-<img src="public/static/keystone.png" alt="keystone backend">
+- updated all dependencies.
 
 
 <br />

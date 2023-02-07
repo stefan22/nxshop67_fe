@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const NavContainer = styled.ul`
-  margin: 0 0 0 1rem;
+  margin: 0;
   padding: 0;
   display: flex;
   flex: 4 1;
