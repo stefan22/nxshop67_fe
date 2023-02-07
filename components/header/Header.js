@@ -3,14 +3,24 @@ import Link from 'next/link'
 import { HeaderContainer, Navwrap } from './Header.styles'
 import Nav from '../Nav'
 import Image from 'next/image'
-import shop from '@/assets/products/shop67.png'
+import shop from 'public/shop67.png'
 
 const Header = () => (
   <HeaderContainer data-testid="top-navigation">
     <Navwrap>
       <Link href={'/'} passHref>
+        {/*a tags removed console warning*/}
         <a>
-          <Image data-testid="logo" src={shop} width={51} height={50} alt={'logo'} />
+          <Image
+            layout="intrinsic"
+            objectFit="cover"
+            data-testid="logo"
+            src={shop}
+            width={40}
+            height={45}
+            alt={'logo'}
+            className="image-logo"
+          />
         </a>
       </Link>
       <Nav />

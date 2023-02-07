@@ -3,7 +3,6 @@
 assets/
 xassets/
 backend/
-
 .eslintignore
 .prettierignore
 

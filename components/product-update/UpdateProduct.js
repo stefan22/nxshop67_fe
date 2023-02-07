@@ -1,9 +1,9 @@
 import { ProductUpdate, FormContainer } from './UpdateProduct.styles'
-import useForm from '../../hooks/form/useForm'
+import { useEditProduct } from '../../hooks/form'
 
 export const UpdateProduct = () => {
   //passing id in useForm
-  const { input, loading, handleChange } = useForm()
+  const { input, loading, handleChange } = useEditProduct()
 
   if (loading) return <p>Loading...</p>
 

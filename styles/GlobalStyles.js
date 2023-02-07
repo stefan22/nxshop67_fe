@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --gray: #9d9d9d;
     --dgray:#f3f2f2;
     --itembg: #dedede;
+    --itemho: #f8f9fa;
     /* white */
     --white: #ffffff;
     --offWhite: #fafafa;
@@ -18,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     --goldengray: #868181;
     /* red/orange */
     --red: #f94a3d;
-    --darkRed: #cf2e2e;
+    --satred: #e16740;
     --orange: #ff9401;
     --amber: #ffcf03;
     --yellow: #ffe507;
@@ -49,20 +50,12 @@ const GlobalStyles = createGlobalStyle`
     --bs3: 0 6px 10px 0 rgb(169,3,3,.21), 0 1px 18px 0 rgb(209,11,11,.12), 0 3px 5px -1px rgb(116,9,9,.25);
     --bs4: 0 0 5px 3px rgba(0, 0, 0, 0.05);
     --bs5: 0 2px 3px 0 rgb(60 64 67 / 15%), 0 6px 10px 4px rgb(60 64 67 / 15%);
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0; 
+ 
   }
   
   /* outside root */
   *, *:before, *:after {
-    inline-size: auto;
-    background-color: inherit;
-    color: inherit;
     overflow-wrap: break-word;
-    margin: 0;
-    padding: 0;
     border: 0 solid;
     box-shadow: none;
     outline: none;
@@ -74,27 +67,18 @@ const GlobalStyles = createGlobalStyle`
   }
   
   p,
-  h1,h2,h3,h4,h5,h6,li,figcaption {
+  h1,h2,h3,h4,h5,h6,
+  li,figcaption {
     max-inline-size: var(--measure);
-    font-weight: 400;
+    font-weight: 300;
   }
   
   body {
-    font-size: var(--fontSizeRegular);
-    font-weight: 400;
+    font-size: var(--fontSizeTxt);
     color: var(--black);
     font-family: 'Be Vietnam Pro', sans-serif;
-    box-sizing: border-box;
-    letter-spacing: -0.003em;
     line-height: var(--ratio);
     background-color: var(--offWhite);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow: #fff 0 1px 1px;
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   footer,header,main,nav {
@@ -141,19 +125,9 @@ const GlobalStyles = createGlobalStyle`
   picture {
     height: fit-content;
     display: flex;
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
-    overflow: hidden;
   }
-
-  picture img:hover {
-    filter:hue-rotate(
-      10deg
-    );
-  }
+  
   
   a {
     text-decoration: none;
@@ -168,7 +142,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: var(--fontSizeLarge);
     color: var(--black);
     font-weight: 400;
-    font-size: 3rem;
+    font-size: var(--fontSizeLarge);
     margin-block-start: 4.5rem, var(--space);
   }
 
@@ -200,10 +174,9 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     display: flex;
-    font-size: var(--fontRegular);
+    font-size: var(--fontSizeTxt);
     color: var(--black);
     padding: 0;
-    font-weight: 400;
     margin-block-start: 1.5rem;
   }
   .error-message {

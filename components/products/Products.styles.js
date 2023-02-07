@@ -6,7 +6,7 @@ const ProductsContainer = styled.div`
   flex-wrap: wrap;
   overflow-x: hidden;
   width: 100%;
-  max-width: 1450px;
+  max-width: 1480px;
   height: auto;
   justify-content: space-around;
 `
