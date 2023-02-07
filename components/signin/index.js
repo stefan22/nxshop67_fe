@@ -1,3 +1,4 @@
 import SignInUp from './SignInUp'
+import SignInUpContainer from './SignInUp.styles'
 
-export default SignInUp
+export { SignInUp, SignInUpContainer }

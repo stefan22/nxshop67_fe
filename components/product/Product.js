@@ -32,7 +32,7 @@ const Product = ({ product }) => (
           }
         }}
       >
-        Edit
+        Edit &#x23F5;
       </Link>
     </TitleContainer>
   </ItemContainer>

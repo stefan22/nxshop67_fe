@@ -5,48 +5,50 @@ const SignInUpContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 920px;
+  max-width: 480px;
   height: auto;
-  transition: all linear 0.3s 50ms;
-  header {
-    display: flex;
-    background: var(--offWhite);
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    h1 {
-      margin: 3.5rem 0 0;
-      font-size: 3.75rem;
-    }
-    p {
-      display: flex;
-      margin: 0;
-      justify-content: center;
-      flex-direction: column;
-      color: var(--darkRed);
-      font-size: var(--fontSizeMedium);
-      font-weight: 400;
-      width: 100%;
-      height: 50px;
-    }
-  }
-  .login {
-    border: 1px solid var(--ghostwhite);
+  transition: all linear 0.3s 0ms;
 
+  .login {
     padding: 0;
     width: 100%;
     min-height: 600px;
     max-width: 480px;
-    @media screen and (max-width: 736px) {
-      border: none;
+    margin-bottom: 1rem;
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+
+      h1 {
+        margin: 2rem 0 0;
+        font-size: var(--fontmedium);
+        @media screen and (max-width: 1281px) {
+          margin: 0;
+        }
+      }
+      p {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--satred);
+        font-size: var(--fontxt);
+        font-weight: 300;
+        width: 100%;
+        height: 50px;
+        &.error-message {
+          font-size: var(--fontbase);
+        }
+      }
     }
 
     .login__body {
-      padding: 2rem 2rem 2rem;
-      background-color: var(--offWhite);
-      @media screen and (max-width: 736px) {
-        padding: 4rem 0;
+      padding: 1rem 2rem 1rem;
+      @media screen and (max-width: 1281px) {
+        padding: 0;
       }
       form {
         display: flex;
@@ -54,77 +56,101 @@ const SignInUpContainer = styled.div`
         height: auto;
         min-height: 300px;
         width: 100%;
-
-        .input-field {
-          width: 100%;
-          margin: 2rem 0 2rem;
+        fieldset {
           padding: 0;
-          position: relative;
-
-          span {
-            position: absolute;
-            right: 5px;
-            top: 1px;
-            cursor: pointer;
-            font-size: var(--fontSizeTxt);
-          }
-
-          label {
-            display: flex;
-            font-size: var(--fontTxt);
-            justify-content: center;
-            flex-direction: column;
-          }
-
-          input {
-            background-color: var(--dgray);
-            padding: 9px 20px;
-            border: 1px solid lightgray;
-          }
-        }
-        .buttons-group {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          flex-direction: column;
-          margin: 7rem 0 2rem;
-
-          .submit-button,
-          .login__no-account {
-            display: flex;
+          margin: 0;
+          .input-field {
             width: 100%;
-            justify-content: center;
-            margin: 1rem 0;
-          }
-          .submit-button {
-            display: flex;
-            button {
-              font-size: 1.75rem;
+            margin: 2rem 0 2rem;
+            padding: 0;
+            position: relative;
+
+            label {
               display: flex;
-              flex-direction: column;
+              font-weight: 300;
               justify-content: center;
-              align-items: center;
-              width: 100%;
-              line-height: 1.5;
-              height: 42px;
+              flex-direction: column;
+              font-size: var(--fontone);
+
+              span {
+                position: absolute;
+                right: 5px;
+                top: 3px;
+                cursor: pointer;
+                font-weight: 300;
+                font-size: var(--fontsmall);
+              }
+            }
+
+            input {
+              background-color: var(--dgray);
+              padding: 9px 10px;
+              border: 1px solid lightgray;
+              font-size: var(--fontsmall);
             }
           }
-          .login__no-account {
+
+          .buttons-group {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-content: center;
             width: 100%;
-            button {
-              font-size: 1.75rem;
+            flex-direction: column;
+            margin: 4rem 0 2rem;
+
+            .submit-button,
+            .login__no-account {
+              display: flex;
+              width: 100%;
+              justify-content: center;
+              margin: 0;
+              p {
+                font-size: var(--fontsmall);
+              }
+            }
+
+            .submit-button {
+              display: flex;
+
+              button {
+                font-size: var(--fontxt);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 42px;
+                font-weight: 400;
+                @media screen and (max-width: 1281px) {
+                  font-weight: 300;
+                }
+              }
+            }
+
+            .login__no-account {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              align-items: center;
+              align-content: center;
               width: 100%;
-              line-height: 1.5;
-              height: 42px;
-              background-color: var(--red);
+              @media screen and (max-width: 1281px) {
+                p {
+                  font-size: var(--fontsmall);
+                }
+              }
+
+              button {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 42px;
+                font-weight: 400;
+                background-color: var(--red);
+                @media screen and (max-width: 1281px) {
+                  font-weight: 300;
+                }
+              }
             }
           }
         }

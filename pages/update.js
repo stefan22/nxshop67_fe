@@ -1,4 +1,4 @@
-import UpdateProduct from '@/components/product-update'
+import EditProduct from '@/components/edit-product'
 const UpdatePage = ({ query }) => {
   let id = query?.id
 
@@ -10,7 +10,7 @@ const UpdatePage = ({ query }) => {
       </h3>
       <br />
 
-      <UpdateProduct id={id} />
+      <EditProduct id={id} />
     </div>
   )
 }

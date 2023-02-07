@@ -5,8 +5,8 @@ const NavContainer = styled.ul`
   padding: 0;
   display: flex;
   flex: 4 1;
+  height: 57px;
   justify-content: flex-end;
-  font-size: 2rem;
   width: 100%;
   @media screen and (max-width: 980px) {
     display: none;
@@ -18,19 +18,17 @@ const NavContainer = styled.ul`
     align-items: center;
     position: relative;
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: var(--fontSizeRegular);
     background: none;
     border: 0;
     cursor: pointer;
     @media (max-width: 700px) {
-      font-size: var(--fontSizeMedium);
+      font-size: var(--fontmedium);
       padding: 0 10px;
     }
     &:before {
       content: '';
-      width: 2px;
-      background: var(--lightGrey);
+      width: 0;
+      background: var(--dgray);
       height: 100%;
       left: 0;
       position: absolute;
@@ -40,9 +38,9 @@ const NavContainer = styled.ul`
     }
     &:after {
       height: 2px;
-      background: var(--black);
+      background: var(--darkgrey);
       content: '';
-      width: 0;
+      width: 0%;
       position: absolute;
       transform: translateX(-50%);
       transition: width 0.4s;
@@ -55,7 +53,7 @@ const NavContainer = styled.ul`
       text-decoration: none;
       outline: none;
       &:after {
-        width: calc(100% - 60px);
+        width: calc(100% - 85px);
       }
       @media (max-width: 700px) {
         width: calc(100% - 10px);

@@ -29,10 +29,8 @@ html:focus-within {
 }
 
 body {
-  min-height: 100vh;
   text-rendering: optimizeLegibility;
   font-weight: inherit;
-  width: 100%;
 }
 
 

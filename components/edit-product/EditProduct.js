@@ -1,7 +1,7 @@
 import { ProductUpdate, FormContainer } from './UpdateProduct.styles'
-import { useEditProduct } from '../../hooks/form'
+import { useEditProduct } from '../../hooks/edit-product'
 
-export const UpdateProduct = () => {
+export const EditProduct = () => {
   //passing id in useForm
   const { input, loading, handleChange } = useEditProduct()
 

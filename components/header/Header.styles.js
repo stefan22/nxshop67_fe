@@ -4,7 +4,7 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: calc(100% - 40px);
+  width: 100%;
   padding: 0 20px;
   margin: 0 0 8vh;
 `
@@ -14,18 +14,20 @@ const Navwrap = styled.div`
   position: relative;
   width: 100%;
   padding: 0;
-  max-width: 1440px;
+  height: 57px;
+  max-width: 1480px;
   margin: 0 auto;
   justify-content: space-between;
   border-bottom: 1px solid var(--ghostwhite);
   > a {
     width: 67px;
-    height: 45px;
+    line-height: 4.1;
   }
 
   ul > a {
-    padding: 1.5rem 3rem;
-    line-height: 1;
+    font-size: var(--fontxt);
+    font-variant: all-small-caps;
+
     border: none;
     list-style: none;
   }
@@ -34,8 +36,8 @@ const Navwrap = styled.div`
     display: flex;
     transform: translateX(13px);
     width: 40px;
-    height: 45px;
-    vertical-align: sub;
+    height: auto;
+    vertical-align: text-bottom;
     @media screen and (max-width: 736px) {
       transform: translateX(0);
     }
@@ -52,7 +54,7 @@ const Navwrap = styled.div`
   button {
     padding: 1.5rem 3rem;
     color: var(--black);
-    line-height: 1;
+    line-height: var(--lineheightsmall);
   }
 `
 
