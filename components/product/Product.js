@@ -35,6 +35,7 @@ const Product = ({ product }) => (
       >
         Edit &#x23F5;
       </Link>
+
       <DeleteProduct btnName="Delete" id={product?.id} />
     </TitleContainer>
   </ItemContainer>
