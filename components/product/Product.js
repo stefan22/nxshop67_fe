@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { TitleContainer, OnSaleContainer, PriceTag, ItemContainer } from './Product.styles'
 import { GBPCurrencyFormat as poundFormat } from '@/lib/currencyFormat'
+import { DeleteProduct } from '@/components/delete-product'
 
 const Product = ({ product }) => (
   <ItemContainer data-testid="product">
@@ -34,6 +35,7 @@ const Product = ({ product }) => (
       >
         Edit &#x23F5;
       </Link>
+      <DeleteProduct btnName="Delete" id={product?.id} />
     </TitleContainer>
   </ItemContainer>
 )
