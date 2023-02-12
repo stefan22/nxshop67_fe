@@ -35,11 +35,11 @@ const TitleContainer = styled.h3`
     box-shadow: var(--bs5);
     width: 21%;
     font-weight: 300;
-    font-size: var(--fontone);
+    font-size: var(--fontsmall);
     line-height: 44px;
     text-shadow: none;
     perspective: 200px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.35px;
     perspective-origin: 20px center;
     &:hover {
       text-decoration: none;
