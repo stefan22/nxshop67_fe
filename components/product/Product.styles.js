@@ -6,9 +6,14 @@ const TitleContainer = styled.h3`
   transform: translate(6px, -5px) skew(-10deg) rotate(-1deg);
   height: 44px;
   margin: 0;
+  overflow: hidden;
   max-width: 96%;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap;
+  box-shadow: var(--bs4);
   z-index: 10;
+  @media screen and (max-width: 699px) {
+    max-width: 97%;
+  }
 
   span {
     background: var(--darkgrey);
@@ -19,10 +24,13 @@ const TitleContainer = styled.h3`
     text-align: center;
     transition: color 0.3s linear 0ms;
     color: var(--white);
-    padding: 0;
-    width: 78%;
+    padding: 0 5px;
+    width: 57%;
     box-shadow: var(--bs4);
     margin: 0 auto;
+    @media screen and (max-width: 699px) {
+      width: 70%;
+    }
   }
   a {
     padding: 0 5px;
@@ -31,12 +39,15 @@ const TitleContainer = styled.h3`
     border-top-right-radius: 1px;
     border-bottom-right-radius: 2px;
     border-top: 1px solid var(--gray);
-    border-bottom: 1px solid var(--grey);
+    border-left: 1px solid var(--ghostwhite);
     box-shadow: var(--bs5);
-    width: 21%;
+    width: 20%;
     font-weight: 300;
     font-size: var(--fontsmall);
-    line-height: 44px;
+    line-height: 45px;
+    height: 44px;
+    margin: 0;
+    margin-left: 1px;
     text-shadow: none;
     perspective: 200px;
     letter-spacing: 0.35px;
@@ -44,6 +55,7 @@ const TitleContainer = styled.h3`
     &:hover {
       text-decoration: none;
       background: var(--medgrey);
+    }
   }
 `
 

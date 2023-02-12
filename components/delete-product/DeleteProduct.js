@@ -44,7 +44,7 @@ const DeleteProduct = ({ id, btnName }) => {
           }
         }}
       >
-        {btnName}
+        {btnName}  &#x23F5;
       </button>
     </DeleteButton>
   )

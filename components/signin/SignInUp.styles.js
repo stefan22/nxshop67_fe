@@ -39,7 +39,7 @@ const SignInUpContainer = styled.div`
         font-size: var(--fontxt);
         font-weight: 300;
         width: 100%;
-        height: 50px;
+        height: 40px;
         &.error-message {
           font-size: var(--fontbase);
         }
@@ -116,14 +116,11 @@ const SignInUpContainer = styled.div`
                 font-size: var(--fontxt);
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
                 width: 100%;
                 height: 42px;
-                font-weight: 400;
-                @media screen and (max-width: 1281px) {
-                  font-weight: 300;
-                }
+                line-height: 1.05;
+                font-weight: 300;
               }
             }
 
@@ -142,15 +139,12 @@ const SignInUpContainer = styled.div`
               button {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
                 width: 100%;
                 height: 42px;
-                font-weight: 400;
+                line-height: 1.05;
+                font-weight: 300;
                 background-color: var(--red);
-                @media screen and (max-width: 1281px) {
-                  font-weight: 300;
-                }
               }
             }
           }
