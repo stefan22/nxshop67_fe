@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
-const FormContainer = styled.form`
-  border: 5px solid var(--white);
+const FormContainer = styled.div`
   padding: 0 5rem;
   font-size: var(--fontxt);
   line-height: normal;
@@ -11,104 +10,96 @@ const FormContainer = styled.form`
   width: 100%;
   height: auto;
   justify-content: center;
-  @media screen and (max-width: 736px) {
-    padding: 0;
-    width: 100%;
-    border: none;
-  }
-  .login-title__mobile {
-    display: none;
-    @media screen and (max-width: 1279px) {
-      display: block;
-      font-size: var(--fontmedium);
-      text-align: center;
-      width: 100%;
-      margin: 0 0 2rem;
-      h1 {
-        margin: 0 0 2rem;
+  ul {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 3px;
+    box-shadow: var(--bs1);
+    border: 1px solid var(--dgray);
+    background: var(--offwhite);
+    li {
+      list-style: none;
+      font-size: var(--fontsmall);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+      color: var(--satred);
+      span {
+        font-weight: 500;
+        color: var(--medgrey);
+        font-size: var(--fontsmall);
       }
     }
   }
 
-  label {
-    display: block;
-    font-size: var(--fontregular);
-    line-height: 1.15;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  input,
-  textarea,
-  select {
-    margin-top: 0.5rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    background: var(--offWhite);
-    padding: 1rem 0.5rem;
-    font-size: var(--fontSizeTxt);
-    border: 1px solid var(--gray);
-    border-radius: 4px;
-    box-shadow: var(--b1);
-
-    &:focus {
-      outline: 0;
-      border-color: var(--red);
-    }
-  }
-  textarea {
-    padding: 1.5rem 0.5rem;
-  }
-
-  button,
-  input[type='submit'] {
-    width: auto;
-    background: var(--red);
-    margin: 0.75rem 0;
-    color: var(--white);
-    font-size: var(--fontxt);
-    border: 0;
-    font-weight: 400;
-    padding: 1rem 2rem;
-  }
-  button {
-    font-size: var(--fontregular);
-    line-height: 1.25;
-    border-radius: 4px;
-    font-weight: 600;
-    margin: 0 0 2rem 0;
-    box-shadow: var(--bs4);
-  }
-  button[type='button'] {
-    margin-bottom: 0;
-  }
-  fieldset {
-    border: 0;
-    padding: 0;
     height: auto;
-    margin: 0 0 3rem;
+    font-size: var(--fontxt);
+    .login-title__mobile {
+      display: none;
+    }
 
-    &[disabled] {
-      opacity: 0.5;
-    }
-    &::before {
-      height: 10px;
-      content: '';
+    label {
       display: block;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: var(--fontone);
     }
-    &[aria-busy='true']::before {
-      background-size: 50% auto;
-      animation: 0.5s linear infinite;
+
+    input,
+    textarea,
+    select {
+      margin: 0.5rem 0;
+      width: 100%;
+      height: 42px;
+      padding: 5px 10px;
+      font-size: var(--fontsmall);
+      color: var(--gray);
+      border: 1px solid var(--gray);
+      border-radius: 3px;
+      box-shadow: var(--b1);
+
+      &:focus {
+        outline: 0;
+        border-color: var(--red);
+      }
+    }
+
+    textarea {
+      padding: 15px 10px;
+      min-height: 120px;
+    }
+
+    button {
+      background: var(--red);
+      height: 42px;
+      border-radius: 4px;
+      font-weight: 400;
+      margin: 0 0 2rem 0;
+      font-size: var(--fontxt);
+      box-shadow: var(--bs4);
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0;
+      height: auto;
+      margin: 0 0 2rem;
+
+      &[disabled] {
+        opacity: 0.5;
+      }
+
+      &::before {
+        height: 10px;
+        content: '';
+        display: block;
+      }
     }
   }
 `
 
-const ProductUpdate = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  margin: 0;
-  flex-direction: column;
-  z-index: 10;
-  margin-bottom: 3rem;
-`
-
-export { FormContainer, ProductUpdate }
+export { FormContainer }

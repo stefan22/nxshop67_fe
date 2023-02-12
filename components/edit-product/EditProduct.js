@@ -1,22 +1,29 @@
-import { ProductUpdate, FormContainer } from './UpdateProduct.styles'
+import { FormContainer } from './UpdateProduct.styles'
 import { useEditProduct } from '../../hooks/edit-product'
 
 export const EditProduct = () => {
   //passing id in useForm
   const { input, loading, handleChange } = useEditProduct()
-
   if (loading) return <p>Loading...</p>
 
   return (
-    <div className="product-update">
-      <ProductUpdate>
-        <p>NAME: {input?.name}</p>
-        <p>DESC: {input?.description}</p>
-        <p>PRICE: {input?.price}</p>
-        <p>IMG SRC: {input?.photo?.image.publicUrlTransformed}</p>
-      </ProductUpdate>
+    <FormContainer>
+      <ul>
+        <li>
+          <span>Name:</span> {input.name}
+        </li>
+        <li>
+          <span>Desc:</span> {input.description}
+        </li>
+        <li>
+          <span>Price:</span> {input.price}
+        </li>
+        <li>
+          <span>Img src:</span> {input.photo?.image.publicUrlTransformed}
+        </li>
+      </ul>
 
-      <FormContainer>
+      <form>
         <div className="login-title__mobile">
           <h1>Sign in</h1>
         </div>
@@ -64,7 +71,7 @@ export const EditProduct = () => {
         <button disabled type="submit">
           Update Product
         </button>
-      </FormContainer>
-    </div>
+      </form>
+    </FormContainer>
   )
 }

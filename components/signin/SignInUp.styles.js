@@ -15,6 +15,7 @@ const SignInUpContainer = styled.div`
     min-height: 600px;
     max-width: 480px;
     margin-bottom: 1rem;
+    
     header {
       display: flex;
       flex-direction: column;

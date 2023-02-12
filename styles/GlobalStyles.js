@@ -187,6 +187,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     display: block;
   }
+  
 `
 
 export default GlobalStyles
