@@ -122,7 +122,7 @@ const ItemContainer = styled.div`
   box-shadow: var(--bs);
   flex-direction: column;
   cursor: pointer;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
   justify-content: space-between;
   z-index: 1;
   transition: all 300ms linear 0ms;

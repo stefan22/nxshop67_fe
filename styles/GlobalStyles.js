@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #69697b;
     --gray: #9d9d9d;
     --dgray:#f3f2f2;
+    --logray: #dddddd;
     --itembg: #dedede;
     --itemho: #f8f9fa;
     /* white */
@@ -19,14 +20,16 @@ const GlobalStyles = createGlobalStyle`
     --goldengray: #868181;
     /* red/orange */
     --red: #f94a3d;
+    --ored: #ff4500;
     --satred: #e16740;
     --orange: #ff9401;
     --amber: #ffcf03;
     --yellow: #ffe507;
     --lightred: #fdecec;
+    --lired: #fce1e1;
     /* blues */
-    --lightblue: #8ed1fc;
-    --darkblue: #0693e3;
+    --lightblue: #129cdd;
+    --darkblue: #63bef6;
     
     /* vars */
    --measure: 60ch; /* max inline size */

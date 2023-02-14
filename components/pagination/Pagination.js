@@ -20,15 +20,12 @@ const Pagination = ({ page }) => {
   } = useQuery(paginationQuery)
 
   if (loadingPagination) return <p>Loading...</p>
-
   // eslint-disable-next-line no-console
   if (errorPagination) return console.log(`[Error:msg]: ${errorPagination}`)
 
   const { count } = dataPagination._allProductsMeta
   const pageCount = Math.ceil(count / perPage)
 
-  // eslint-disable-next-line no-console
-  console.log('page count is ', pageCount, ' count is ', count, pageCount)
   return (
     <PaginationStyles>
       <Head>
@@ -42,7 +39,8 @@ const Pagination = ({ page }) => {
       <p>
         Page {page} of {pageCount}
       </p>
-      <p>{count} Items Total</p>
+      <p>Total items: {count}</p>
+
       <Link href={`/products/${page + 1}`}>
         <a aria-disabled={page >= pageCount}>Next ⇒</a>
       </Link>
