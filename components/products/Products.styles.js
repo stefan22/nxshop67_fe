@@ -8,7 +8,7 @@ const ProductsContainer = styled.div`
   width: 100%;
   max-width: 1480px;
   height: auto;
-  transition: all .3s linear 0ms;
+  transition: all 0.3s linear 0ms;
   justify-content: space-around;
 `
 

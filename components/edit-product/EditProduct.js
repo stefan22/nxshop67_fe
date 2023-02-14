@@ -37,7 +37,7 @@ export const EditProduct = () => {
               name="name"
               id="name"
               required={true}
-              value={input?.name}
+              value={input.name}
               onChange={e => handleChange(e)}
             />
           </label>
@@ -51,7 +51,7 @@ export const EditProduct = () => {
               id="price"
               required={true}
               onChange={e => handleChange(e)}
-              value={input?.price}
+              value={input.price}
             />
           </label>
 
@@ -63,7 +63,7 @@ export const EditProduct = () => {
               id="description"
               required={true}
               onChange={e => handleChange(e)}
-              value={input?.description}
+              value={input.description}
             />
           </label>
         </fieldset>

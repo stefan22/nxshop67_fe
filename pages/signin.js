@@ -26,10 +26,7 @@ const signinMutation = gql`
 
 const SignInPage = () => {
   const [error, setError] = useState({ message: '' })
-  const { input, handleChange, resetForm } = useForm({
-    email: '',
-    password: ''
-  })
+  const { input, handleChange, resetForm } = useForm()
 
   const [signin] = useMutation(signinMutation, {
     variables: input,

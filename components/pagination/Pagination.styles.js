@@ -4,7 +4,7 @@ const PaginationStyles = styled.div`
   text-align: center;
   display: inline-grid;
   grid-template-columns: repeat(4, auto);
-  transition: all .4s ease-in 50ms;
+  transition: all 0.4s ease-in 50ms;
   align-items: stretch;
   justify-content: center;
   align-content: center;
@@ -29,7 +29,7 @@ const PaginationStyles = styled.div`
     background: var(--lightblue);
     color: var(--white);
     font-weight: 400;
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
     &:hover {
       background: var(--darkblue);
     }
