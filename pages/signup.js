@@ -17,11 +17,7 @@ const signupMutation = gql`
 `
 
 const SignUp = () => {
-  const { input, handleChange, resetForm } = useForm({
-    email: '',
-    name: '',
-    password: ''
-  })
+  const { input, handleChange, resetForm } = useForm()
   const [signup, { data, loading, error }] = useMutation(signupMutation, {
     variables: input
   })

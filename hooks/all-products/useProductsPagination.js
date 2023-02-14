@@ -1,5 +1,4 @@
 import { useQuery } from '@apollo/client'
-import { allProductsQuery } from './allProductsQuery'
 import { productsPaginationQuery } from '@/hooks/all-products/productsPaginationQuery'
 
 const useProductsPagination = (page, perPage) => {
