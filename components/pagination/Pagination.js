@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
 import Head from 'next/head'
 import Link from 'next/link'
-import PaginationStyles from './Pagination.styles'
+import { PaginationStyles } from './Pagination.styles'
 import { perPage } from '../../next.config'
 
 export const paginationQuery = gql`
@@ -27,7 +27,7 @@ const Pagination = ({ page }) => {
   const pageCount = Math.ceil(count / perPage)
 
   return (
-    <PaginationStyles>
+    <PaginationStyles animate={{ opacity: 1 }}>
       <Head>
         <title>
           Shop67 - Page {page} of {pageCount}
@@ -36,6 +36,7 @@ const Pagination = ({ page }) => {
       <Link href={`/products/${page - 1}`}>
         <a aria-disabled={page <= 1}>⇐ Prev</a>
       </Link>
+
       <p>
         Page {page} of {pageCount}
       </p>

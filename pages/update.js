@@ -1,4 +1,4 @@
-import EditProduct from '@/components/edit-product'
+import EditProduct from '../components/edit-product'
 const UpdatePage = ({ query }) => {
   let id = query?.id
 

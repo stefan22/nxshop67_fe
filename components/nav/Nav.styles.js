@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const NavContainer = styled.ul`
+const NavContainer = styled(motion.ul)`
   margin: 0;
   padding: 0;
   display: flex;

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 const TitleContainer = styled.h3`
   display: flex;
@@ -11,7 +12,7 @@ const TitleContainer = styled.h3`
   flex-wrap: nowrap;
   box-shadow: var(--bs4);
   z-index: 10;
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 1005px) {
     max-width: 97%;
   }
 
@@ -28,7 +29,7 @@ const TitleContainer = styled.h3`
     width: 57%;
     box-shadow: var(--bs4);
     margin: 0 auto;
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 1005px) {
       width: 70%;
     }
   }
@@ -75,7 +76,7 @@ const PriceTag = styled.span`
   overflow: hidden;
   top: 5%;
   right: 10px;
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 1112px) {
     top: 5%;
     right: 5%;
   }
@@ -103,17 +104,18 @@ const OnSaleContainer = styled.span`
   text-align: center;
   font-size: var(--fontbase);
   line-height: 1.25;
-  @media screen and (max-width: 736px) {
+  @media screen and (max-width: 1112px) {
     transition: all 0.2s linear 0ms;
     width: 38px;
     height: 38px;
   }
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 1005px) {
     transform: skew(10deg, -15deg) translate(0px, 35px) perspective(400px);
   }
 `
 
-const ItemContainer = styled.div`
+const ItemContainer = styled(motion.div)`
+  opacity: 0.87;
   background: var(--itembg);
   border: 1px solid var(--medgrey);
   display: flex;
@@ -126,11 +128,13 @@ const ItemContainer = styled.div`
   justify-content: space-between;
   z-index: 1;
   transition: all 300ms linear 0ms;
-  @media screen and (max-width: 845px) {
-    width: 330px;
+  @media screen and (max-width: 1112px) {
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto 4rem;
   }
-  @media screen and (max-width: 699px) {
-    width: 440px;
+  @media screen and (max-width: 1005px) {
+    max-width: 340px;
   }
 
   picture {

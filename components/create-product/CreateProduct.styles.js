@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const ProductContainer = styled.form`
+const ProductContainer = styled(motion.form)`
   border: 5px solid var(--white);
   padding: 0 5rem;
   font-size: var(--fontSizeTxt);

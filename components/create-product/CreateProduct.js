@@ -2,7 +2,7 @@ import React from 'react'
 import Router from 'next/router'
 import useAddForm from '../../hooks/form'
 import { ProductContainer, LoginContainer } from './CreateProduct.styles'
-import ErrorMessage from '@/lib/ErrorMessage'
+import ErrorMessage from '../../lib/ErrorMessage'
 import { useCreateProduct } from '../../hooks/create-product'
 
 /*

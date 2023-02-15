@@ -17,6 +17,7 @@ const Nav = () => {
           <SignOut />
         </>
       )}
+      <Link href="/contact-us">Contact-us</Link>
       {!currentUser && <Link href="/signin">Signin</Link>}
     </NavContainer>
   )

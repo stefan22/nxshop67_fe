@@ -2,11 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { TitleContainer, OnSaleContainer, PriceTag, ItemContainer } from './Product.styles'
-import { GBPCurrencyFormat as poundFormat } from '@/lib/currencyFormat'
-import { DeleteProduct } from '@/components/delete-product'
-
+import { GBPCurrencyFormat as poundFormat } from '../../lib/currencyFormat'
+import { DeleteProduct } from '../delete-product'
 const Product = ({ product }) => (
-  <ItemContainer data-testid="product">
+  <ItemContainer animate={{ opacity: 1 }} data-testid="product">
     <OnSaleContainer>ON-SALE!</OnSaleContainer>
     <Link href={`/product/${product?.id}`}>
       <picture>
@@ -26,6 +25,7 @@ const Product = ({ product }) => (
       <span>{product?.name}</span>
 
       <Link
+        style={{ color: '#c28f87' }}
         href={{
           pathname: '/update',
           query: {

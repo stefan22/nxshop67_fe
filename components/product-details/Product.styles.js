@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const Details = styled.div`
+const Details = styled(motion.div)`
+  opacity: 0.5;
   img {
     max-width: 510px;
     width: 100%;

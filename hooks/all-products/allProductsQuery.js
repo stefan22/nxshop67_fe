@@ -1,5 +1,4 @@
 import gql from 'graphql-tag'
-
 export const allProductsQuery = gql`
   query allProductsQuery {
     allProducts {

@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const PaginationStyles = styled.div`
+const PaginationStyles = styled(motion.div)`
+  opacity: 0.87;
   text-align: center;
   display: inline-grid;
   grid-template-columns: repeat(4, auto);
-  transition: all 0.4s ease-in 50ms;
   align-items: stretch;
   justify-content: center;
   align-content: center;
@@ -41,4 +42,4 @@ const PaginationStyles = styled.div`
   }
 `
 
-export default PaginationStyles
+export { PaginationStyles }

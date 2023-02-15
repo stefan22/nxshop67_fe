@@ -1,6 +1,5 @@
 import React from 'react'
 import LoaderContainer from './Loader.styles'
-
 const Loader = () => (
   <LoaderContainer>
     <svg
