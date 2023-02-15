@@ -2,6 +2,7 @@ import { useMutation } from '@apollo/client'
 import gql from 'graphql-tag'
 import { useRouter } from 'next/router'
 import { currentUserQuery } from '../../hooks/current-user/currentUserQuery'
+import SignoutBtn from './Signout.styles'
 
 const signOutMutation = gql`
   mutation signOutMutation {
@@ -22,9 +23,9 @@ const SignOut = () => {
   }
 
   return (
-    <button type="button" onClick={doSignout}>
+    <SignoutBtn type="button" onClick={doSignout}>
       Sign Out
-    </button>
+    </SignoutBtn>
   )
 }
 

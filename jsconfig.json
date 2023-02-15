@@ -1,31 +1,24 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "es2020",
-    "lib": ["es2020", "DOM", "dom.iterable"],
-    "target": "es2020",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
     "resolveJsonModule": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "allowJs": true,
-
-    "paths": {
-      "@/components/*": ["components/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/lib/*": ["lib/*"],
-      "@/pages/*": ["pages/*"],
-      "@/styles/*": ["styles/*"],
-      "@/assets/*": ["assets/*"]
-    }
+    "jsx": "preserve",
+    "incremental": true,
+    "noEmit": true,
+    "rootDir": "./*",
+    "allowJs": false
   },
-
   "include": [
-    "next-env.d.js",
     "next-env.d.js",
     "**/*.js",
     "**/*.jsx"

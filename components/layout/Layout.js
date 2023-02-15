@@ -1,21 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Head from 'next/head'
-import Header from '../header'
+import { motion } from 'framer-motion'
 import GlobalStyles from '../../styles/GlobalStyles'
 import { PageWrapperSl, InnerWrapperSl } from './Layout.styles'
 
-export const Layout = ({ children }) => (
-  <PageWrapperSl>
-    <GlobalStyles />
-    <Head>
-      <title>NxShop67</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <Header />
-    <InnerWrapperSl>{children}</InnerWrapperSl>
-  </PageWrapperSl>
-)
+const mixedOut = {
+  enter: { opacity: 0, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: 100 },
+  center: {
+    x: 0,
+    opacity: 1,
+    zIndex: 10,
+    transition: {
+      delayChildren: 0.5
+    }
+  }
+}
+
+export const Layout = ({ children }) => {
+  return (
+    <PageWrapperSl animate={{ opacity: 1 }}>
+      <GlobalStyles />
+      <motion.main
+        initial="enter"
+        animate="center"
+        exit="exit"
+        variants={mixedOut}
+        transition={{
+          type: 'spring',
+          stiffness: 100,
+          damping: 10,
+          restSpeed: 0.5,
+          opacity: { duration: 0.3 }
+        }}
+      >
+        <InnerWrapperSl>{children}</InnerWrapperSl>
+      </motion.main>
+    </PageWrapperSl>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.any

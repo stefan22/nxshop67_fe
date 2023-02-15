@@ -1,5 +1,4 @@
 import gql from 'graphql-tag'
-
 export const createProductMutation = gql`
   mutation createProductMutation($name: String!, $description: String!, $price: Int!, $image: Upload) {
     createProduct(

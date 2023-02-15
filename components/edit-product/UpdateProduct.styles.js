@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const FormContainer = styled.div`
+const FormContainer = styled(motion.div)`
   padding: 0 5rem;
   font-size: var(--fontxt);
   line-height: normal;

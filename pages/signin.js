@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
-import { SignInUp } from '@/components/signin'
+import { SignInUp } from '../components/signin'
 import { useForm } from '../hooks/form'
 import { gql } from 'graphql-tag'
 import { useMutation } from '@apollo/client'

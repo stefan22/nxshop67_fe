@@ -1,3 +1,2 @@
-import { EditProduct } from '@/components/edit-product/EditProduct'
-
+import { EditProduct } from './EditProduct'
 export default EditProduct

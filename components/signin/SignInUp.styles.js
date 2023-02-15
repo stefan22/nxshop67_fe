@@ -1,13 +1,13 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const SignInUpContainer = styled.div`
+const SignInUpContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 480px;
   height: auto;
-  transition: all linear 0.3s 0ms;
 
   .login {
     padding: 0;

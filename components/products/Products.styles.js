@@ -1,15 +1,16 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const ProductsContainer = styled.div`
+const ProductsContainer = styled(motion.div)`
   display: flex;
+  opacity: 1;
   flex-direction: row;
   flex-wrap: wrap;
   overflow-x: hidden;
   width: 100%;
   max-width: 1480px;
-  height: auto;
-  transition: all 0.3s linear 0ms;
-  justify-content: space-around;
+  height: fit-content;
+  justify-content: space-between;
 `
 
 export { ProductsContainer }

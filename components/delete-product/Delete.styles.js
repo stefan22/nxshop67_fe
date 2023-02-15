@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const DeleteButton = styled.div`
+const DeleteButton = styled(motion.div)`
   padding: 0;
   margin: 0;
   width: 28%;

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useSingleProduct } from '../../hooks/single-product'
-import ErrorMessage from '@/lib/ErrorMessage'
-import ProductDetails from '@/components/product-details'
+import ErrorMessage from '../../lib/ErrorMessage'
+import ProductDetails from '../../components/product-details'
 
 const SingleProduct = () => {
   const router = useRouter()

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "development": {
       "presets": ["next/babel"],
@@ -10,7 +10,7 @@
             "displayName": true
           }
         ]
-      ]
+      ],
     },
     "production": {
       "presets": ["next/babel"],
