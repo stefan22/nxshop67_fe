@@ -5,7 +5,7 @@ const CarouselContainer = styled(motion.div)`
   display: flex;
   width: 100%;
   height: auto;
-  margin: 4.5rem 0 3rem;
+  margin: 3rem 0 3rem;
   .item {
     position: relative;
     display: flex;

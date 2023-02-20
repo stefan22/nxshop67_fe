@@ -36,7 +36,7 @@ const TitleContainer = styled.h3`
   a {
     padding: 0 5px;
     color: #fff;
-    background: #1565c0;
+    background: ${({ theme }) => theme.colors.secondary};
     border-top-right-radius: 1px;
     border-bottom-right-radius: 2px;
     border-top: 1px solid var(--gray);

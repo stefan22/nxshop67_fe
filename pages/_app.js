@@ -2,11 +2,14 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 import { ApolloProvider } from '@apollo/client'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../utils/theme'
 import routeNProgress from '../components/n-progress'
 import withApollo from '../utils/withData'
 import Header from '../components/header'
 import Layout from '../components/layout'
 import '../styles/reset.css'
+import GlobalStyles from '../styles/GlobalStyles'
 import Head from 'next/head'
 
 const handleExitComplete = () => {
@@ -34,9 +37,12 @@ const App = ({ Component, pageProps, apollo }) => {
       <ApolloProvider client={apollo}>
         <Header />
         <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-          <Layout>
-            <Component {...pageProps} key={page.route} />
-          </Layout>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <Layout>
+              <Component {...pageProps} key={page.route} />
+            </Layout>
+          </ThemeProvider>
         </AnimatePresence>
       </ApolloProvider>
     </>
