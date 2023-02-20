@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCurrentUser } from '../hooks/current-user'
+import Head from 'next/head'
 
 const Account = () => {
   const { currentUser, userLoading } = useCurrentUser()
@@ -8,6 +9,9 @@ const Account = () => {
 
   return (
     <>
+      <Head>
+        <title>NXShop67 - Account:{currentUser.name}</title>
+      </Head>
       <h1>Welcome {currentUser?.name || 'no name'} </h1>
       <p>
         Good time to complete hsekpng: - folder structure started it: new folder with js file and style

@@ -3,8 +3,8 @@ const UpdatePage = ({ query }) => {
   let id = query?.id
 
   return (
-    <div className="update-page">
-      <header style={{ marginBottom: '3rem' }}>
+    <div className="product-update">
+      <header style={{ margin: '2rem 0' }}>
         <h1
           style={{
             width: '100%',

@@ -2,7 +2,7 @@ import React from 'react'
 import Product from '../product'
 import { ProductsContainer } from './Products.styles'
 import { useProductsPagination } from '../../hooks/all-products'
-import ErrorMessage from '../../lib/ErrorMessage'
+import ErrorMessage from '../../utils/ErrorMessage'
 
 const Products = ({ page, perPage }) => {
   const { allProds, allProdsLoading, allProdsError } = useProductsPagination(page, perPage)
