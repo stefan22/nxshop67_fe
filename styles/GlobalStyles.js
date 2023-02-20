@@ -176,7 +176,7 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     display: flex;
-    font-size: var(--fontSizeTxt);
+    font-size: var(--fontone);
     color: var(--black);
     padding: 0;
     margin-block-start: 1.5rem;

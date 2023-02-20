@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { TitleContainer, OnSaleContainer, PriceTag, ItemContainer } from './Product.styles'
-import { GBPCurrencyFormat as poundFormat } from '../../lib/currencyFormat'
+import { GBPCurrencyFormat as poundFormat } from '../../utils/currencyFormat'
 import { DeleteProduct } from '../delete-product'
 const Product = ({ product }) => (
   <ItemContainer animate={{ opacity: 1 }} data-testid="product">

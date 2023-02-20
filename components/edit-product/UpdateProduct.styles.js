@@ -5,7 +5,7 @@ const FormContainer = styled(motion.div)`
   padding: 0 5rem;
   font-size: var(--fontxt);
   line-height: normal;
-  font-weight: 400;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -15,9 +15,9 @@ const FormContainer = styled(motion.div)`
     margin: 0;
     padding: 1rem;
     border-radius: 3px;
-    box-shadow: var(--bs1);
-    border: 1px solid var(--dgray);
-    background: var(--offwhite);
+    box-shadow: var(--bs4);
+    border: 1px solid var(--logray);
+    background: var(--itemho);
     li {
       list-style: none;
       font-size: var(--fontsmall);
@@ -78,7 +78,7 @@ const FormContainer = styled(motion.div)`
       background: var(--red);
       height: 42px;
       border-radius: 4px;
-      font-weight: 400;
+      font-weight: 300;
       margin: 0 0 2rem 0;
       font-size: var(--fontxt);
       box-shadow: var(--bs4);

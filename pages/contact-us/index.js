@@ -1,13 +1,18 @@
+import Head from 'next/head'
+import Contactus from './Contactus.styles'
 const ContactUs = () => {
   return (
-    <div>
-      <h1>Emlor Ip Sumsum</h1>
+    <Contactus>
+      <Head>
+        <title>NXShop67 - Contact-us</title>
+      </Head>
+      <h1>Contact-us</h1>
+      <p>Lorem suum suum</p>
       <ul>
         <li>Email user email</li>
         <li>Usern name: name</li>
       </ul>
-    </div>
+    </Contactus>
   )
 }
-
 export default ContactUs
