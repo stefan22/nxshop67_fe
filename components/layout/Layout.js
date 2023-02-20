@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
-import GlobalStyles from '../../styles/GlobalStyles'
 import { PageWrapperSl, InnerWrapperSl } from './Layout.styles'
 
 const mixedOut = {
@@ -20,7 +19,6 @@ const mixedOut = {
 export const Layout = ({ children }) => {
   return (
     <PageWrapperSl animate={{ opacity: 1 }}>
-      <GlobalStyles />
       <motion.main
         initial="enter"
         animate="center"

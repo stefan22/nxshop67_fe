@@ -45,7 +45,6 @@ const GlobalStyles = createGlobalStyle`
     --fontmedium: 2.5rem;
     --fontlarge: 3rem;
     --lineheightsmall: calc(0.8 * var(--ratio));
-   
     
     /* other */
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
@@ -53,7 +52,6 @@ const GlobalStyles = createGlobalStyle`
     --bs3: 0 6px 10px 0 rgb(169,3,3,.21), 0 1px 18px 0 rgb(209,11,11,.12), 0 3px 5px -1px rgb(116,9,9,.25);
     --bs4: 0 0 5px 3px rgba(0, 0, 0, 0.05);
     --bs5: 0 2px 3px 0 rgb(60 64 67 / 15%), 0 6px 10px 4px rgb(60 64 67 / 15%);
- 
   }
   
   /* outside root */
@@ -82,6 +80,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Be Vietnam Pro', sans-serif;
     line-height: var(--ratio);
     background-color: var(--offWhite);
+    color: ${({ theme }) => theme.colors.primary}
   }
 
   footer,header,main,nav {
@@ -171,7 +170,6 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--offWhite);
     line-height: var(--lineheightsmall);
     font-weight: 400;
-    
   }
 
   p {
