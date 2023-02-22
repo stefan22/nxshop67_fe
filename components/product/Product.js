@@ -7,7 +7,12 @@ import { DeleteProduct } from '../delete-product'
 const Product = ({ product }) => (
   <ItemContainer animate={{ opacity: 1 }} data-testid="product">
     <OnSaleContainer>ON-SALE!</OnSaleContainer>
-    <Link href={`/product/${product?.id}`}>
+    <Link
+      href={{
+        query: { id: `${product?.id}` },
+        pathname: `/product/${product?.id}`
+      }}
+    >
       <picture>
         <Image
           layout="intrinsic"

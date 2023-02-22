@@ -23,15 +23,12 @@ const Navwrap = styled.div`
     width: 67px;
     line-height: 4.1;
   }
-
   ul > a {
     font-size: var(--fontxt);
     font-variant: all-small-caps;
-
     border: none;
     list-style: none;
   }
-
   div {
     display: flex;
     transform: translateX(13px);
@@ -41,7 +38,6 @@ const Navwrap = styled.div`
     @media screen and (max-width: 736px) {
       transform: translateX(0);
     }
-
     img {
       transition: mix-blend-mode 400ms linear 0ms;
       mix-blend-mode: normal;

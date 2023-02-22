@@ -15,7 +15,6 @@ const TitleContainer = styled.h3`
   @media screen and (max-width: 1005px) {
     max-width: 97%;
   }
-
   span {
     background: var(--darkgrey);
     display: block;
@@ -136,13 +135,11 @@ const ItemContainer = styled(motion.div)`
   @media screen and (max-width: 1005px) {
     max-width: 340px;
   }
-
   picture {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
   }
-
   &:hover {
     filter: brightness(1.1);
     mix-blend-mode: darken;
@@ -151,7 +148,6 @@ const ItemContainer = styled(motion.div)`
       color: var(--satred);
     }
   }
-
   img {
     padding: 0;
     display: flex;
@@ -160,7 +156,6 @@ const ItemContainer = styled(motion.div)`
     align-self: center;
     height: fit-content;
   }
-
   p {
     line-height: 2.75;
     position: absolute;
@@ -178,12 +173,10 @@ const ItemContainer = styled(motion.div)`
     width: 70px;
     background-color: var(--red);
     border-radius: 50%;
-
     &::before {
       content: '£';
     }
   }
-
   .buttonList {
     display: grid;
     width: 100%;
@@ -191,7 +184,6 @@ const ItemContainer = styled(motion.div)`
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1px;
     background: var(--dgray);
-
     & > * {
       background: white;
       border: 0;

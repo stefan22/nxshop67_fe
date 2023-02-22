@@ -16,17 +16,21 @@ const useEditProduct = () => {
   })
   const [loading, setLoading] = useState(true)
 
-  const { singleProd, singleProdLoading, singleProdError } = useSingleProduct(query.id)
+  const {
+    singleProduct,
+    singleProductLoading,
+    singleProductError } = useSingleProduct(query.id)
 
   useEffect(() => {
-    if (singleProd) {
-      const { Product } = singleProd
+    if (singleProduct) {
+      const { Product } = singleProduct
+
       setInput({
         ...Product
       })
       setLoading(false)
     }
-  }, [singleProd])
+  }, [singleProduct])
 
   const handleChange = e => {
     let { name, value } = e.target
@@ -37,16 +41,18 @@ const useEditProduct = () => {
     })
   }
 
-  const resetForm = obj => setInput(Object.fromEntries(Object.entries(obj).map(([itm, val]) => [itm, ' '])))
+  const resetForm = obj =>
+    setInput(Object.fromEntries(Object.entries(obj).map(([itm, val]) => [itm, ' '])))
 
   // eslint-disable-next-line no-console
-  if (singleProdError) return console.log('[From:useEditProduct] Error Msg: ', singleProdError)
+  if (singleProductError)
+    return console.log('[From:useEditProduct] Error Msg: ', singleProductError)
 
   return {
     input,
     resetForm,
     handleChange,
-    singleProdLoading
+    singleProductLoading
   }
 }
 

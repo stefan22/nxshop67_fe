@@ -2,33 +2,15 @@ import React, { useState } from 'react'
 import Router from 'next/router'
 import { SignInUp } from '../components/signin'
 import { useForm } from '../hooks/form'
-import { gql } from 'graphql-tag'
 import { useMutation } from '@apollo/client'
+import { signInMutation } from '../hooks/form'
 import { currentUserQuery } from '../hooks/current-user'
-
-const signinMutation = gql`
-  mutation signinMutation($email: String!, $password: String!) {
-    authenticateUserWithPassword(email: $email, password: $password) {
-      ... on UserAuthenticationWithPasswordSuccess {
-        item {
-          id
-          email
-          name
-        }
-      }
-      ... on UserAuthenticationWithPasswordFailure {
-        code
-        message
-      }
-    }
-  }
-`
 
 const SignInPage = () => {
   const [error, setError] = useState({ message: '' })
   const { input, handleChange, resetForm } = useForm()
 
-  const [signin] = useMutation(signinMutation, {
+  const [signin] = useMutation(signInMutation, {
     variables: input,
     refetchQueries: [{ query: currentUserQuery }]
   })
