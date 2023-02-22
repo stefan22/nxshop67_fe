@@ -10,7 +10,7 @@ const Account = () => {
   return (
     <>
       <Head>
-        <title>NXShop67 - Account:{currentUser.name}</title>
+        <title>NXShop67 - Account:{currentUser?.name}</title>
       </Head>
       <h1>Welcome {currentUser?.name || 'no name'} </h1>
       <p>

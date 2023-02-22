@@ -18,7 +18,6 @@ const ProductContainer = styled(motion.form)`
     width: 100%;
     border: none;
   }
-
   .login-title__mobile {
     display: none;
     @media screen and (max-width: 1279px) {
@@ -32,7 +31,6 @@ const ProductContainer = styled(motion.form)`
       }
     }
   }
-
   label {
     display: block;
     font-size: var(--fontSizeRegular);
@@ -40,7 +38,6 @@ const ProductContainer = styled(motion.form)`
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-
   input,
   textarea,
   select {
@@ -52,7 +49,6 @@ const ProductContainer = styled(motion.form)`
     border: 1px solid var(--gray);
     border-radius: 4px;
     box-shadow: var(--b1);
-
     &:focus {
       outline: 0;
       border-color: var(--red);
@@ -61,7 +57,6 @@ const ProductContainer = styled(motion.form)`
   textarea {
     padding: 1.5rem 0.5rem;
   }
-
   button,
   input[type='submit'] {
     width: auto;
@@ -89,7 +84,6 @@ const ProductContainer = styled(motion.form)`
     padding: 0;
     height: auto;
     margin: 0 0 3rem;
-
     &[disabled] {
       opacity: 0.5;
     }
@@ -123,7 +117,6 @@ const LoginContainer = styled.div`
   @media screen and (max-width: 1279px) {
     background: transparent;
   }
-
   .loginLeftContainer {
     width: 49%;
     padding: 0;
@@ -148,18 +141,15 @@ const LoginContainer = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-
       .login-title {
         margin-top: 0;
         font-size: var(--fontSizeRegular);
       }
-
       .login-sub-title {
         font-size: 20px;
         margin: 0;
         min-height: 50%;
       }
-
       .redirect-signup {
         font-size: 16px;
       }

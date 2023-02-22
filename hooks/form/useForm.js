@@ -9,7 +9,9 @@ const useForm = () => {
   const [input, setInput] = useState({
     name: '',
     description: '',
-    price: 0
+    price: 0,
+    email: '',
+    password: ''
   })
 
   const handleChange = e => {

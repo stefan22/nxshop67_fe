@@ -31,7 +31,6 @@ const FormContainer = styled(motion.div)`
       }
     }
   }
-
   form {
     display: flex;
     flex-direction: column;
@@ -42,14 +41,12 @@ const FormContainer = styled(motion.div)`
     .login-title__mobile {
       display: none;
     }
-
     label {
       display: block;
       margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: var(--fontone);
     }
-
     input,
     textarea,
     select {
@@ -62,18 +59,15 @@ const FormContainer = styled(motion.div)`
       border: 1px solid var(--gray);
       border-radius: 3px;
       box-shadow: var(--b1);
-
       &:focus {
         outline: 0;
         border-color: var(--red);
       }
     }
-
     textarea {
       padding: 15px 10px;
       min-height: 120px;
     }
-
     button {
       background: var(--red);
       height: 42px;
@@ -83,17 +77,14 @@ const FormContainer = styled(motion.div)`
       font-size: var(--fontxt);
       box-shadow: var(--bs4);
     }
-
     fieldset {
       border: 0;
       padding: 0;
       height: auto;
       margin: 0 0 2rem;
-
       &[disabled] {
         opacity: 0.5;
       }
-
       &::before {
         height: 10px;
         content: '';

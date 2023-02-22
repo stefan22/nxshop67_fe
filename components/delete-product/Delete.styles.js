@@ -8,7 +8,6 @@ const DeleteButton = styled(motion.div)`
   height: 44px;
   display: flex;
   flex-direction: column;
-
   button {
     display: flex;
     flex-direction: column;

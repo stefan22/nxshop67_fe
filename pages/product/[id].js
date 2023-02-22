@@ -8,11 +8,14 @@ const SingleProduct = () => {
   const router = useRouter()
   const { id } = router.query
 
-  const { singleProd, singleProdLoading, singleProdError } = useSingleProduct(id)
+  const {
+    singleProduct,
+    singleProductLoading, 
+    singleProductError } = useSingleProduct(id)
 
-  if (singleProdLoading) return <p>Loading...</p>
-  if (singleProdError) return <ErrorMessage error={singleProdError} />
-  const { Product } = singleProd
+  if (singleProductLoading) return <p>Loading...</p>
+  if (singleProductError) return <ErrorMessage error={singleProductError} />
+  const { Product } = singleProduct
   return <ProductDetails product={Product} />
 }
 

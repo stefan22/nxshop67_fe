@@ -10,7 +10,6 @@ const CarouselContainer = styled(motion.div)`
     position: relative;
     display: flex;
     width: 100%;
-
     .caption {
       display: flex;
       flex-direction: column;
