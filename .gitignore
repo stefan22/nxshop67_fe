@@ -1,13 +1,6 @@
 .DS_Store
 .idea/
-assets/
-xassets/
 backend/
-.eslintignore
-.prettierignore
-
-.next/
-.build/
+# .next/
 *.env
-next-env.d.ts
-node_modules
+
