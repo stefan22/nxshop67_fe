@@ -4,30 +4,40 @@
 
 <br />
 
-## :paperclip: Install
+## &#x1F4CE; Install
 
-:lollipop: Type `npm install`  
-:lollipop: Type `npm run dev` // opens in port 3003.  
-:lollipop: Node v16.17.0
+<br />
 
-## :paperclip: Front-end
+&#x2446; Frontend:
+```bash
+Type `npm install && npm run dev`   // opens in port 3003
+```
+
+&#x267E; ReactJS, NextJS, Apollo Client, Styled components
+
+<br />
+
+&#x2446; Backend:
+```bash
+Type `npm install && npm run dev` // opens in port 3000.  
+```
+
+&#x267E; NextJS, GraphQL, MongoDB
+
+<kbd>&#x2B86; Node v16 </kbd>
+
+##
 
 
-:lollipop: ReactJS, NextJS, Apollo Client, Styled components
 
+:lollipop: &#x2116; 3
 
-
-#### <kdb>Frontend</kdb>
-
-<img src="public/static/frontend2.png" alt="shop frontend">
+<img src="frontend/public/static/frontend2.png" alt="shop frontend">
 
 
 <br />
 <br />
 
-
-#### Back-end :paperclip: separate
-- updated all dependencies.
 
 
 <br />
