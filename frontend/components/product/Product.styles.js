@@ -12,9 +12,7 @@ const TitleContainer = styled.h3`
   flex-wrap: nowrap;
   box-shadow: var(--bs4);
   z-index: 10;
-  @media screen and (max-width: 1005px) {
-    max-width: 97%;
-  }
+
   span {
     background: var(--darkgrey);
     display: block;
@@ -25,33 +23,27 @@ const TitleContainer = styled.h3`
     transition: color 0.3s linear 0ms;
     color: var(--white);
     padding: 0 5px;
-    width: 57%;
+    width: 60%;
     box-shadow: var(--bs4);
     margin: 0 auto;
-    @media screen and (max-width: 1005px) {
-      width: 70%;
-    }
   }
+
   a {
     padding: 0 5px;
+    background: var(--darkblue);
     color: #fff;
-    background: ${({ theme }) => theme.colors.secondary};
     border-top-right-radius: 1px;
     border-bottom-right-radius: 2px;
     border-top: 1px solid var(--gray);
     border-left: 1px solid var(--ghostwhite);
     box-shadow: var(--bs5);
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-weight: 300;
     font-size: var(--fontsmall);
-    line-height: 45px;
-    height: 44px;
-    margin: 0;
-    margin-left: 1px;
-    text-shadow: none;
-    perspective: 200px;
     letter-spacing: 0.35px;
-    perspective-origin: 20px center;
     &:hover {
       text-decoration: none;
       background: var(--medgrey);
@@ -71,7 +63,7 @@ const PriceTag = styled.span`
   max-width: fit-content;
   position: absolute;
   border: 1px solid #333;
-  box-shadow: var(--b);
+  box-shadow: var(--bs1);
   overflow: hidden;
   top: 5%;
   right: 10px;
@@ -89,7 +81,6 @@ const OnSaleContainer = styled.span`
   bottom: 13%;
   left: 1%;
   font-weight: 400;
-  box-shadow: var(--bs5);
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -98,7 +89,7 @@ const OnSaleContainer = styled.span`
   background-color: var(--red);
   border-radius: 50%;
   z-index: 20;
-  box-shadow: 0 2px 5px rgba(0, 0, 0.005);
+  box-shadow: var(--bs4);
   transform: skew(7deg, -15deg) translate(1px, 15px) perspective(400px);
   text-align: center;
   font-size: var(--fontbase);
@@ -149,35 +140,35 @@ const ItemContainer = styled(motion.div)`
       color: var(--satred);
     }
   }
-  img {
-    padding: 0;
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-    align-self: center;
-    height: fit-content;
-  }
-  p {
-    line-height: 2.75;
-    position: absolute;
-    top: 13%;
-    left: 5%;
-    color: var(--black);
-    font-weight: 900;
-    padding: 1rem;
-    margin-block-start: 6rem;
-    box-shadow: var(--bs);
-    font-size: 1.65rem;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 70px;
-    background-color: var(--red);
-    border-radius: 50%;
-    &::before {
-      content: '£';
-    }
-  }
+  //img {
+  //  padding: 0;
+  //  display: flex;
+  //  margin: 0 auto;
+  //  width: 100%;
+  //  align-self: center;
+  //  height: fit-content;
+  //}
+  //p {
+  //  line-height: 2.75;
+  //  position: absolute;
+  //  top: 13%;
+  //  left: 5%;
+  //  color: var(--black);
+  //  font-weight: 900;
+  //  padding: 1rem;
+  //  margin-block-start: 6rem;
+  //  box-shadow: var(--bs);
+  //  font-size: 1.65rem;
+  //  justify-content: center;
+  //  align-items: center;
+  //  overflow: hidden;
+  //  width: 70px;
+  //  background-color: var(--red);
+  //  border-radius: 50%;
+  //  &::before {
+  //    content: '£';
+  //  }
+  //}
   .buttonList {
     display: grid;
     width: 100%;

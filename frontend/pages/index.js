@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Carousel from '../components/carousel'
-const IndexPage = () => {
+const IndexPage = props => {
+  console.log(props, 'props')
+
   return (
     <>
       <Head>
@@ -13,4 +15,8 @@ const IndexPage = () => {
   )
 }
 
+export async function getServerSideProps({ req }) {
+  const headers = req ? req.headers : {}
+  return { props: { headers } }
+}
 export default IndexPage

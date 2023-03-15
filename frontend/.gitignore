@@ -9,4 +9,6 @@ xassets/
 # .next/
 build/
 *.env
-node_modules
+node_modules/
+
+/styles/SharedStyles.jsx
