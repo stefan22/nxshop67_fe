@@ -4,3 +4,4 @@ backend/
 # .next/
 *.env
 
+frontend/styles/SharedStyles.jsx

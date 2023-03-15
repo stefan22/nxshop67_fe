@@ -9,7 +9,7 @@ const PaginationStyles = styled(motion.div)`
   justify-content: center;
   align-content: center;
   margin: 0 0 2rem;
-  height: 45px;
+  line-height: 20px;
   width: 100%;
   & > * {
     margin: 0;
@@ -32,7 +32,7 @@ const PaginationStyles = styled(motion.div)`
     color: var(--medgrey);
   }
   a {
-    background: ${({ theme }) => theme.colors.secondary};
+    background: var(--darkblue);
     transition: all 0.3s ease 0ms;
     color: var(--white);
     letter-spacing: 0.25px;
