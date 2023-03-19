@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client'
-import gql from 'graphql-tag'
 import Head from 'next/head'
 import Link from 'next/link'
+import { paginationQuery } from '../../features/all-products'
 import { PaginationStyles } from './Pagination.styles'
 import getConfig from 'next/config'
 
@@ -9,13 +9,6 @@ import getConfig from 'next/config'
 const { publicRuntimeConfig } = getConfig()
 const perPage = parseInt(publicRuntimeConfig.GQL_PER_PAGE) || 2
 
-export const paginationQuery = gql`
-  query paginationQuery {
-    _allProductsMeta {
-      count
-    }
-  }
-`
 const Pagination = ({ page }) => {
   const {
     error: errorPagination,

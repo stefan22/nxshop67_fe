@@ -3,6 +3,7 @@ import { onError } from '@apollo/link-error'
 import { getDataFromTree } from '@apollo/client/react/ssr'
 import { createUploadLink } from 'apollo-upload-client'
 import withApollo from 'next-with-apollo'
+import { paginationField } from '../components/pagination'
 import getConfig from 'next/config'
 import { endpoint, prodEndpoint } from '../config/config'
 
@@ -45,7 +46,15 @@ const createClient = ({ headers, initialState }) =>
         headers
       })
     ]),
-    cache: new InMemoryCache({}).restore(initialState || {})
+    cache: new InMemoryCache({
+      typePolicies: {
+        Query: {
+          fields: {
+            allProducts: paginationField()
+          }
+        }
+      }
+    }).restore(initialState || {})
   })
 
 export default withApollo(createClient, { getDataFromTree })
