@@ -117,7 +117,8 @@ const ItemContainer = styled(motion.div)`
   margin-bottom: 4rem;
   justify-content: space-between;
   z-index: 1;
-  transition: all 250ms linear 0ms;
+  overflow: hidden;
+  transition: flex 0.7s ease-in;
 
   @media screen and (max-width: 1112px) {
     width: 100%;
@@ -130,45 +131,25 @@ const ItemContainer = styled(motion.div)`
   picture {
     width: 100%;
     display: grid;
+    transition: all 350ms ease-in 0ms;
     grid-template-columns: auto;
   }
   &:hover {
-    filter: brightness(1.1);
-    mix-blend-mode: darken;
-    background: var(--itemho);
+    picture {
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
     h3 span {
       color: var(--satred);
     }
   }
-  //img {
-  //  padding: 0;
-  //  display: flex;
-  //  margin: 0 auto;
-  //  width: 100%;
-  //  align-self: center;
-  //  height: fit-content;
-  //}
-  //p {
-  //  line-height: 2.75;
-  //  position: absolute;
-  //  top: 13%;
-  //  left: 5%;
-  //  color: var(--black);
-  //  font-weight: 900;
-  //  padding: 1rem;
-  //  margin-block-start: 6rem;
-  //  box-shadow: var(--bs);
-  //  font-size: 1.65rem;
-  //  justify-content: center;
-  //  align-items: center;
-  //  overflow: hidden;
-  //  width: 70px;
-  //  background-color: var(--red);
-  //  border-radius: 50%;
-  //  &::before {
-  //    content: '£';
-  //  }
-  //}
+  img {
+    padding: 0;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    align-self: center;
+    height: fit-content;
+  }
   .buttonList {
     display: grid;
     width: 100%;

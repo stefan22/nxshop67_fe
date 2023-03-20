@@ -37,11 +37,9 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   color: var(--white);
   margin: 0 0 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  padding: 0.5em 1em 0.345em;
   border-radius: 3px;
 
   background: ${props => (props.primary ? 'var(--red)' : 'var(--yellow)')};

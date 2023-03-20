@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import NavContainer from './Nav.styles'
 import SignOut from '../signout'
+import { GrMoney, GrLogout, GrLogin, GrShop, GrUser, GrContact } from 'react-icons/gr'
 
 import { useCurrentUser } from '../../features/current-user'
 
@@ -12,15 +13,37 @@ const Nav = () => {
 
   return (
     <NavContainer data-testid="menu-links">
-      <Link href="/products">Products</Link>
+      <span>
+        <GrMoney />
+        <Link href="/products">Products</Link>
+      </span>
+      <span>
+        <GrShop />
+        <Link href="/cart">Cart</Link>
+      </span>
       {user && (
         <>
-          <Link href="/account">Account</Link>
-          <SignOut />
+          <span>
+            <GrUser />
+            <Link href="/account">Account</Link>
+          </span>
+
+          <span>
+            <GrLogout />
+            <SignOut />
+          </span>
         </>
       )}
-      <Link href="/contact-us">Contact-us</Link>
-      {!user && <Link href="/signin">Signin</Link>}
+      {!user && (
+        <span>
+          <GrLogin />
+          <Link href="/signin">Signin</Link>
+        </span>
+      )}
+      <span>
+        <GrContact />
+        <Link href="/contact-us">Contact-us</Link>
+      </span>
     </NavContainer>
   )
 }

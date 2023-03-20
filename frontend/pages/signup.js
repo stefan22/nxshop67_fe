@@ -1,36 +1,27 @@
 import React from 'react'
-import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
-import { useForm } from '../features/form'
+import { useForm, signUpMutation } from '../features/form'
 import { SignInUpContainer } from '../components/signin'
-import SignIn from './signin'
 import Link from 'next/link'
-
-const signupMutation = gql`
-  mutation signupMutation($email: String!, $name: String!, $password: String!) {
-    createUser(data: { email: $email, name: $name, password: $password }) {
-      id
-      email
-      name
-    }
-  }
-`
+import { useRouter } from 'next/router'
+import SignInPage from './signin'
 
 const SignUp = () => {
-  const { input, handleChange, resetForm } = useForm()
-  const [signup, { data, loading, error }] = useMutation(signupMutation, {
-    variables: input
+  const { inputs, handleChange, resetForm } = useForm()
+  const [signup, { data, loading, error }] = useMutation(signUpMutation, {
+    variables: inputs
   })
+  const router = useRouter()
+
   const handleSubmit = async e => {
     e.preventDefault()
     // eslint-disable-next-line no-console
     await signup().catch(err => console.log(err))
-    resetForm(input)
+    resetForm(inputs)
   }
 
-  if (loading) return <p>Loading...</p>
-
   if (data?.createUser) {
+    router.push('/signin')
     return (
       <div
         style={{
@@ -43,11 +34,12 @@ const SignUp = () => {
           alignItems: 'center'
         }}
       >
-        <p>Successfully signed up with {data?.createUser.email}</p>
-        <SignIn />
+        <SignInPage />
       </div>
     )
   }
+
+  if (loading) return <p>Loading...</p>
 
   return (
     <SignInUpContainer>
@@ -69,7 +61,7 @@ const SignUp = () => {
                     placeholder="Name"
                     name="name"
                     required
-                    value={input.name}
+                    value={inputs.name}
                     onChange={handleChange}
                   />
                 </label>
@@ -83,7 +75,7 @@ const SignUp = () => {
                     placeholder="Email"
                     name="email"
                     required
-                    value={input.email}
+                    value={inputs.email}
                     onChange={handleChange}
                   />
                 </label>
@@ -92,14 +84,13 @@ const SignUp = () => {
               <section className="input-field">
                 <label htmlFor="password">
                   Password:
-                  <span>Password Reset</span>
                   <input
                     type="password"
                     placeholder="Password"
                     name="password"
                     required
                     autoComplete="current-password"
-                    value={input.password}
+                    value={inputs.password}
                     onChange={handleChange}
                   />
                 </label>
@@ -107,6 +98,10 @@ const SignUp = () => {
 
               <div className="buttons-group">
                 <section className="submit-button">
+                  <div className="other__links">
+                    <p>Password reset?</p>&nbsp;
+                    <Link href="/password-reset">Click here.</Link>
+                  </div>
                   <button type="submit">Sign up</button>
                 </section>
 

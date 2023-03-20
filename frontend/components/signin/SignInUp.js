@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import SignInUpContainer from './SignInUp.styles'
 import { StyledBtn } from '../../styles/SharedStyles'
 
@@ -12,7 +13,6 @@ const SignInUp = ({
   labelSignin,
   labelSignup,
   btnIntroMsg,
-
   heading
 }) => (
   <SignInUpContainer>
@@ -35,7 +35,7 @@ const SignInUp = ({
                   autoComplete="current-email"
                   required
                   name="email"
-                  value={inputs.email}
+                  value={inputs?.email}
                   onChange={handleChange}
                 />
               </label>
@@ -44,13 +44,12 @@ const SignInUp = ({
             <section className="input-field">
               <label htmlFor="password">
                 Password:
-                <span>Password Reset</span>
                 <input
                   type="password"
                   placeholder="Password"
                   autoComplete="current-password"
                   name="password"
-                  value={inputs.password}
+                  value={inputs?.password}
                   onChange={handleChange}
                 />
               </label>
@@ -58,22 +57,18 @@ const SignInUp = ({
 
             <div className="buttons-group">
               <section className="submit-button">
+                <div className="other__links">
+                  <p>Password reset?</p>&nbsp;
+                  <Link href="/password-reset">Click here.</Link>
+                </div>
+
                 <button type="submit">Sign in</button>
               </section>
-
-              {/*<StyledBtn href={hrefLinkIn} name={labelSignin} />*/}
 
               <section className="login__no-account">
                 <p>{btnIntroMsg}</p>
                 <StyledBtn href={hrefLinkUp} name={labelSignup} />
               </section>
-
-              {/*<section className="login__no-account">*/}
-              {/*  <p>{btnIntroMsg}</p>*/}
-              {/*  <Link href={hrefLinkUp}>*/}
-              {/*    <button type="button">{labelSignup}</button>*/}
-              {/*  </Link>*/}
-              {/*</section>*/}
             </div>
           </fieldset>
         </form>

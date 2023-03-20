@@ -4,13 +4,11 @@ import { motion } from 'framer-motion'
 const Contactus = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  align-items: center;
-  margin: 2rem 0;
-  h1 {
-    font-size: var(--fontmedium);
-  }
+
   p {
     display: flex;
     justify-content: center;
