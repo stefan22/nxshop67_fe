@@ -12,7 +12,6 @@ const SignInUp = ({
   labelSignin,
   labelSignup,
   btnIntroMsg,
-
   heading
 }) => (
   <SignInUpContainer>
@@ -35,7 +34,7 @@ const SignInUp = ({
                   autoComplete="current-email"
                   required
                   name="email"
-                  value={inputs.email}
+                  value={inputs?.email}
                   onChange={handleChange}
                 />
               </label>
@@ -50,7 +49,7 @@ const SignInUp = ({
                   placeholder="Password"
                   autoComplete="current-password"
                   name="password"
-                  value={inputs.password}
+                  value={inputs?.password}
                   onChange={handleChange}
                 />
               </label>
@@ -61,19 +60,10 @@ const SignInUp = ({
                 <button type="submit">Sign in</button>
               </section>
 
-              {/*<StyledBtn href={hrefLinkIn} name={labelSignin} />*/}
-
               <section className="login__no-account">
                 <p>{btnIntroMsg}</p>
                 <StyledBtn href={hrefLinkUp} name={labelSignup} />
               </section>
-
-              {/*<section className="login__no-account">*/}
-              {/*  <p>{btnIntroMsg}</p>*/}
-              {/*  <Link href={hrefLinkUp}>*/}
-              {/*    <button type="button">{labelSignup}</button>*/}
-              {/*  </Link>*/}
-              {/*</section>*/}
             </div>
           </fieldset>
         </form>
