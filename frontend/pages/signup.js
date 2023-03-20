@@ -1,26 +1,18 @@
 import React from 'react'
-import gql from 'graphql-tag'
 import { useMutation } from '@apollo/client'
-import { useForm } from '../features/form'
+import { useForm, signUpMutation } from '../features/form'
 import { SignInUpContainer } from '../components/signin'
-import SignIn from './signin'
 import Link from 'next/link'
-
-const signupMutation = gql`
-  mutation signupMutation($email: String!, $name: String!, $password: String!) {
-    createUser(data: { email: $email, name: $name, password: $password }) {
-      id
-      email
-      name
-    }
-  }
-`
+import { useRouter } from 'next/router'
+import SignInPage from './signin'
 
 const SignUp = () => {
   const { input, handleChange, resetForm } = useForm()
-  const [signup, { data, loading, error }] = useMutation(signupMutation, {
+  const [signup, { data, loading, error }] = useMutation(signUpMutation, {
     variables: input
   })
+  const router = useRouter()
+
   const handleSubmit = async e => {
     e.preventDefault()
     // eslint-disable-next-line no-console
@@ -28,9 +20,8 @@ const SignUp = () => {
     resetForm(input)
   }
 
-  if (loading) return <p>Loading...</p>
-
   if (data?.createUser) {
+    router.push('/signin')
     return (
       <div
         style={{
@@ -43,11 +34,12 @@ const SignUp = () => {
           alignItems: 'center'
         }}
       >
-        <p>Successfully signed up with {data?.createUser.email}</p>
-        <SignIn />
+        <SignInPage />
       </div>
     )
   }
+
+  if (loading) return <p>Loading...</p>
 
   return (
     <SignInUpContainer>

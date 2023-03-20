@@ -20,6 +20,10 @@ const App = ({ Component, pageProps, apollo }) => {
       <Head>
         <title>NxShop67</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="nxshop67 site app proj" />
+        <link rel="shortcut icon" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <ApolloProvider client={apollo}>

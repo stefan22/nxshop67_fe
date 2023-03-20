@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { useCurrentUser } from '../features/current-user'
 import capitalize from '../utils/capitalize'
+import { GrMoney } from 'react-icons/gr'
 
 const Account = () => {
   const { user, loading } = useCurrentUser()
