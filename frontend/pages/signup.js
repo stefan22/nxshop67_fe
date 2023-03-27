@@ -12,6 +12,7 @@ const SignUp = () => {
     variables: input
   })
   const router = useRouter()
+
   const handleSubmit = async e => {
     e.preventDefault()
     // eslint-disable-next-line no-console

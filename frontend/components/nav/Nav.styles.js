@@ -5,12 +5,22 @@ const NavContainer = styled(motion.ul)`
   margin: 0;
   padding: 0;
   display: flex;
-  flex: 4 1;
   height: 57px;
   justify-content: flex-end;
   width: 100%;
   @media screen and (max-width: 980px) {
     display: none;
+  }
+  span {
+    position: relative;
+  }
+  svg {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    height: 57px;
+    justify-content: center;
+    margin: 0 0.5rem 0;
   }
   a,
   button {
@@ -21,6 +31,8 @@ const NavContainer = styled(motion.ul)`
     text-transform: uppercase;
     background: none;
     border: 0;
+    line-height: 2.1;
+    font-size: var(--fontsmall);
     cursor: pointer;
     @media (max-width: 700px) {
       font-size: var(--fontmedium);
@@ -41,7 +53,7 @@ const NavContainer = styled(motion.ul)`
       height: 2px;
       background: var(--darkgrey);
       content: '';
-      width: 0%;
+      width: 0;
       position: absolute;
       transform: translateX(-50%);
       transition: width 0.4s;

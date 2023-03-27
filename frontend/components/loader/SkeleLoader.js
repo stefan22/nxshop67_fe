@@ -1,5 +1,5 @@
-import { Svg } from './Svg.jsx'
-const SkeleLoader = ({ title }) => (
+import { Svg } from './Svg.js'
+const SkeleLoader = () => (
   <>
     <Svg
       speed={1}
@@ -25,7 +25,7 @@ const SkeleLoader = ({ title }) => (
       <circle cx="210" cy="535" r="12" />
       <circle cx="428" cy="536" r="12" />
     </Svg>
-    <p>{title}</p>
+    <p>Loading...</p>
   </>
 )
 

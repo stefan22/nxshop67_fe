@@ -21,7 +21,7 @@ const Navwrap = styled.div`
   border-bottom: 1px solid var(--ghostwhite);
   > a {
     width: 67px;
-    line-height: 4.1;
+    line-height: 4.5;
   }
   ul > a {
     font-size: var(--fontxt);

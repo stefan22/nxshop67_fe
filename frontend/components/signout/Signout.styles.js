@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 const SignoutBtn = styled(motion.button)`
-  font-size: var(--fontxt);
   font-variant: all-small-caps;
   font-weight: 400;
   border: none;

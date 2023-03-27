@@ -6,6 +6,7 @@ module.exports = {
     'next/link-passhref': 0,
     'unused-default-export': 0,
     'react/prop-types': 0,
+    'react/display-name': 0,
     'import/no-unresolved': 0,
     'import/no-named-as-default': 0,
     '@typescript-eslint/no-unsafe-assignment': 0,

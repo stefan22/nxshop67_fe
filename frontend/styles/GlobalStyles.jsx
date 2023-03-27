@@ -87,13 +87,13 @@ const GlobalStyles = createGlobalStyle`
   }
   
   button {
-    font-size: inherit;
+    font-size: var(--fontext);
     display: inline-block;
     cursor: pointer;
     font-weight: 300;
     color: var(--white);
     background-color: var(--black);
-    padding: .345em 1em .345em;
+    padding: .5em 1em .345em;
     border-width: 1px;
     
     .buttonDark {
