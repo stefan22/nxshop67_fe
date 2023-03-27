@@ -1,3 +1,4 @@
-import { SkeleLoader } from './SkeleLoader.jsx'
+import { SkeleLoader } from './SkeleLoader.js'
+import withLoading from './withLoading'
 
-export default SkeleLoader
+export { withLoading, SkeleLoader }

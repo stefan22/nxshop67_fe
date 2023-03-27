@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import { theme } from '../utils/theme'
 
 const FlexContainer = styled.div`
   display: flex;
@@ -38,11 +37,9 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   color: var(--white);
   margin: 0 0 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  padding: 0.5em 1em 0.345em;
   border-radius: 3px;
 
   background: ${props => (props.primary ? 'var(--red)' : 'var(--yellow)')};
@@ -110,6 +107,34 @@ const Description = styled.p`
   text-align: center;
   line-height: 1.5;
   font-size: 1.5rem;
+`
+
+const Table = styled.table`
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid var(--offWhite);
+  thead {
+    font-size: 10px;
+  }
+  td,
+  th {
+    border-bottom: 1px solid var(--offWhite);
+    border-right: 1px solid var(--offWhite);
+    padding: 10px 5px;
+    position: relative;
+    &:last-child {
+      border-right: none;
+      width: 150px;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  tr {
+    &:hover {
+      background: var(--offWhite);
+    }
+  }
 `
 
 export { Card, StyledBtn, Container, Main, Title, Description }

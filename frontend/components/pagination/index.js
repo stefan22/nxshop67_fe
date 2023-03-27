@@ -1,3 +1,4 @@
 import Pagination from './Pagination'
+import paginationField from './paginationField'
 
-export { Pagination }
+export { Pagination, paginationField }

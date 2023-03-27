@@ -1,0 +1,16 @@
+{
+  "name": "nxshop67",
+  "short_name": "nxshop67",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "background_color": "#fff",
+  "description": "React, NextJS app",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#129cdd"
+}

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { theme } from '../utils/theme'
 import '@fontsource/be-vietnam'
 
 const GlobalStyles = createGlobalStyle`
@@ -77,45 +76,24 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     font-size: var(--fontxt);
-    color: var(--black);
     font-family: 'Be Vietnam Pro', sans-serif;
     line-height: var(--ratio);
     background-color: var(--offWhite);
-    color: ${({ theme }) => theme.colors.black1}
+    color: var(--black);
   }
 
   footer,header,main,nav {
     display: block
   }
-
-  @media (prefers-reduced-motion:no-preference) {
-    html:focus-within {
-      scroll-behavior: smooth
-    }
-  }
-  
-  #__next {
-    width: 100%;
-    height: 100vh;
-  }
-  
-  form {
-    border-radius: 4px;
-    min-height: 400px;
-    width: 100%;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-  }
   
   button {
-    font-size: inherit;
+    font-size: var(--fontext);
     display: inline-block;
     cursor: pointer;
     font-weight: 300;
     color: var(--white);
     background-color: var(--black);
-    padding: .345em 1em .345em;
+    padding: .5em 1em .345em;
     border-width: 1px;
     
     .buttonDark {
@@ -141,7 +119,6 @@ const GlobalStyles = createGlobalStyle`
   
   /* utilities */
   .heading_H1 {
-    font-size: var(--fontlarge);
     color: var(--black);
     font-weight: 400;
     font-size: var(--fontlarge);

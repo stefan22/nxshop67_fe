@@ -33,8 +33,8 @@ const SignInPage = () => {
     <SignInUp
       handleChange={handleChange}
       handleSubmit={handleSubmit}
-      heading="Welcome back!"
       error={error}
+      heading="Welcome back"
       inputs={input}
       hrefLinkUp="/signup"
       hrefLinkIn="/signin"
