@@ -19,7 +19,7 @@
 
 #### <kdb>Frontend</kdb>
 
-<img src="public/static/frontend2.png" alt="shop frontend">
+<img src="public/static/row-products-pagination.png" alt="shop frontend">
 
 
 <br />
