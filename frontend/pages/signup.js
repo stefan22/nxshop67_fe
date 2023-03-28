@@ -84,7 +84,6 @@ const SignUp = () => {
               <section className="input-field">
                 <label htmlFor="password">
                   Password:
-                  <span>Password Reset</span>
                   <input
                     type="password"
                     placeholder="Password"
@@ -99,6 +98,10 @@ const SignUp = () => {
 
               <div className="buttons-group">
                 <section className="submit-button">
+                  <div className="other__links">
+                    <p>Password reset?</p>&nbsp;
+                    <Link href="/password-reset">Click here.</Link>
+                  </div>
                   <button type="submit">Sign up</button>
                 </section>
 

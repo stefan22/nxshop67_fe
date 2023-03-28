@@ -38,7 +38,7 @@ const createClient = ({ headers, initialState }) =>
           )
       }),
       createUploadLink({
-        uri: process.env.NODE_ENV === 'development' ? endpoint : prodEndpoint,
+        uri: process.env.NODE_ENV === 'development' ? endpoint : productionUrl,
         fetchOptions: {
           credentials: 'include'
         },

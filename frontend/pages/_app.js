@@ -40,11 +40,12 @@ App.getInitialProps = async function ({ Component, ctx }) {
   let pageProps = {}
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx)
+    // eslint-disable-next-line no-console
+    console.log('pageprops ', pageProps)
   }
   pageProps.query = ctx.query
 
   return {
-    DATABASE_URL: process.env.DATABASE_URL,
     pageProps
   }
 }

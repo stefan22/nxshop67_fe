@@ -48,6 +48,7 @@ const SignInUpContainer = styled(motion.div)`
 
     .login__body {
       padding: 1rem 2rem 1rem;
+
       @media screen and (max-width: 1281px) {
         padding: 0;
       }
@@ -83,11 +84,15 @@ const SignInUpContainer = styled(motion.div)`
               }
             }
 
-            input {
+            input,
+            textarea {
               background-color: var(--dgray);
               padding: 9px 10px;
               border: 1px solid lightgray;
               font-size: var(--fontsmall);
+            }
+            textarea {
+              padding: 15px 10px;
             }
           }
 
@@ -105,9 +110,14 @@ const SignInUpContainer = styled(motion.div)`
               align-content: center;
               width: 100%;
               margin: 0;
-              p {
+              p,
+              a {
                 font-size: var(--fontsmall);
                 margin: 1.15rem 0 0;
+                font-weight: 300;
+              }
+              a {
+                text-decoration: underline;
               }
             }
 
@@ -125,7 +135,29 @@ const SignInUpContainer = styled(motion.div)`
                 background-color: var(--red);
               }
             }
+
+            .other__links {
+              display: flex;
+              justify-content: flex-start;
+              p,
+              a {
+                font-size: var(--fontsmall);
+                margin: 1.15rem 0 0;
+                font-weight: 300;
+              }
+              a {
+                text-decoration: underline;
+              }
+            }
           }
+        }
+      }
+      &.password__reset {
+        .input-field {
+          margin-top: 3.5rem;
+        }
+        .buttons-group {
+          margin-top: 3rem;
         }
       }
     }

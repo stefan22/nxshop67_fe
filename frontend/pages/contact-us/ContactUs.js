@@ -1,22 +1,47 @@
+import React, { useState } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
+import { ContactForm } from '../../components/signin'
 import Contactus from './ContactUs.styles'
-import SkeleLoader from '../../components/loader'
-import { Main } from '../../styles/SharedStyles'
-import { StyledBtn } from '../../styles/SharedStyles'
+
+const useContactForm = () => {
+  const [input, setInput] = useState({
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleChange = e => {
+    setInput(prevState => {
+      return {
+        ...prevState,
+        [e.target.id]: e.target.value
+      }
+    })
+  }
+  return {
+    input,
+    handleChange
+  }
+}
 
 const ContactUs = () => {
+  const [error, setError] = useState({ message: '' })
+  const { input, handleChange } = useContactForm()
+  const handleSubmit = e => {
+    e.preventDefault()
+  }
   return (
     <Contactus>
-      <Main>
-        <Head>
-          <title>NXShop67 - Contact-us</title>
-        </Head>
-        <h1>Contact-us</h1>
-        <p>Lorem suum suum</p>
-        <StyledBtn href="/" name="home" primary={false} className="okay" />
-        {/*<SkeleLoader />*/}
-      </Main>
+      <Head>
+        <title>NXShop67 - Contact-us</title>
+      </Head>
+      <ContactForm
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        setError={setError}
+        error={error}
+        inputs={input}
+      />
     </Contactus>
   )
 }

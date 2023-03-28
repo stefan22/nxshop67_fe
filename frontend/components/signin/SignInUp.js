@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import SignInUpContainer from './SignInUp.styles'
 import { StyledBtn } from '../../styles/SharedStyles'
 
@@ -57,6 +58,11 @@ const SignInUp = ({
 
             <div className="buttons-group">
               <section className="submit-button">
+                <div className="other__links">
+                  <p>Password reset?</p>&nbsp;
+                  <Link href="/password-reset">Click here.</Link>
+                </div>
+
                 <button type="submit">Sign in</button>
               </section>
 
