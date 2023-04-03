@@ -5,7 +5,7 @@ import { createUploadLink } from 'apollo-upload-client'
 import withApollo from 'next-with-apollo'
 import { paginationField } from '../components/pagination'
 import getConfig from 'next/config'
-import { endpoint, prodEndpoint } from '../config/config'
+import { endpoint } from '../config/config'
 
 // env var
 const { publicRuntimeConfig } = getConfig()
