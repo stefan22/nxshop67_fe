@@ -5,11 +5,12 @@ import { createUploadLink } from 'apollo-upload-client'
 import withApollo from 'next-with-apollo'
 import { paginationField } from '../components/pagination'
 import getConfig from 'next/config'
-import { endpoint } from '../config/config'
 
 // env var
 const { publicRuntimeConfig } = getConfig()
-const productionUrl = parseInt(publicRuntimeConfig.PRODUCTION_URL)
+// eslint-disable-next-line no-console
+console.log(publicRuntimeConfig)
+const endpoint = publicRuntimeConfig.BACKEND_URL
 
 /**
  * Creates new ApolloClient
@@ -38,7 +39,10 @@ const createClient = ({ headers, initialState }) =>
           )
       }),
       createUploadLink({
-        uri: process.env.NODE_ENV === 'development' ? endpoint : productionUrl,
+        uri:
+          process.env.NODE_ENV === 'development'
+            ? endpoint
+            : 'http://localhost:3000/api/graphql',
         fetchOptions: {
           credentials: 'include'
         },
