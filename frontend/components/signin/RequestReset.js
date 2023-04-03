@@ -5,17 +5,17 @@ import { useMutation } from '@apollo/client'
 import SignInUpContainer from './SignInUp.styles'
 
 const RequestReset = () => {
-  const { input, handleChange, resetForm } = useForm({ email: '' })
+  const { inputs, handleChange, resetForm } = useForm({ email: '' })
   const [reset, { data, loading, error }] = useMutation(requestResetMutation, {
-    variables: input
+    variables: inputs
   })
 
   async function handleSubmit(e) {
     e.preventDefault()
     // eslint-disable-next-line no-console
-    console.log(input)
+    console.log(inputs)
     await reset()
-    resetForm(input)
+    resetForm(inputs)
   }
 
   return (
@@ -23,7 +23,7 @@ const RequestReset = () => {
       <div className="login">
         <header>
           <h1>Password reset request</h1>
-          {data?.sendUserPasswordResetLink === null && input.email !== '' ? (
+          {data?.sendUserPasswordResetLink === null && inputs.email !== '' ? (
             <p>{`A password reset link has been sent to your inbox.`}</p>
           ) : (
             <p>Email password reset.</p>
@@ -40,7 +40,7 @@ const RequestReset = () => {
                     type="email"
                     placeholder="Email"
                     autoComplete="current-email"
-                    value={input?.email}
+                    value={inputs?.email}
                     onChange={handleChange}
                     required
                     name="email"

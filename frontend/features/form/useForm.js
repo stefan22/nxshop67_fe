@@ -6,7 +6,7 @@ import { useState } from 'react'
  * */
 
 const useForm = () => {
-  const [input, setInput] = useState({
+  const [inputs, setInput] = useState({
     name: '',
     description: '',
     price: 0,
@@ -26,21 +26,20 @@ const useForm = () => {
     }
 
     return setInput({
-      ...input,
+      ...inputs,
       [name]: value
     })
   }
 
-  const resetForm = obj =>
-    setInput(
-      Object.fromEntries(
-        //clear input fields
-        Object.entries(obj).map(([itm, val]) => [itm, ' '])
-      )
+  const resetForm = obj => {
+    const isReset = Object.fromEntries(
+      Object.entries(obj).map(([key, val]) => [key, ' '])
     )
+    setInput(isReset)
+  }
 
   return {
-    input,
+    inputs,
     resetForm,
     handleChange
   }

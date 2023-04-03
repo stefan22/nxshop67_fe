@@ -2,14 +2,20 @@ import React from 'react'
 const SkeleLoader = () => (
   <>
     <svg
-      style={{ transform: 'skewX(10deg) translateX(-15px)' }}
+      style={{
+        mixBlendMode: 'lighten',
+        transform: 'skewX(10deg) translateX(-15px)'
+      }}
       speed={1}
       width={340}
       height={384}
       viewBox="0 0 340 90"
     >
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="0"
         y="34"
         rx="2"
@@ -18,7 +24,10 @@ const SkeleLoader = () => (
         height="3"
       />
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="0"
         y="40"
         rx="2"
@@ -27,7 +36,11 @@ const SkeleLoader = () => (
         height="11"
       />
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)',
+          filter: 'drop-shadow(0 1px 3px #acacac29)'
+        }}
         x="0"
         y="58"
         rx="2"
@@ -36,7 +49,10 @@ const SkeleLoader = () => (
         height="41"
       />
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="0"
         y="105"
         rx="2"
@@ -45,7 +61,10 @@ const SkeleLoader = () => (
         height="41"
       />
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="0"
         y="152"
         rx="2"
@@ -55,7 +74,10 @@ const SkeleLoader = () => (
       />
 
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: '' + 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="217"
         y="152"
         rx="2"
@@ -65,7 +87,10 @@ const SkeleLoader = () => (
       />
 
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="0"
         y="200"
         rx="2"
@@ -75,7 +100,10 @@ const SkeleLoader = () => (
       />
 
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="12"
         y="295"
         rx="2"
@@ -85,7 +113,10 @@ const SkeleLoader = () => (
       />
 
       <rect
-        style={{ fill: 'url("#rec-animated")' }}
+        style={{
+          fill: 'url("#rec-animated")',
+          boxShadow: '0 2px 4px 1px rgba(0,0,0,.17)'
+        }}
         x="240"
         y="295"
         rx="2"

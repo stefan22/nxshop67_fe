@@ -29,7 +29,7 @@ const App = ({ Component, pageProps, apollo }) => {
       <ApolloProvider client={apollo}>
         <GlobalStyles />
         <Layout>
-          <Component {...pageProps} key={page.route} />
+          <Component {...pageProps} />
         </Layout>
       </ApolloProvider>
     </>

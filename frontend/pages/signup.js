@@ -7,9 +7,9 @@ import { useRouter } from 'next/router'
 import SignInPage from './signin'
 
 const SignUp = () => {
-  const { input, handleChange, resetForm } = useForm()
+  const { inputs, handleChange, resetForm } = useForm()
   const [signup, { data, loading, error }] = useMutation(signUpMutation, {
-    variables: input
+    variables: inputs
   })
   const router = useRouter()
 
@@ -17,7 +17,7 @@ const SignUp = () => {
     e.preventDefault()
     // eslint-disable-next-line no-console
     await signup().catch(err => console.log(err))
-    resetForm(input)
+    resetForm(inputs)
   }
 
   if (data?.createUser) {
@@ -61,7 +61,7 @@ const SignUp = () => {
                     placeholder="Name"
                     name="name"
                     required
-                    value={input.name}
+                    value={inputs.name}
                     onChange={handleChange}
                   />
                 </label>
@@ -75,7 +75,7 @@ const SignUp = () => {
                     placeholder="Email"
                     name="email"
                     required
-                    value={input.email}
+                    value={inputs.email}
                     onChange={handleChange}
                   />
                 </label>
@@ -90,7 +90,7 @@ const SignUp = () => {
                     name="password"
                     required
                     autoComplete="current-password"
-                    value={input.password}
+                    value={inputs.password}
                     onChange={handleChange}
                   />
                 </label>

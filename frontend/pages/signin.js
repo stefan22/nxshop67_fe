@@ -8,10 +8,10 @@ import { currentUserQuery } from '../features/current-user'
 
 const SignInPage = () => {
   const [error, setError] = useState({ message: '' })
-  const { input, handleChange, resetForm } = useForm()
+  const { inputs, handleChange, resetForm } = useForm()
 
   const [signin] = useMutation(signInMutation, {
-    variables: input,
+    variables: inputs,
     refetchQueries: [{ query: currentUserQuery }]
   })
 
@@ -19,14 +19,16 @@ const SignInPage = () => {
     e.preventDefault()
     let { data } = await signin()
 
+    if (data?.authenticateUserWithPassword?.item?.email === inputs?.email) {
+      await Router.push({ pathname: '/account' })
+    }
     if (data?.authenticateUserWithPassword.code === 'FAILURE') {
       setError({
         message: data?.authenticateUserWithPassword.message
       })
-    } else if (data?.authenticateUserWithPassword.code !== 'FAILURE') {
-      await Router.push({ pathname: '/account' })
     }
-    resetForm(input)
+
+    resetForm(inputs)
   }
 
   return (
@@ -35,7 +37,7 @@ const SignInPage = () => {
       handleSubmit={handleSubmit}
       error={error}
       heading="Welcome back"
-      inputs={input}
+      inputs={inputs}
       hrefLinkUp="/signup"
       hrefLinkIn="/signin"
       labelSignin="Sign in"

@@ -118,7 +118,7 @@ const ItemContainer = styled(motion.div)`
   justify-content: space-between;
   z-index: 1;
   overflow: hidden;
-  transition: all 0.3s ease-in;
+  transition: flex 0.7s ease-in;
 
   @media screen and (max-width: 1112px) {
     width: 100%;

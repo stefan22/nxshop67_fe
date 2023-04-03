@@ -44,7 +44,6 @@ const SignInUp = ({
             <section className="input-field">
               <label htmlFor="password">
                 Password:
-                <span>Password Reset</span>
                 <input
                   type="password"
                   placeholder="Password"

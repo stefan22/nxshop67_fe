@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config()
+require('dotenv').config()
 /**
  * @type {import('next').NextConfig}
  */
@@ -15,7 +15,8 @@ module.exports = {
   publicRuntimeConfig: {
     // passing env to pgs (env set to 5/ default val 2)
     GQL_PER_PAGE: process.env.GQL_PER_PAGE,
-    PRODUCTION_URL: process.env.PRODUCTION_URL
+    FRONTEND_URL: process.env.FRONTEND_URL,
+    BACKEND_URL: process.env.BACKEND_URL
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

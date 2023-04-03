@@ -2,31 +2,12 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import { ContactForm } from '../../components/signin'
 import Contactus from './ContactUs.styles'
-
-const useContactForm = () => {
-  const [input, setInput] = useState({
-    email: '',
-    subject: '',
-    message: ''
-  })
-
-  const handleChange = e => {
-    setInput(prevState => {
-      return {
-        ...prevState,
-        [e.target.id]: e.target.value
-      }
-    })
-  }
-  return {
-    input,
-    handleChange
-  }
-}
+import { useForm } from '../../features/form'
 
 const ContactUs = () => {
   const [error, setError] = useState({ message: '' })
-  const { input, handleChange } = useContactForm()
+  const { input, handleChange } = useForm()
+
   const handleSubmit = e => {
     e.preventDefault()
   }

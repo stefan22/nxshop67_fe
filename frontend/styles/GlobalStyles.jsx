@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle`
     --ratio: 1.5;  /* line height */
     
     /* font sizes */
-    --fontsmall: 0.87rem;
+    --fontsmall: 0.84rem;
     --fontbase: 10px;
     --fontone: 1rem;
     --fontxt: 1.2rem;

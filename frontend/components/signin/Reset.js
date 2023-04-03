@@ -1,22 +1,48 @@
 import { useMutation } from '@apollo/client'
+import Link from 'next/link'
 import { useForm, resetMutation } from '../../features/form'
 import { SignInUpContainer } from '../signin'
+import { useRouter } from 'next/router'
+import ErrorMessage from '../../utils/ErrorMessage'
 
 const Reset = ({ token }) => {
-  const { input, handleChange, resetForm } = useForm({
+  const router = useRouter()
+  const { inputs, handleChange, resetForm } = useForm({
     email: '',
-    password: '',
-    token
+    password: ''
   })
 
-  const [reset, { data, loading }] = useMutation(resetMutation, {
-    variables: input
+  const [reset, { data, loading, error }] = useMutation(resetMutation, {
+    variables: {
+      inputs,
+      token
+    }
   })
+
+  const resetError = data?.redeemUserPasswordResetToken?.code
+    ? data?.redeemUserPasswordResetToken
+    : undefined
 
   async function handleSubmit(e) {
     e.preventDefault()
-    await reset()
-    resetForm(input)
+    try {
+      const data = await reset({
+        variables: {
+          email: inputs?.email,
+          password: inputs?.password,
+          token
+        }
+      })
+      let isToken = data?.data
+      await resetForm(inputs)
+
+      if (isToken?.redeemUserPasswordtoken === null) {
+        await router.push({ pathname: '/signin' })
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error(err)
+    }
   }
 
   return (
@@ -25,13 +51,19 @@ const Reset = ({ token }) => {
         <header>
           <h1>Password reset</h1>
           {data?.redeemUserPasswordResetToken === null && (
-            <p>Success! You can Now sign in</p>
+            <div className="form-message">
+              <p className="message-success">
+                You have successfully updated your password.
+                <Link href="/signin">Click here to signin</Link>
+              </p>
+            </div>
           )}
         </header>
 
         <div className="login__body password__reset">
           <form method="POST" onSubmit={handleSubmit}>
             <fieldset>
+              {<ErrorMessage error={error || resetError} />}
               <section className="input-field">
                 <label htmlFor="email">
                   Email:
@@ -39,7 +71,7 @@ const Reset = ({ token }) => {
                     type="email"
                     placeholder="Email"
                     autoComplete="current-email"
-                    value={input?.email}
+                    value={inputs?.email}
                     onChange={handleChange}
                     required
                     name="email"
@@ -53,7 +85,7 @@ const Reset = ({ token }) => {
                   <input
                     type="password"
                     placeholder="Password"
-                    value={input?.password}
+                    value={inputs?.password}
                     onChange={handleChange}
                     required
                     name="password"

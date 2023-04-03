@@ -22,6 +22,7 @@ const Navwrap = styled.div`
   > a {
     width: 67px;
     line-height: 4.5;
+    padding-left: 2rem;
   }
   ul > a {
     font-size: var(--fontxt);

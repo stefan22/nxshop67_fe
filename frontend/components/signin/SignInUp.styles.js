@@ -22,6 +22,24 @@ const SignInUpContainer = styled(motion.div)`
       justify-content: center;
       align-content: center;
       text-align: center;
+      .form-message {
+        padding: 2rem;
+        background: white;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-left: 5px solid red;
+        .message-success {
+          font-size: var(--fontone);
+          a {
+            font-weight: 300;
+            text-decoration: underline;
+          }
+        }
+      }
 
       h1 {
         margin: 2rem 0 0;
