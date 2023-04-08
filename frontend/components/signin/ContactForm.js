@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import SignInUpContainer from './SignInUp.styles'
 
 const ContactForm = ({ handleSubmit, handleChange, setError, error, inputs }) => {
@@ -48,7 +47,6 @@ const ContactForm = ({ handleSubmit, handleChange, setError, error, inputs }) =>
                 <label htmlFor="message">
                   Message:
                   <textarea
-                    type="textarea"
                     placeholder="Your message"
                     name="message"
                     id="message"

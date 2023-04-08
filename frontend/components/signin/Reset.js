@@ -9,13 +9,13 @@ const Reset = ({ token }) => {
   const router = useRouter()
   const { inputs, handleChange, resetForm } = useForm({
     email: '',
-    password: ''
+    password: '',
+    token
   })
 
   const [reset, { data, loading, error }] = useMutation(resetMutation, {
     variables: {
-      inputs,
-      token
+      inputs
     }
   })
 
