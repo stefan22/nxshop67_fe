@@ -7,6 +7,20 @@ const currentUserQuery = gql`
         id
         email
         name
+        cart {
+          id
+          quantity
+          product {
+            id
+            price
+            name
+            photo {
+              image {
+                publicUrlTransformed
+              }
+            }
+          }
+        }
       }
     }
   }
