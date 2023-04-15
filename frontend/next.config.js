@@ -15,8 +15,8 @@ module.exports = {
   publicRuntimeConfig: {
     // passing env to pgs (env set to 5/ default val 2)
     GQL_PER_PAGE: process.env.GQL_PER_PAGE,
-    FRONTEND_URL: process.env.FRONTEND_URL,
-    BACKEND_URL: process.env.BACKEND_URL
+    FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3003',
+    BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:3000'
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

@@ -19,7 +19,7 @@ const Nav = () => {
       </span>
       <span>
         <GrShop />
-        <Link href="/cart">Cart</Link>
+        <Link href="/">Cart</Link>
       </span>
       {user && (
         <>
