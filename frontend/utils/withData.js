@@ -8,9 +8,7 @@ import getConfig from 'next/config'
 
 // env var
 const { publicRuntimeConfig } = getConfig()
-// eslint-disable-next-line no-console
-console.log(publicRuntimeConfig)
-const endpoint = publicRuntimeConfig.BACKEND_URL
+const GQLEndPoint = publicRuntimeConfig.GQL_ENDPOINT
 
 /**
  * Creates new ApolloClient
@@ -41,7 +39,7 @@ const createClient = ({ headers, initialState }) =>
       createUploadLink({
         uri:
           process.env.NODE_ENV === 'development'
-            ? endpoint
+            ? GQLEndPoint
             : 'http://localhost:3000/api/graphql',
         fetchOptions: {
           credentials: 'include'

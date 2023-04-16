@@ -12,7 +12,7 @@ const Reset = ({ token }) => {
     password: ''
   })
 
-  const [reset, { data, loading, error }] = useMutation(resetMutation, {
+  const [reset, { data, error }] = useMutation(resetMutation, {
     variables: {
       inputs,
       token

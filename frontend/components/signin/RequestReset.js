@@ -6,16 +6,22 @@ import SignInUpContainer from './SignInUp.styles'
 
 const RequestReset = () => {
   const { inputs, handleChange, resetForm } = useForm({ email: '' })
-  const [reset, { data, loading, error }] = useMutation(requestResetMutation, {
+  const [reset, { data, loading }] = useMutation(requestResetMutation, {
     variables: inputs
   })
 
+  if (loading) return <p>Loading...</p>
   async function handleSubmit(e) {
     e.preventDefault()
-    // eslint-disable-next-line no-console
-    console.log(inputs)
-    await reset()
-    resetForm(inputs)
+    try {
+      // eslint-disable-next-line no-console
+      console.log(inputs)
+      await reset()
+      resetForm(inputs)
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log('req reset error ', err)
+    }
   }
 
   return (

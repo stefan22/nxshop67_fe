@@ -6,16 +6,18 @@ import { GrMoney } from 'react-icons/gr'
 
 const Account = () => {
   const { user, loading } = useCurrentUser()
-
+  let username
   if (loading) return <p>Loading...</p>
-  let isUsername = capitalize(user?.name)
+  if (user?.name) username = capitalize(user?.name)
 
   return (
     <>
       <Head>
-        <title>NXShop67 - Account:{isUsername}</title>
+        <title>NXShop67 - Account:{username}</title>
       </Head>
-      <h1>Welcome {isUsername} </h1>
+      <h1>
+        Welcome <GrMoney /> {username}{' '}
+      </h1>
       <p>Lorem zoom zoom</p>
     </>
   )
