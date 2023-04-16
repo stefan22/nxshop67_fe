@@ -6,7 +6,6 @@ import { GBPCurrencyFormat } from '../../utils/currencyFormat'
 import { cartTotalPrice } from '../../utils/cartTotalPrice'
 
 const CartItem = ({ cartItem }) => {
-
   const { product } = cartItem
   if (!product) return null
 
@@ -39,9 +38,9 @@ const Cart = ({ close, setClose }) => {
 
   return (
     <CartContainer className="cart-side" close={close}>
-      <CloseButton
-          onClick={() => setClose(!close)}
-          close={close}>&#x0058;</CloseButton>
+      <CloseButton onClick={() => setClose(!close)} close={close}>
+        &#x0058;
+      </CloseButton>
       <header>
         <Heading>{`${user?.name}'s Cart`}</Heading>
       </header>

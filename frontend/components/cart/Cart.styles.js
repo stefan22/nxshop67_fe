@@ -18,7 +18,7 @@ const CartContainer = styled.div`
   background: #f5f5f5;
   border: 1px solid #cccccc;
   overflow: initial !important;
-   ${props => props.close && `right: -20%`};
+  ${props => props.close && `right: -20%`};
 
   header {
     display: flex;
@@ -90,7 +90,7 @@ const Heading = styled.h3`
 const CloseButton = styled.button`
   background: var(--grey);
   color: white !important;
-   padding: 0.2rem 0.5rem !important;
+  padding: 0.2rem 0.5rem !important;
   font-size: 1.2rem;
   border: 0;
   position: absolute;
