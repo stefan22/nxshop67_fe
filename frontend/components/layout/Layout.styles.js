@@ -5,7 +5,7 @@ export const PageWrapperSl = styled(motion.div)`
   opacity: 0.87;
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100vh;
   width: 100%;
   padding: 0;
 `
@@ -19,4 +19,7 @@ export const InnerWrapperSl = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 1rem;
+  transition: all 0.3s linear 0ms;
+  transform: translateX(0);
+  ${props => !props.close && `transform: translateX(-8vw)`};
 `

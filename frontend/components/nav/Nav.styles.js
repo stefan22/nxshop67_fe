@@ -8,12 +8,20 @@ const NavContainer = styled(motion.ul)`
   height: 57px;
   justify-content: flex-end;
   width: 100%;
+  transition: all 0.35s linear 0ms;
+  ${props => !props.close && `transform: translateX(-170px)`};
   @media screen and (max-width: 980px) {
     display: none;
   }
   span {
     position: relative;
   }
+
+  span#nav-cart,
+  a[href='/products#'] {
+    ${props => !props.close && `display: none;`};
+  }
+
   svg {
     position: absolute;
     left: 10px;
@@ -75,4 +83,4 @@ const NavContainer = styled(motion.ul)`
   }
 `
 
-export default NavContainer
+export { NavContainer }

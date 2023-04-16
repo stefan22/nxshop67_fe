@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import { PageWrapperSl, InnerWrapperSl } from './Layout.styles'
 import Header from '../header'
+import { useCartState } from '../../utils/cartContext'
 import { variants } from '../../utils/animationVariant'
 
 const handleExitComplete = () => {
@@ -13,6 +14,7 @@ const handleExitComplete = () => {
 }
 
 export const Layout = ({ children }) => {
+  const { close } = useCartState()
   return (
     <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
       <PageWrapperSl animate={{ opacity: 1 }}>
@@ -30,7 +32,7 @@ export const Layout = ({ children }) => {
             opacity: { duration: 0.35 }
           }}
         >
-          <InnerWrapperSl>{children}</InnerWrapperSl>
+          <InnerWrapperSl close={close}>{children}</InnerWrapperSl>
         </motion.main>
       </PageWrapperSl>
     </AnimatePresence>

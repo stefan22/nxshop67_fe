@@ -31,14 +31,6 @@ const Navwrap = styled.div`
     list-style: none;
   }
   div {
-    display: flex;
-    transform: translateX(13px);
-    width: 40px;
-    height: auto;
-    vertical-align: text-bottom;
-    @media screen and (max-width: 736px) {
-      transform: translateX(0);
-    }
     img {
       transition: mix-blend-mode 400ms linear 0ms;
       mix-blend-mode: normal;
