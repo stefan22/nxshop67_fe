@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const sendEmail = () => {
+export const sendEmail = () => {
   return axios({
     method: 'post',
     url: '/api/send-mail',

@@ -7,7 +7,7 @@ const useCurrentUser = () => {
   const { data: user } = useQuery(currentUserQuery)
 
   useEffect(() => {
-    setLoading(false)
+    return setLoading(false)
   }, [])
 
   return {

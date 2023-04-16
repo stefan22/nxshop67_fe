@@ -16,7 +16,8 @@ module.exports = {
     // passing env to pgs (env set to 5/ default val 2)
     GQL_PER_PAGE: process.env.GQL_PER_PAGE,
     FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3003',
-    BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:3000'
+    BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:3000',
+    GQL_ENDPOINT: process.env.GQL_ENDPOINT || 'http://localhost:3000/api/graphql'
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

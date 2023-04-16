@@ -17,18 +17,22 @@ const SignInPage = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    let { data } = await signin()
 
-    if (data?.authenticateUserWithPassword?.item?.email === inputs?.email) {
-      await Router.push({ pathname: '/account' })
+    try {
+      let { data } = await signin()
+      resetForm(inputs)
+      if (data?.authenticateUserWithPassword?.item?.email === inputs?.email) {
+        return await Router.push({ pathname: '/account' })
+      }
+      if (data?.authenticateUserWithPassword.code === 'FAILURE') {
+        return setError({
+          message: data?.authenticateUserWithPassword.message
+        })
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log('signing error ', err)
     }
-    if (data?.authenticateUserWithPassword.code === 'FAILURE') {
-      setError({
-        message: data?.authenticateUserWithPassword.message
-      })
-    }
-
-    resetForm(inputs)
   }
 
   return (
