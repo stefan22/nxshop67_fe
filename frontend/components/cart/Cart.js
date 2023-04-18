@@ -1,9 +1,27 @@
 import React from 'react'
 import Image from 'next/image'
-import { CartContainer, Heading, CloseButton, CartListItem } from './Cart.styles'
+import {
+  CartContainer,
+  HeadingWrapper,
+  Heading,
+  CloseButton,
+  CartListItem
+} from './Cart.styles'
 import { useCurrentUser } from '../../features/current-user'
 import { GBPCurrencyFormat } from '../../utils/currencyFormat'
 import { cartTotalPrice } from '../../utils/cartTotalPrice'
+import { CartItemInfo } from './Cart.styles'
+import {
+  GrClose,
+  GrTag,
+  GrFormTrash,
+  GrShop,
+  GrTrash,
+  GrCreditCard,
+  GrBasket,
+  GrCart
+} from 'react-icons/gr'
+import { AiOutlinePoundCircle } from 'react-icons/ai'
 
 const CartItem = ({ cartItem }) => {
   const { product } = cartItem
@@ -13,20 +31,22 @@ const CartItem = ({ cartItem }) => {
     <CartListItem>
       <Image
         width="100"
-        height="50"
+        height="100"
         src={product.photo.image?.publicUrlTransformed}
         alt={product.name}
       />
-      <div>
-        <h3>{product.name}</h3>
+      <CartItemInfo>
+        <h3>
+          <GrTag /> {product.name}
+        </h3>
         <p>
           {GBPCurrencyFormat(product.price * cartItem.quantity)} -
           <em>
-            {cartItem.quantity} &times;
+            {cartItem.quantity} <GrShop />
             {GBPCurrencyFormat(product.price)} each
           </em>
         </p>
-      </div>
+      </CartItemInfo>
     </CartListItem>
   )
 }
@@ -38,19 +58,26 @@ const Cart = ({ close, setClose }) => {
 
   return (
     <CartContainer className="cart-side" close={close}>
-      <CloseButton onClick={() => setClose(!close)} close={close}>
-        &#x0058;
-      </CloseButton>
-      <header>
-        <Heading>{`${user?.name}'s Cart`}</Heading>
-      </header>
+      <HeadingWrapper>
+        <CloseButton onClick={() => setClose(!close)} close={close}>
+          <GrClose />
+        </CloseButton>
+        <header>
+          <Heading>
+            CART <GrCart />
+          </Heading>
+        </header>
+      </HeadingWrapper>
       <ul>
         {user?.cart.map(cartItem => (
           <CartItem key={cartItem.id} cartItem={cartItem} />
         ))}
       </ul>
       <footer>
-        <p>{GBPCurrencyFormat(cartTotalPrice(user.cart))}</p>
+        <p>
+          <AiOutlinePoundCircle />
+          {GBPCurrencyFormat(cartTotalPrice(user.cart))}
+        </p>
       </footer>
     </CartContainer>
   )
