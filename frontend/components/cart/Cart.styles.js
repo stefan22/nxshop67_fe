@@ -22,11 +22,10 @@ const CartContainer = styled.div`
 
   header {
     display: flex;
-    border-bottom: 5px solid var(--black);
-    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--logray);
     padding-top: 0;
     margin-top: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
 
     h3 {
       margin-top: 0;
@@ -77,39 +76,89 @@ const CartContainer = styled.div`
   }
 `
 
+const HeadingWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(42px, auto);
+  width: 100%;
+  margin-bottom: 2rem;
+  header {
+    margin: 0 0 0 50px;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+`
+
 const Heading = styled.h3`
-  background: var(--red);
-  color: white;
-  display: inline-block;
-  padding: 4px 5px;
-  transform: skew(-3deg);
+  color: var(--black);
+  width: 100%;
+  display: flex;
+  font-size: 3rem;
+  font-weight: 400;
+  transform: scale(1.2);
+  font-variant-caps: all-petite-caps;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  font-size: 4rem;
+  svg {
+    display: flex;
+    margin: 0 10px;
+    height: 30px;
+    font-size: 0.94rem;
+  }
 `
 
 const CloseButton = styled.button`
-  background: var(--grey);
-  color: white !important;
-  padding: 0.2rem 0.5rem !important;
-  font-size: 1.2rem;
+  background: var(--darkblue);
+  padding: 0.25rem 0.5rem !important;
+  font-size: 1.25rem;
+  vertical-align: middle;
   border: 0;
   position: absolute;
   z-index: 2;
+  height: 30px;
+  top: 15px;
   left: 20px;
+  svg {
+    path {
+      fill: white;
+      stroke: white;
+    }
+  }
 `
 
 const CartListItem = styled.li`
   padding: 1rem 0;
-  border-bottom: 1px solid var(--lightGrey);
+  border-bottom: 1px dotted var(--grey);
   display: grid;
   grid-template-columns: auto 1fr auto;
   img {
     margin-right: 1rem;
-  }
-  h3,
-  p {
-    margin: 0;
+    width: 100px !important;
+    height: auto !important;
   }
 `
 
-export { CartContainer, Heading, CloseButton, CartListItem }
+const CartItemInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 10px;
+  h3,
+  p {
+    margin: 0;
+    svg {
+      path {
+        stroke: var(--lightblue);
+        fill: #fffacd;
+      }
+    }
+  }
+  h3 {
+    color: var(--lightblue);
+    font-size: 1.15rem;
+  }
+`
+
+export { CartContainer, HeadingWrapper, Heading, CloseButton, CartListItem, CartItemInfo }
