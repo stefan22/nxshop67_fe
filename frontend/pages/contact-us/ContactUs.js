@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { ContactForm } from '../../components/signin'
 import Contactus from './ContactUs.styles'
 import { useForm } from '../../features/form'
+import { SkeleLoader, withLoading } from '../../components/loader'
 
 const ContactUs = () => {
   const [error, setError] = useState({ message: '' })
@@ -26,4 +27,5 @@ const ContactUs = () => {
     </Contactus>
   )
 }
-export default ContactUs
+
+export default withLoading(Contactus, SkeleLoader)

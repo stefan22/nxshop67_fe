@@ -6,5 +6,4 @@ export async function getServerSideProps({ req }) {
   return { props: { headers } }
 }
 
-const IndexPage = withLoading(Carousel, SkeleLoader)
-export default IndexPage
+export default withLoading(Carousel, SkeleLoader)

@@ -14,6 +14,7 @@ const Product = ({ product }) => (
   <ItemContainer animate={{ opacity: 1 }} data-testid="product">
     <OnSaleContainer>ON-SALE!</OnSaleContainer>
     <Link
+      passHref
       href={{
         query: { id: `${product?.id}` },
         pathname: `/product/${product?.id}`
@@ -36,6 +37,7 @@ const Product = ({ product }) => (
       <span>{product?.name}</span>
 
       <Link
+        passHref
         style={{ color: '#c28f87' }}
         href={{
           pathname: '/update',
