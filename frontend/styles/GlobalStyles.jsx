@@ -39,11 +39,12 @@ const GlobalStyles = createGlobalStyle`
     /* font sizes */
     --fontsmall: 0.84rem;
     --fontbase: 10px;
-    --fontone: 1rem;
-    --fontxt: 1.2rem;
-    --fontregular: 1.5rem;
-    --fontmedium: 2.5rem;
-    --fontlarge: 3rem;
+    --fontone: 14px;
+    --fontween: 1rem;
+    --fontxt: 1.1em;
+    --fontregular: 1.5em;
+    --fontmedium: 2.5em;
+    --fontlarge: 3em;
     --lineheightsmall: calc(0.8 * var(--ratio));
     
     /* other */

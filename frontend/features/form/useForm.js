@@ -5,14 +5,16 @@ import { useState } from 'react'
  * @return inputs,resetForm, handleChange
  * */
 
+const initialState = {
+  name: '',
+  description: '',
+  price: 0,
+  email: '',
+  password: ''
+}
+
 const useForm = () => {
-  const [inputs, setInput] = useState({
-    name: '',
-    description: '',
-    price: 0,
-    email: '',
-    password: ''
-  })
+  const [inputs, setInput] = useState(initialState)
 
   const handleChange = e => {
     let { name, value, type } = e.target
@@ -31,16 +33,19 @@ const useForm = () => {
     })
   }
 
-  const resetForm = obj => {
-    const isReset = Object.fromEntries(
-      Object.entries(obj).map(([key, val]) => [key, ' '])
+  const resetForm = () => {
+    let isReset = Object.fromEntries(
+      Object.entries(inputs).map(([key, val]) => [key, ' '])
     )
-    setInput(isReset)
+    return setInput(isReset)
   }
+
+  const formClear = () => setInputs(initialState)
 
   return {
     inputs,
     resetForm,
+    formClear,
     handleChange
   }
 }
