@@ -3,11 +3,11 @@ import Head from 'next/head'
 import { useCurrentUser } from '../features/current-user'
 import capitalize from '../utils/capitalize'
 import { GrMoney } from 'react-icons/gr'
+import { SkeleLoader, withLoading } from '../components/loader'
 
-const Account = () => {
-  const { user, loading } = useCurrentUser()
+const UserAccount = () => {
+  const { user } = useCurrentUser()
   let username
-  if (loading) return <p>Loading...</p>
   if (user?.name) username = capitalize(user?.name)
 
   return (
@@ -23,4 +23,4 @@ const Account = () => {
   )
 }
 
-export default Account
+export default withLoading(UserAccount, SkeleLoader)
