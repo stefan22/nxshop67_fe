@@ -5,23 +5,15 @@ import {
   HeadingWrapper,
   Heading,
   CloseButton,
-  CartListItem
+  CartListItem,
+  CartItemInfo,
+  FooterInfo
 } from './Cart.styles'
 import { useCurrentUser } from '../../features/current-user'
 import { GBPCurrencyFormat } from '../../utils/currencyFormat'
 import { cartTotalPrice } from '../../utils/cartTotalPrice'
-import { CartItemInfo } from './Cart.styles'
-import {
-  GrClose,
-  GrTag,
-  GrFormTrash,
-  GrShop,
-  GrTrash,
-  GrCreditCard,
-  GrBasket,
-  GrCart
-} from 'react-icons/gr'
-import { AiOutlinePoundCircle } from 'react-icons/ai'
+import { GrClose, GrTag, GrShop, GrCreditCard, GrBasket } from 'react-icons/gr'
+// GrFormTrash,  GrTrash,  GrCart
 
 const CartItem = ({ cartItem }) => {
   const { product } = cartItem
@@ -30,20 +22,24 @@ const CartItem = ({ cartItem }) => {
   return (
     <CartListItem>
       <Image
-        width="100"
-        height="100"
+        width="128"
+        height="142"
         src={product.photo.image?.publicUrlTransformed}
         alt={product.name}
       />
       <CartItemInfo>
         <h3>
-          <GrTag /> {product.name}
+          <GrTag size="16" /> {product.name}
         </h3>
         <p>
-          {GBPCurrencyFormat(product.price * cartItem.quantity)} -
+          Qty: {cartItem.quantity}
+          <em>{GBPCurrencyFormat(product.price)} each</em>
+        </p>
+
+        <p>
+          Total:
           <em>
-            {cartItem.quantity} <GrShop />
-            {GBPCurrencyFormat(product.price)} each
+            {GBPCurrencyFormat(product.price * cartItem.quantity)} <GrShop size="14" />
           </em>
         </p>
       </CartItemInfo>
@@ -64,7 +60,7 @@ const Cart = ({ close, setClose }) => {
         </CloseButton>
         <header>
           <Heading>
-            CART <GrCart />
+            CART <GrBasket />
           </Heading>
         </header>
       </HeadingWrapper>
@@ -73,12 +69,13 @@ const Cart = ({ close, setClose }) => {
           <CartItem key={cartItem.id} cartItem={cartItem} />
         ))}
       </ul>
-      <footer>
+      <FooterInfo>
+        <span style={{ visibility: 'hidden' }}></span>
         <p>
-          <AiOutlinePoundCircle />
-          {GBPCurrencyFormat(cartTotalPrice(user.cart))}
+          <GrCreditCard size={16} />
         </p>
-      </footer>
+        <p>{GBPCurrencyFormat(cartTotalPrice(user.cart))}</p>
+      </FooterInfo>
     </CartContainer>
   )
 }
