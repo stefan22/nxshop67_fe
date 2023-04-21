@@ -5,7 +5,7 @@ import capitalize from '../utils/capitalize'
 import { GrMoney } from 'react-icons/gr'
 import { SkeleLoader, withLoading } from '../components/loader'
 
-const UserAccount = () => {
+const Account = () => {
   const { user } = useCurrentUser()
   let username
   if (user?.name) username = capitalize(user?.name)
@@ -23,4 +23,4 @@ const UserAccount = () => {
   )
 }
 
-export default withLoading(UserAccount, SkeleLoader)
+export default withLoading(Account, SkeleLoader)
