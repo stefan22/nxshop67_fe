@@ -6,6 +6,8 @@ jobs:
   lint_files:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug
+        run: echo "Workflow trigger"
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
