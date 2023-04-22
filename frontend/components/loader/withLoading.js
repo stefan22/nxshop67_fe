@@ -3,12 +3,16 @@ const withLoading =
   (Component, LoadingComponent) =>
   ({ ...rest }) => {
     const [loading, setLoading] = useState(true)
+
     useEffect(() => {
-      let timeout = setTimeout(() => {
-        return setLoading(false)
-      }, 1000)
-      return () => clearTimeout(timeout)
-    }, [])
+      let testTimeout
+      if (loading) {
+        testTimeout = setTimeout(function () {
+          setLoading(false)
+        }, 500)
+      }
+      return () => testTimeout
+    }, [loading])
 
     if (loading) return <LoadingComponent />
     return <Component {...rest} />

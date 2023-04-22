@@ -1,3 +1,1 @@
-import ProductsPage from './[page]'
-
-export default ProductsPage
+export { default } from './[page]'
