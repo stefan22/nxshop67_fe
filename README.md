@@ -4,11 +4,11 @@
 
 <br />
 
-## &#x1F4CE; Install
+## &#x1FA97;  Install
 
 <br />
 
-&#x2446; Frontend:
+### &#x2694; Frontend:
 ```bash
 Type `npm install && npm run dev`   // opens in port 3003
 ```
@@ -17,7 +17,7 @@ Type `npm install && npm run dev`   // opens in port 3003
 
 <br />
 
-&#x2446; Backend:
+### &#x2694; Backend:
 ```bash
 Type `npm install && npm run dev` // opens in port 3000.  
 ```
@@ -39,6 +39,35 @@ Type `npm install && npm run dev` // opens in port 3000.
 <br />
 
 
+
+## &#x1FA97;  About project
+<hr />
+
+#### &#x2694; Folder structure         
+- Feature based/atomic design folder structure
+
+#### &#x2694; Rendering
+- Server-side rendering, 
+- Client-side rendering 
+- Static generation - auto
+
+#### &#x2694; ***State***   
+   - `Local state` local-first approach with built-in React Hooks   
+         &nbsp; No single global state is used; instead the Context API is used handle state across multiple components          
+   - `Server and form state` - data handled with Graphql/Apollo  including loading/error states.          
+
+####  &#x2694; *Authentication workflow*  
+- Basic authentication w/ email/passowrd and token using KeystoneJS     
+- KeystoneJS w/built-in support for Cloudinary images and MongoDB data    
+
+#### &#x2694; **Styling**     
+- Global CSS variables/reset stylesheet    
+- CSS in JS w/Styled components    
+
+#### &#x2694; **Testing**
+
+-  Unit testing w/ Jest    
+-  Integration testing w/ end-to-end Cypress    
 
 <br />
 

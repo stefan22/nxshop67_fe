@@ -1,8 +1,9 @@
 /**
- * @Fun List HOC<Takes an array of object and a function component>
- * @param items {array}
- * @param Component {function}
- * @returns {Array}
+ *  @fn List -{Higher Order Component}
+ *  It renders a list of items using  provided List component
+ *  @params - it takes in two props 'items' {Array} of items to be rendered and 'item' which is the component
+ *  to be used to render each item
+ *
  */
 
 const List = ({ items, item: Item }) => {

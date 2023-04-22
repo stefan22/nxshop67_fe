@@ -1,7 +1,8 @@
 /*
  * @fn cartTotalPrice
- * It calculates the total cost of a cart's products
- * @param user cart items <Object>
+ * It calculates the total cost of  cart's products.
+ *  @param - it takes a cart array as its only argument
+ *  @returns - the total value at the accumulator ( total price of all items in the cart)
  */
 
 const cartTotalPrice = cart => {

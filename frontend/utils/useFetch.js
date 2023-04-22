@@ -1,5 +1,7 @@
 /*
- *  @fn useFetch
+ *  @fn useFetch - used for fetching data from an API endpoint.
+ *  The usestate hook is used to initialize.
+ *  The useEffect hook used to fetch data.
  * @param  It takes a Url/ endpoint parameter
  * @returns data, loading and error <object>
  * */

@@ -6,7 +6,16 @@ import withApollo from 'next-with-apollo'
 import { paginationField } from '../components/pagination'
 import getConfig from 'next/config'
 
-// env var
+/*
+ * @function-  createClient returns a new instance of the ApolloClient class from the @apollo/client library.
+ * @params - headers and initialState
+ * The client is configured with a link that is composed of an onError function that logs any GraphQL errors or network errors to the console and a
+ * The createUploadLink takes an URI and is used to handle file uploads in GraphQL.
+ * The client also has a cache instance of InMemoryCache  to handle pagination for querying products.
+ * The initialState is used to hydrate the cache on the client for server-side rendering.
+ * The publicRuntimeConfig is an object that stores the env variables pulled off next.config.jsfile.
+ * */
+
 const { publicRuntimeConfig } = getConfig()
 const GQLEndPoint = publicRuntimeConfig.GQL_ENDPOINT
 
