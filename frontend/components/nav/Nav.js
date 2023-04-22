@@ -4,7 +4,7 @@ import { NavContainer } from './Nav.styles'
 import SignOut from '../signout'
 import Cart from '../cart'
 import { GrMoney, GrLogout, GrLogin, GrShop, GrUser } from 'react-icons/gr'
-import { useCartState } from '../../utils/cartContext'
+import { useCartState } from '../../utils'
 import { useCurrentUser } from '../../features/current-user'
 
 const Nav = () => {
