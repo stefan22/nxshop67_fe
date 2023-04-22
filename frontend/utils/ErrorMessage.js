@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 /**
- * @fun ErrorMessage
- * @param error <object>
- * @return jsx
+ *  @fn ErrorMessage
+ *  @param {Object }It takes an error prop (object) that returns 'message' when 'Network error'
+ * @return {Null} Checks if Error or error.message is falsy, if so returns null
+ *
  */
 
 const ErrorSl = styled.div`
