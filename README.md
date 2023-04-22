@@ -9,6 +9,7 @@
 <br />
 
 ### &#x2694; Frontend:
+Frontend only atm
 ```bash
 Type `npm install && npm run dev`   // opens in port 3003
 ```
@@ -18,6 +19,7 @@ Type `npm install && npm run dev`   // opens in port 3003
 <br />
 
 ### &#x2694; Backend:
+Trying out something different
 ```bash
 Type `npm install && npm run dev` // opens in port 3000.  
 ```
@@ -40,29 +42,30 @@ Type `npm install && npm run dev` // opens in port 3000.
 
 
 
-## &#x1FA97;  About project
-<hr />
+### &#x1FA97;  About ongoing project changes
 
-#### &#x2694; Folder structure         
-- Feature based/atomic design folder structure
+<br />
+
+#### &#x2694; Folder structure      
+An Atomic design/ feature-based folder mixed structure, without the atoms, molecules and  crawling organisms.
 
 #### &#x2694; Rendering
-- Server-side rendering, 
-- Client-side rendering 
-- Static generation - auto
+- Server-side, Client-side rendering, Static generation  with Next
 
 #### &#x2694; ***State***   
-   - `Local state` local-first approach with built-in React Hooks   
-         &nbsp; No single global state is used; instead the Context API is used handle state across multiple components          
-   - `Server and form state` - data handled with Graphql/Apollo  including loading/error states.          
+No single global state on the client-side. When it makes sense state left out at component level, and Context API
+to handle some state across multiple components.
+- `Local state` √ built-in React Hooks   
+- `Global state`≈ No global state. Context API state across multiple components          
+- `Server and form state` √ - using Graphql/Apollo  includes loading/error states.          
 
-####  &#x2694; *Authentication workflow*  
-- Basic authentication w/ email/passowrd and token using KeystoneJS     
-- KeystoneJS w/built-in support for Cloudinary images and MongoDB data    
+####  &#x2694; *Auth flow*  
+- Basic authentication w/ email/passowrd and token using Keystone Client     
+- Keystone v5 config for Cloudinary and MongoDB data    
 
 #### &#x2694; **Styling**     
 - Global CSS variables/reset stylesheet    
-- CSS in JS w/Styled components    
+- CSS in JS Styled components    
 
 #### &#x2694; **Testing**
 
