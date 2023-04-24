@@ -19,7 +19,7 @@ Type `npm install && npm run dev`   // opens in port 3003
 <br />
 
 ### &#x2694; Backend:
-Trying out something different
+Trying out Payload Headless CMS
 ```bash
 Type `npm install && npm run dev` // opens in port 3000.  
 ```
@@ -46,26 +46,20 @@ Type `npm install && npm run dev` // opens in port 3000.
 
 <br />
 
-#### &#x2694; Folder structure      
-An Atomic design/ feature-based folder mixed structure, without the atoms, molecules and  crawling organisms.
-
 #### &#x2694; Rendering
 - Server-side, Client-side rendering, Static generation  with Next
 
-#### &#x2694; ***State***   
-No single global state on the client-side. When it makes sense state left out at component level, and Context API
-to handle some state across multiple components.
-- `Local state` √ built-in React Hooks   
+#### &#x2694; ***State***
+- `Local state` √  at component level when appropriate.  
 - `Global state`≈ No global state. Context API state across multiple components          
-- `Server and form state` √ - using Graphql/Apollo  includes loading/error states.          
+- `Server and form state` √ -  Graphql/Apollo data,  including loading/error states.          
 
 ####  &#x2694; *Auth flow*  
-- Basic authentication w/ email/passowrd and token using Keystone Client     
-- Keystone v5 config for Cloudinary and MongoDB data    
+- Basic authentication token w/ email/passowrd using Keystone Client
 
 #### &#x2694; **Styling**     
 - Global CSS variables/reset stylesheet    
-- CSS in JS Styled components    
+- Styled components    (CSS in JS)
 
 #### &#x2694; **Testing**
 

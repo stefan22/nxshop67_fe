@@ -1,12 +1,10 @@
-
 @import './nprogress.css';
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-/* Remove default margin */
+ /*Remove default margin */
 body,
 h1,
 h2,
@@ -24,16 +22,13 @@ ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
-
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 body {
   text-rendering: optimizeLegibility;
   font-weight: inherit;
 }
-
 
 img,
 picture {
