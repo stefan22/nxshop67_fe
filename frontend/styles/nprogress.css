@@ -32,7 +32,6 @@
    right: 15px;
    display: none;
 }
-
 #nprogress .spinner-icon {
    width: 18px;
    height: 18px;
@@ -43,17 +42,14 @@
    border-bottom-color: #534b4b;
    animation: nprogress-spinner 950ms linear infinite 850ms;
 }
-
 .nprogress-custom-parent {
    overflow: hidden;
    position: relative;
 }
-
 .nprogress-custom-parent #nprogress .spinner,
 .nprogress-custom-parent #nprogress .bar {
    position: absolute;
 }
-
 @keyframes nprogress-spinner {
    0% {
       transform: rotate(0deg);

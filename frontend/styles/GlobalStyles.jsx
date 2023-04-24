@@ -107,8 +107,6 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     width: 100%;
   }
-  
-  
   a {
     text-decoration: none;
     color: var(--black);
