@@ -4,6 +4,8 @@ import { useForm, resetMutation } from '../../features/form'
 import { SignInUpContainer } from '../signin'
 import { useRouter } from 'next/router'
 import ErrorMessage from '../../utils/ErrorMessage'
+import InputField from '../InputField'
+import React from 'react'
 
 const Reset = ({ token }) => {
   const router = useRouter()
@@ -44,6 +46,7 @@ const Reset = ({ token }) => {
       console.error(err)
     }
   }
+  const { email, password } = inputs
 
   return (
     <SignInUpContainer>
@@ -64,34 +67,19 @@ const Reset = ({ token }) => {
           <form method="POST" onSubmit={handleSubmit}>
             <fieldset>
               {<ErrorMessage error={error || resetError} />}
-              <section className="input-field">
-                <label htmlFor="email">
-                  Email:
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    autoComplete="current-email"
-                    value={inputs?.email}
-                    onChange={handleChange}
-                    required
-                    name="email"
-                  />
-                </label>
-              </section>
 
-              <section className="input-field">
-                <label htmlFor="password">
-                  Password:
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    value={inputs?.password}
-                    onChange={handleChange}
-                    required
-                    name="password"
-                  />
-                </label>
-              </section>
+              <InputField
+                label="Email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+              />
+              <InputField
+                label="Password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+              />
 
               <div className="buttons-group">
                 <section className="submit-button">
