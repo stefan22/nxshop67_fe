@@ -176,6 +176,36 @@ const FooterInfo = styled.div`
   }
 `
 
+const ShopCount = styled.div`
+  background: var(--red);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.64rem;
+  padding: 0.25rem 0.3rem;
+  position: absolute !important;
+  left: -36px;
+  top: -13px;
+  outline: 1px solid #f45a5a;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  line-height: 1.15;
+  vertical-align: middle;
+  perspective: 400px;
+  transform-origin: 50% 50%;
+  ${props => props.count === 0 && `transform: rotate(360deg);`};
+`
+
+const CartCountContainer = styled.span`
+  position: relative;
+  .count {
+    transition: all .4s linear 50ms;
+    backface-visibility: hidden;
+  }
+  ${props => props.count === 0 && `visibility: hidden;`};
+`
+
 export {
   CartContainer,
   HeadingWrapper,
@@ -183,5 +213,7 @@ export {
   CloseButton,
   CartListItem,
   CartItemInfo,
-  FooterInfo
+  FooterInfo,
+  ShopCount,
+  CartCountContainer
 }
