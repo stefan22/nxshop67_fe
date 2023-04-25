@@ -1,9 +1,9 @@
 import React from 'react'
-import { PaginationStyles } from './Pagination.styles'
+import { PaginationStyled } from './Pagination.styled'
 import Head from 'next/head'
 import Link from 'next/link'
 const PaginationElement = ({ currentPage, totalPages, totalCount }) => (
-  <PaginationStyles animate={{ opacity: 1 }}>
+  <PaginationStyled animate={{ opacity: 1 }}>
     <Head>
       <title>
         Shop67 - Page {currentPage} of {totalPages}
@@ -22,7 +22,7 @@ const PaginationElement = ({ currentPage, totalPages, totalCount }) => (
     <Link href={`/products/${currentPage + 1}`}>
       <a aria-disabled={currentPage >= totalPages}>Next ⇒</a>
     </Link>
-  </PaginationStyles>
+  </PaginationStyled>
 )
 
 export default PaginationElement

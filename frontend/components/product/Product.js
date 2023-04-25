@@ -6,7 +6,7 @@ import {
   OnSaleContainer,
   PriceTag,
   ItemContainer
-} from './Product.styles'
+} from './Product.styled'
 import { GBPCurrencyFormat as poundFormat } from '../../utils/currencyFormat'
 import AddToCart from '../cart/AddToCart'
 

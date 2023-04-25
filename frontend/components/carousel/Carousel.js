@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Items from './Items.js'
-import CarouselContainer from './Carousel.styles'
+import CarouselContainer from './Carousel.styled'
 
 const Carousel = () => {
   const { carouselItems } = Items

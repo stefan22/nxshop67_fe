@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useForm, requestResetMutation } from '../../features/form'
 import { useMutation } from '@apollo/client'
-import SignInUpContainer from './SignInUp.styles'
+import SignInUpContainer from './SignInUp.styled'
 import InputField from '../InputField'
 
 const RequestReset = () => {

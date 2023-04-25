@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import '@fontsource/be-vietnam'
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyled = createGlobalStyle`
   root, html {
     /* colors */
     --black: #212244;
@@ -167,4 +167,4 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-export default GlobalStyles
+export default GlobalStyled

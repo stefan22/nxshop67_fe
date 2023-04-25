@@ -1,6 +1,6 @@
 import React from 'react'
 import Product from '../product'
-import { ProductsContainer } from './Products.styles'
+import { ProductsContainer } from './Products.styled'
 import { useProductsPagination } from '../../features/all-products'
 import { Pagination } from '../pagination'
 

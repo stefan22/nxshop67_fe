@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { NavContainer } from './Nav.styles'
+import { NavContainer } from './Nav.styled'
 import SignOut from '../signout'
 import Cart from '../cart'
 import { GrMoney, GrLogout, GrLogin, GrShop, GrUser } from 'react-icons/gr'

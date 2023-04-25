@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { HeaderContainer, Navwrap } from './Header.styles'
+import { HeaderContainer, Navwrap } from './Header.styled'
 import Nav from '../nav'
 import Image from 'next/image'
 

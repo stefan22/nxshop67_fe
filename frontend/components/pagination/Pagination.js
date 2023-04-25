@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client'
 import Head from 'next/head'
 import Link from 'next/link'
 import { paginationQuery } from '../../features/all-products'
-import { PaginationStyles } from './Pagination.styles'
+import { PaginationStyled } from './Pagination.styled'
 import getConfig from 'next/config'
 
 // env set to 5
@@ -24,7 +24,7 @@ const Pagination = ({ page }) => {
   const pageCount = Math.ceil(count / perPage)
 
   return (
-    <PaginationStyles animate={{ opacity: 1 }}>
+    <PaginationStyled animate={{ opacity: 1 }}>
       <Head>
         <title>
           Shop67 - Page {page} of {pageCount}
@@ -42,7 +42,7 @@ const Pagination = ({ page }) => {
       <Link href={`/products/${page + 1}`}>
         <a aria-disabled={page >= pageCount}>Next ⇒</a>
       </Link>
-    </PaginationStyles>
+    </PaginationStyled>
   )
 }
 

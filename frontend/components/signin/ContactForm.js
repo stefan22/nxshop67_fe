@@ -1,5 +1,5 @@
 import React from 'react'
-import SignInUpContainer from './SignInUp.styles'
+import SignInUpContainer from './SignInUp.styled'
 import InputField from '../InputField'
 
 const ContactForm = ({ handleSubmit, handleChange, setError, error, inputs }) => {

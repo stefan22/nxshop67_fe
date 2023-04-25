@@ -1,4 +1,4 @@
-import { FormContainer } from './UpdateProduct.styles'
+import { FormContainer } from './UpdateProduct.styled'
 import { useEditProduct } from '../../features/edit-product'
 
 export const EditProduct = () => {
