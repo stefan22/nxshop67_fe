@@ -3,6 +3,7 @@
 backend/
 # .next/
 *.env
+xassets/
 
 frontend/styles/SharedStyles.jsx
 frontend/___tests___/__snapshots__/
