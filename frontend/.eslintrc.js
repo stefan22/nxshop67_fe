@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['next', 'prettier'],
+  extends: ['next', 'plugin:react-hooks/recommended', 'prettier'],
   plugins: ['prettier'],
   rules: {
     'react/react-in-jsx-scope': 0,
@@ -15,6 +15,8 @@ module.exports = {
     'import/no-default-export': 0,
     'no-param-reassign': 0,
     'no-console': 1,
+    'react-hooks/rules-of-hooks': 1,
+    'react-hooks/exhaustive-deps': 1,
     'no-unsafe-optional-chaining': 0,
     'react/jsx-no-useless-fragment': 0,
     'import/no-mutable-exports': 0,
