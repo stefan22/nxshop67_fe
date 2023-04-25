@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useForm, requestResetMutation } from '../../features/form'
 import { useMutation } from '@apollo/client'
 import SignInUpContainer from './SignInUp.styles'
+import InputField from '../InputField'
 
 const RequestReset = () => {
   const { inputs, handleChange, resetForm } = useForm({ email: '' })
@@ -39,20 +40,12 @@ const RequestReset = () => {
         <div className="login__body password__reset">
           <form method="POST" onSubmit={handleSubmit}>
             <fieldset>
-              <section className="input-field">
-                <label htmlFor="email">
-                  Email:
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    autoComplete="current-email"
-                    value={inputs?.email}
-                    onChange={handleChange}
-                    required
-                    name="email"
-                  />
-                </label>
-              </section>
+              <InputField
+                label="Email"
+                name="email"
+                value={inputs?.email}
+                onChange={handleChange}
+              />
 
               <div className="buttons-group">
                 <section className="submit-button">

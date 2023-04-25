@@ -1,5 +1,6 @@
 import React from 'react'
 import SignInUpContainer from './SignInUp.styles'
+import InputField from '../InputField'
 
 const ContactForm = ({ handleSubmit, handleChange, setError, error, inputs }) => {
   return (
@@ -14,20 +15,12 @@ const ContactForm = ({ handleSubmit, handleChange, setError, error, inputs }) =>
         <div className="login__body">
           <form method="POST" onSubmit={handleSubmit}>
             <fieldset>
-              <section className="input-field">
-                <label htmlFor="email">
-                  Email:
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    autoComplete="current-email"
-                    required
-                    name="email"
-                    value={inputs?.email}
-                    onChange={handleChange}
-                  />
-                </label>
-              </section>
+              <InputField
+                label="Email"
+                name="email"
+                value={inputs?.email}
+                onChange={handleChange}
+              />
 
               <section className="input-field">
                 <label htmlFor="subject">
