@@ -1,6 +1,6 @@
 import { useMutation } from '@apollo/client'
 import gql from 'graphql-tag'
-import DeleteButton from './Delete.styles'
+import DeleteButton from './Delete.styled'
 
 const deleteProductMutation = gql`
   mutation deleteProductMutation($id: ID!) {

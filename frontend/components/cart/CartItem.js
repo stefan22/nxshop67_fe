@@ -1,5 +1,5 @@
 import React from 'react'
-import { CartItemInfo, CartListItem } from './Cart.styles'
+import { CartItemInfo, CartListItem } from './Cart.styled'
 import Image from 'next/image'
 import { GrShop, GrTag } from 'react-icons/gr'
 import { GBPCurrencyFormat } from '../../utils'

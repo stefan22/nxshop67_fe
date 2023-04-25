@@ -6,7 +6,7 @@ import withApollo from '../utils/withData'
 import { CartContextProvider } from '../utils'
 import Layout from '../components/layout'
 import '../styles/reset.css'
-import GlobalStyles from '../styles/GlobalStyles'
+import GlobalStyled from '../styles/GlobalStyled'
 
 const App = ({ Component, pageProps, apollo }) => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const App = ({ Component, pageProps, apollo }) => {
       </Head>
 
       <ApolloProvider client={apollo}>
-        <GlobalStyles />
+        <GlobalStyled />
         <CartContextProvider>
           <Layout>
             <Component {...pageProps} />

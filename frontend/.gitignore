@@ -10,5 +10,5 @@ build/
 *.env
 node_modules/
 
-/styles/SharedStyles.jsx
+/styles/SharedStyled.js
 log.js

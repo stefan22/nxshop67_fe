@@ -5,7 +5,7 @@ import {
   Heading,
   CloseButton,
   FooterInfo
-} from './Cart.styles'
+} from './Cart.styled'
 import { useCurrentUser } from '../../features/current-user'
 import { GBPCurrencyFormat } from '../../utils'
 import { cartTotalPrice } from '../../utils'

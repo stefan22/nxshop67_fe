@@ -1,5 +1,5 @@
 import React from 'react'
-import Details from './Product.styles'
+import Details from './Product.styled'
 import { SkeleLoader, withLoading } from '../loader'
 const ProdDetails = ({ product }) => (
   <Details animate={{ opacity: 1 }} data-testid="product-details">

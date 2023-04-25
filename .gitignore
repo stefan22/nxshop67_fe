@@ -5,5 +5,5 @@ backend/
 *.env
 xassets/
 
-frontend/styles/SharedStyles.jsx
+frontend/styles/SharedStyled.js
 frontend/___tests___/__snapshots__/

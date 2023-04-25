@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import SignInUpContainer from './SignInUp.styles'
-import { StyledBtn } from '../../styles/SharedStyles'
+import SignInUpContainer from './SignInUp.styled'
+import { StyledBtn } from '../../styles/SharedStyled'
 import InputField from '../InputField'
 
 const SignInUp = ({

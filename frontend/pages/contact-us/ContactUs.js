@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import { ContactForm } from '../../components/signin'
-import Contactus from './ContactUs.styles'
+import Contactus from './ContactUs.styled'
 import { useForm } from '../../features/form'
 import { SkeleLoader, withLoading } from '../../components/loader'
 

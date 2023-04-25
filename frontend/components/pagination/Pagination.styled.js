@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-const PaginationStyles = styled(motion.div)`
+const PaginationStyled = styled(motion.div)`
   text-align: center;
   display: inline-grid;
   grid-template-columns: repeat(4, auto);
@@ -66,4 +66,4 @@ const PaginationStyles = styled(motion.div)`
   }
 `
 
-export { PaginationStyles }
+export { PaginationStyled }
