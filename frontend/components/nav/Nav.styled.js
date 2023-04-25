@@ -21,6 +21,13 @@ const NavContainer = styled(motion.ul)`
   a[href='/products#'] {
     ${props => !props.close && `display: none;`};
   }
+  
+  #nav-cart {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    text-align: left;
+  }
 
   svg {
     position: absolute;

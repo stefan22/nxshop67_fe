@@ -6,6 +6,7 @@ import Cart from '../cart'
 import { GrMoney, GrLogout, GrLogin, GrShop, GrUser } from 'react-icons/gr'
 import { useCartState } from '../../utils'
 import { useCurrentUser } from '../../features/current-user'
+import CartCount from '../cart/CartCount'
 
 const Nav = () => {
   const { user, loading } = useCurrentUser()
@@ -19,11 +20,6 @@ const Nav = () => {
           <GrMoney />
           <Link href="/products">Products</Link>
         </span>
-
-        {/*<span>*/}
-        {/*  <GrContact />*/}
-        {/*  <Link href="/contact-us">Contact-us</Link>*/}
-        {/*</span>*/}
 
         {!user && (
           <span>
@@ -46,7 +42,13 @@ const Nav = () => {
 
             <span id="nav-cart" onClick={() => setClose(!close)}>
               <GrShop />
-              <Link href="#">Cart</Link>
+              <Link href="#">Cart</Link>{' '}
+              <CartCount
+                count={user.cart.reduce(
+                  (acc, ele) => acc + (ele.product ? ele.quantity : 0),
+                  0
+                )}
+              />
             </span>
           </>
         )}
