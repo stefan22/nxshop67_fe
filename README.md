@@ -34,7 +34,7 @@ Type `npm install && npm run dev` // opens in port 3000.
 
 :lollipop: &#x2116; 3
 
-<img src="frontend/public/static/row-products-pagination.png" alt="pagination">
+<img src="frontend/public/static/frontend-user-cart.png" alt="pagination">
 
 
 <br />
