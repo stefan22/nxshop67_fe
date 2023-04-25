@@ -8,7 +8,7 @@ import {
   ItemContainer
 } from './Product.styles'
 import { GBPCurrencyFormat as poundFormat } from '../../utils/currencyFormat'
-import { DeleteProduct } from '../delete-product'
+import AddToCart from '../cart/AddToCart'
 
 const Product = ({ product }) => (
   <ItemContainer animate={{ opacity: 1 }} data-testid="product">
@@ -32,24 +32,11 @@ const Product = ({ product }) => (
         />
       </picture>
     </Link>
+
     <PriceTag>{poundFormat(product?.price)}</PriceTag>
     <TitleContainer>
       <span>{product?.name}</span>
-
-      <Link
-        passHref
-        style={{ color: '#c28f87' }}
-        href={{
-          pathname: '/update',
-          query: {
-            id: product?.id
-          }
-        }}
-      >
-        Edit &#x23F5;
-      </Link>
-
-      <DeleteProduct btnName="Delete" id={product?.id} />
+      <AddToCart id={product.id} />
     </TitleContainer>
   </ItemContainer>
 )
