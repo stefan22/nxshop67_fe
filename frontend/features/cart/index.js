@@ -1,1 +1,4 @@
-export { default } from './addToCartMutation'
+import addToCartMutation from './addToCartMutation'
+import removeFromCartMutation from './removeFromCartMutation'
+
+export { addToCartMutation, removeFromCartMutation }

@@ -3,6 +3,7 @@ import { CartItemInfo, CartListItem } from './Cart.styled'
 import Image from 'next/image'
 import { GrShop, GrTag } from 'react-icons/gr'
 import { GBPCurrencyFormat } from '../../utils'
+import RemoveFromCart from './RemoveFromCart'
 
 const CartItem = ({ cartItem }) => {
   const { product } = cartItem
@@ -11,20 +12,20 @@ const CartItem = ({ cartItem }) => {
   return (
     <CartListItem>
       <Image
-        width="128"
-        height="142"
+        width="156"
+        height="177"
         src={product.photo.image?.publicUrlTransformed}
         alt={product.name}
       />
       <CartItemInfo>
         <h3>
-          <GrTag size="16" /> {product.name}
+          <GrTag size="20" /> {product.name}
         </h3>
         <p>
           Qty: {cartItem.quantity}
           <em>{GBPCurrencyFormat(product.price)} each</em>
         </p>
-
+        <RemoveFromCart id={cartItem.id} />
         <p>
           Total:
           <em>

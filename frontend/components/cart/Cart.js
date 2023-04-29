@@ -10,7 +10,6 @@ import { useCurrentUser } from '../../features/current-user'
 import { GBPCurrencyFormat } from '../../utils'
 import { cartTotalPrice } from '../../utils'
 import { GrClose, GrCreditCard, GrBasket } from 'react-icons/gr'
-// GrFormTrash,  GrTrash,  GrCart
 import CartItem from './CartItem'
 
 const Cart = ({ close, setClose }) => {
@@ -35,10 +34,11 @@ const Cart = ({ close, setClose }) => {
           <CartItem key={cartItem.id} cartItem={cartItem} />
         ))}
       </ul>
+
       <FooterInfo>
         <span style={{ visibility: 'hidden' }}></span>
         <p>
-          <GrCreditCard size={16} />
+          <GrCreditCard size={20} />
         </p>
         <p>{GBPCurrencyFormat(cartTotalPrice(user.cart))}</p>
       </FooterInfo>

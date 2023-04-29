@@ -1,6 +1,6 @@
 import { useMutation } from '@apollo/client'
 import { currentUserQuery, useCurrentUser } from '../../features/current-user'
-import addToCartMutation from '../../features/cart'
+import { addToCartMutation } from '../../features/cart'
 import { BsCartPlus } from 'react-icons/bs'
 
 const AddToCart = ({ id }) => {
