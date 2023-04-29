@@ -40,13 +40,13 @@ const paginationField = () => {
     merge(existing, incoming, { args }) {
       const { skip, first } = args
       // eslint-disable-next-line no-console
-      console.log(`Merging items from the network ${incoming.length}`)
+      // console.log(`Merging items from the network ${incoming.length}`)
       const merged = existing ? existing.slice(0) : []
       for (let i = skip; i < skip + incoming.length; ++i) {
         merged[i] = incoming[i - skip]
       }
       // eslint-disable-next-line no-console
-      console.log('merged ', merged)
+      // console.log('merged ', merged)
       // return merged items from cache
       return merged
     }
