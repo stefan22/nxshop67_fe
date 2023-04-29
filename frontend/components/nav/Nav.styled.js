@@ -21,7 +21,7 @@ const NavContainer = styled(motion.ul)`
   a[href='/products#'] {
     ${props => !props.close && `display: none;`};
   }
-  
+
   #nav-cart {
     display: flex;
     align-items: baseline;

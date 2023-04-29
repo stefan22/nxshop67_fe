@@ -3,7 +3,9 @@ import { CartCountContainer, ShopCount } from './Cart.styled'
 
 const CartCount = ({ count }) => (
   <CartCountContainer count={count}>
-    <ShopCount>{count.toString().length === 1 ? `0${count}` : `${count}`}</ShopCount>
+    <ShopCount count={count}>
+      {count.toString().length === 1 ? `0${count}` : `${count}`}
+    </ShopCount>
   </CartCountContainer>
 )
 

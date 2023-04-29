@@ -116,7 +116,7 @@ const CartListItem = styled.li`
   grid-template-columns: auto 1fr auto;
   img {
     margin-right: 1rem;
-    width: 120px !important;
+    width: 156px !important;
     height: auto !important;
   }
 `
@@ -131,7 +131,7 @@ const CartItemInfo = styled.div`
   h3,
   p {
     margin: 0;
-    line-height: 27px;
+    line-height: 24px;
     font-size: var(--fontone);
     display: flex;
     width: 100%;
@@ -144,7 +144,7 @@ const CartItemInfo = styled.div`
       padding-top: 1px;
       path {
         stroke: var(--goldengray);
-        fill: #fffacd;
+        fill: #cdf1ff;
       }
     }
   }
@@ -187,23 +187,45 @@ const ShopCount = styled.div`
   padding: 0.25rem 0.3rem;
   position: absolute !important;
   left: -36px;
-  top: -13px;
+  top: -14px;
   outline: 1px solid #f45a5a;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   line-height: 1.15;
   vertical-align: middle;
   perspective: 400px;
   transform-origin: 50% 50%;
-  ${props => props.count === 0 && `transform: rotate(360deg);`};
+  ${props =>
+    props.count && `transform: rotate(360deg) scale(1.1);`}//background: ${props =>
+    props.count && 'green'};
 `
 
 const CartCountContainer = styled.span`
   position: relative;
   .count {
-    transition: all .4s linear 50ms;
+    transition: all 0.4s linear 50ms;
     backface-visibility: hidden;
   }
   ${props => props.count === 0 && `visibility: hidden;`};
+`
+
+const DeleteItem = styled.button`
+  font-size: 3rem;
+  background: none;
+  border: 0;
+  &:hover {
+    color: var(--red);
+    cursor: pointer;
+  }
+`
+const RemoveItem = styled.span`
+  line-height: 1.15;
+  cursor: pointer;
+  svg {
+    path {
+      stroke-width: 1px;
+      stroke: var(--satred) !important;
+    }
+  }
 `
 
 export {
@@ -215,5 +237,7 @@ export {
   CartItemInfo,
   FooterInfo,
   ShopCount,
-  CartCountContainer
+  CartCountContainer,
+  DeleteItem,
+  RemoveItem
 }
