@@ -21,5 +21,5 @@ export const InnerWrapperSl = styled.div`
   padding: 0 1rem;
   transition: all 0.3s linear 0ms;
   transform: translateX(0);
-  ${props => !props.close && `transform: translateX(-8vw)`};
+  ${props => !props.close && `transform: translateX(-9.5vw)`};
 `
