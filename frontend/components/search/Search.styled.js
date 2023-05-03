@@ -32,8 +32,11 @@ const SearchContainer = styled.div`
   position: relative;
   width: 50%;
   height: fit-content;
-  max-height: 500px;
-  overflow-y: auto;
+  max-height: 450px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  overflow-y: scroll;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -45,15 +48,15 @@ const SearchContainer = styled.div`
     justify-content: flex-start;
     input {
       display: flex;
-      border: 1px solid lightgray;
+      border: 1px solid var(--darkblue);
       width: 100%;
-      padding: 10px;
+      border-radius: 20px;
+      font-weight: 300;
+      background: var(--xlightblue);
       font-size: 1rem;
       margin-bottom: 3rem;
-      #search-clear {
-        cursor: pointer;
-      }
-
+      box-shadow: var(--bs4);
+      padding: 0.875rem 1.25rem;
       &.loading {
         animation: ${glow} 0.5s ease-in-out infinite alternate;
       }
@@ -68,7 +71,6 @@ const SearchContainer = styled.div`
     height: auto;
     width: 100%;
     padding: 0 0 0 0.35rem;
-    overflow: hidden;
     z-index: 10;
     div {
       max-width: 150px;
