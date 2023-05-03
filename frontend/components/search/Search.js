@@ -32,7 +32,7 @@ const Search = () => {
       })
     },
     onSelectedItemChange({ selectedItem }) {
-      router.push({
+      return router.push({
         pathname: `/product/${selectedItem.id}`
       })
     },

@@ -9,14 +9,16 @@ const PaginationStyled = styled(motion.div)`
   justify-content: center;
   align-content: center;
   margin: 0 0 2rem;
-  line-height: 20px;
-  width: 100%;
+  line-height: 22px;
+  width: fit-content;
+  border-left-radius: 4px;
+  border-right-radius: 4px;
+
   & > * {
     margin: 0;
-    padding: 10px 27px;
+    padding: 12px 27px;
     border: 1px solid var(--dgray);
     border-right: 1px solid var(--dgray);
-    font-size: var(--fontsmall);
     &:last-child {
       border-right: 0;
     }
@@ -37,6 +39,9 @@ const PaginationStyled = styled(motion.div)`
     color: var(--white);
     letter-spacing: 0.25px;
     width: 110px;
+    border-width: 0;
+    font-weight: 400;
+    font-size: var(--fontone);
     border-color: var(--dgray);
     &:first-child {
       border-top-left-radius: 3px;
@@ -50,6 +55,7 @@ const PaginationStyled = styled(motion.div)`
       border-color: var(--dgray);
       color: var(--dgray);
       background: rgba(33, 96, 217, 0.72);
+      background: var(--satred);
     }
     @media screen and (max-width: 590px) {
       width: 75px;
