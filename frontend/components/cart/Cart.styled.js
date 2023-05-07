@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const CartContainer = styled.div`
   padding: 0.75rem 1.35rem 1rem 1rem;
+  min-width: 383px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -91,15 +92,16 @@ const Heading = styled.h3`
 `
 
 const CloseButton = styled.button`
-  background: var(--darkblue);
-  padding: 0.25rem 0.5rem !important;
-  font-size: 1.25rem;
+  background: var(--lightblue);
+  border-radius: 3px;
+  padding: 0.25rem !important;
+  font-size: var(--fontween);
+  box-shadow: var(--bs);
   vertical-align: middle;
   border: 0;
   position: absolute;
-  z-index: 2;
-  height: 30px;
-  top: 15px;
+  height: 25px;
+  top: 17px;
   left: 20px;
   svg {
     path {
@@ -155,23 +157,81 @@ const CartItemInfo = styled.div`
   }
 `
 
-const FooterInfo = styled.div`
+const FooterInfo = styled.footer`
   display: flex;
   width: 100%;
-  padding: 0.5rem 2rem;
-  flex-direction: row;
+  padding: 1.5rem 1rem 1rem;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background: var(--white);
   border-bottom: 1px solid var(--ghostwhite);
-  p {
-    line-height: 2;
-    font-size: var(--fontween);
-    color: var(--satred);
+
+  .footer-total {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    span {
+      font-size: var(--fontsmall);
+      text-align: left;
+      margin-right: 1rem;
+      display: flex;
+      color: var(--gray);
+    }
     svg {
-      fill: var(--ghostwhite);
-      stroke-dashoffset: 3;
-      stroke: var(--darkgrey);
+      margin-right: 0.25rem;
+      path {
+        fill: var(--itemho);
+      }
+      path {
+        stroke: var(--ligthblue);
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 0.5rem 0;
+      font-weight: 400;
+      font-size: var(--fontween);
+      color: var(--satred);
+    }
+  }
+  .footer-checkout {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    padding: 1rem 0;
+    form {
+      margin-left: 0;
+    }
+    p {
+      color: var(--ored);
+      position: absolute;
+      top: -35px;
+      left: 15px;
+      margin-left: 1.5rem;
+    }
+
+    div.StripeElement {
+      border: 1px solid var(--darkblue);
+      padding: 5px 10px;
+      mix-blend-mode: darken;
+      box-shadow: var(--bs4);
+      border-radius: 4px;
+    }
+    button {
+      background: var(--ored);
+      box-shadow: var(--bs4);
+      text-underline: none;
+      padding: 10px 20px;
+      color: var(--white);
+      border: 1px solid var(--satred);
+      font-size: var(--fontween);
+      border-radius: 4px;
     }
   }
 `

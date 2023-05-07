@@ -11,12 +11,14 @@ import { GBPCurrencyFormat } from '../../utils'
 import { cartTotalPrice } from '../../utils'
 import { GrClose, GrCreditCard, GrBasket } from 'react-icons/gr'
 import CartItem from './CartItem'
+import Checkout from '../checkout'
 
 const Cart = ({ close, setClose }) => {
   const { user } = useCurrentUser()
 
   if (!user) return null
-
+  // eslint-disable-next-line no-console
+  console.log(user.cart)
   return (
     <CartContainer className="cart-side" close={close}>
       <HeadingWrapper>
@@ -25,7 +27,7 @@ const Cart = ({ close, setClose }) => {
         </CloseButton>
         <header>
           <Heading>
-            CART <GrBasket />
+            CART <GrBasket size={14} />
           </Heading>
         </header>
       </HeadingWrapper>
@@ -36,11 +38,13 @@ const Cart = ({ close, setClose }) => {
       </ul>
 
       <FooterInfo>
-        <span style={{ visibility: 'hidden' }}></span>
-        <p>
-          <GrCreditCard size={20} />
-        </p>
-        <p>{GBPCurrencyFormat(cartTotalPrice(user.cart))}</p>
+        <div className="footer-total">
+          <GrCreditCard size={16} /> Total amount <span>(inc.taxes)</span>
+          <p> {GBPCurrencyFormat(cartTotalPrice(user.cart))}</p>
+        </div>
+        <div className="footer-checkout">
+          <Checkout />
+        </div>
       </FooterInfo>
     </CartContainer>
   )
