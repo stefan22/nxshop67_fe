@@ -4,67 +4,35 @@
 
 <br />
 
-## &#x1FA97;  Install
+## :paperclip: Install
+
+:lollipop: Type `npm install`  
+:lollipop: Type `npm run dev` // opens in port 3003.  
+:lollipop: Node v16.17.0
+
+## :paperclip: Front-end
+
+
+:lollipop: ReactJS, NextJS, Apollo Client, Styled components
+
+
+
+#### <kdb>Frontend</kdb>
+
+<img src="frontend/public/static/stripe-cart.png" alt="shop frontend">
 
 <br />
 
-### &#x2694; Frontend:
-Frontend only atm
-```bash
-Type `npm install && npm run dev`   // opens in port 3003
-```
-
-&#x267E; ReactJS, NextJS, Apollo Client, Styled components
+<img src="frontend/public/static/search2.png" alt="shop frontend">
 
 <br />
 
-### &#x2694; Backend:
-Trying out Payload Headless CMS
-```bash
-Type `npm install && npm run dev` // opens in port 3000.  
-```
-
-&#x267E; NextJS, GraphQL, MongoDB
-
-<kbd>&#x2B86; Node v16 </kbd>
-
-##
+<img src="frontend/public/static/stripe-payment.png" alt="shop frontend">
 
 
+#### Back-end :paperclip: separate
+- updated all dependencies.
 
-:lollipop: &#x2116; 3
-
-<img src="frontend/public/static/frontend-user-cart.png" alt="pagination">
-
-
-<br />
-<br />
-
-
-
-### &#x1FA97;  About ongoing project changes
-
-<br />
-
-#### &#x2694; Rendering
-- Server-side, Client-side rendering, Static generation  with Next
-
-#### &#x2694; ***State***
-- `Local state` √  at component level when appropriate.  
-- `Global state`≈ No global state. Context API state across multiple components          
-- `Server and form state` √ -  Graphql/Apollo data,  including loading/error states.          
-
-####  &#x2694; *Auth flow*  
-- Basic authentication token w/ email/passowrd using Keystone Client
-
-#### &#x2694; **Styling**     
-- Global CSS variables/reset stylesheet    
-- Styled components    (CSS in JS)
-
-#### &#x2694; **Testing**
-
--  Unit testing w/ Jest    
--  Integration testing w/ end-to-end Cypress    
 
 <br />
 
