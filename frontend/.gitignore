@@ -8,7 +8,8 @@ xassets/
 # .next/
 build/
 *.env
+.env.local
 node_modules/
-
+assets/nosho/
 /styles/SharedStyled.js
 log.js
