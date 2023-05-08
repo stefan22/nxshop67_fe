@@ -9,7 +9,7 @@ const ProductsContainer = styled(motion.div)`
   overflow-x: hidden;
   width: 100%;
   margin: 3rem 0 3rem;
-  max-width: 1450px;
+  max-width: 1340px;
   height: fit-content;
   justify-content: space-between;
 `

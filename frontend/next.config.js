@@ -5,7 +5,7 @@ require('dotenv').config()
 
 module.exports = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/avif', 'image/webp', 'images/png'],
     domains: ['res.cloudinary.com']
   },
   reactStrictMode: true,

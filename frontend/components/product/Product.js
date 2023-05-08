@@ -25,8 +25,8 @@ const Product = ({ product }) => (
           layout="intrinsic"
           objectFit="cover"
           loading="lazy"
-          width={267}
-          height={294}
+          width={242}
+          height={273}
           src={product?.photo?.image.publicUrlTransformed}
           alt={product?.name}
         />

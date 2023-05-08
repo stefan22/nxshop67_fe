@@ -9,7 +9,7 @@ const PaginationStyled = styled(motion.div)`
   justify-content: center;
   align-content: center;
   margin: 0 0 2rem;
-  line-height: 22px;
+  line-height: 1;
   width: fit-content;
   border-left-radius: 4px;
   border-right-radius: 4px;

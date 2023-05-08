@@ -12,7 +12,7 @@ const TitleContainer = styled.h3`
   flex-wrap: nowrap;
   box-shadow: var(--bs4);
   z-index: 10;
-  font-size: var(--fontext);
+  font-size: var(--fontone);
 
   span {
     background: var(--darkgrey);

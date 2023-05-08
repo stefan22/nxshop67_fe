@@ -43,8 +43,8 @@ const GlobalStyled = createGlobalStyle`
     --fontween: 1rem;
     --fontxt: 1.1em;
     --fontregular: 1.5em;
-    --fontmedium: 2.5em;
-    --fontlarge: 3em;
+    --fontmedium: 2em;
+    --fontlarge: 2.5em;
     --lineheightsmall: calc(0.8 * var(--ratio));
     
     /* other */
