@@ -56,10 +56,11 @@ const CheckoutForm = () => {
 
     setLoading(false)
     nProgress.done()
+    setClose(true)
 
-    //into usr-acct mini-dashbrd - all orders
+    //to usr-acct mini-dashbrd - all orders
     await router.push({
-      pathname: `/order/[id]`,
+      pathname: `account`,
       query: { id: order.data.checkout.id }
     })
   }
