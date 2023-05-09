@@ -1,3 +1,4 @@
+import React from 'react'
 import { useQuery } from '@apollo/client'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -8,7 +9,11 @@ import { GBPCurrencyFormat } from '../utils'
 import { userOrdersQuery } from '../features/order'
 
 function countItemsInAnOrder(order) {
-  return order.items.reduce((tally, item) => tally + item.quantity, 0)
+  return order.items.reduce((acc, item) => acc + item.quantity, 0)
+}
+
+function getOrderId(oid) {
+  return oid.slice(oid.length - 4, oid.length)
 }
 
 const OrdersPage = () => {
@@ -29,7 +34,7 @@ const OrdersPage = () => {
             <Link passHref href={`/order/${order.id}`}>
               <a>
                 <div className="order-meta">
-                  <h4>Order #</h4>
+                  <h4>Order # {getOrderId(order.id)}</h4>
                   <p>
                     Number of items: {countItemsInAnOrder(order)}
                     <br />

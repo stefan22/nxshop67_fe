@@ -66,7 +66,7 @@ const OrderItemStyles = styled.li`
     grid-gap: 1rem 3rem;
     text-align: center;
     h4 {
-      background: var(--ored);
+      background: var(--darkblue);
       color: var(--white);
       border-radius: 2px;
     }
@@ -81,6 +81,8 @@ const OrderItemStyles = styled.li`
     }
     p {
       font-size: var(--fontone);
+      color: var(--darkgrey);
+      background: var(--offwhite);
       justify-content: center;
     }
   }
