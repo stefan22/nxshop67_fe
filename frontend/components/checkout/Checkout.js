@@ -7,7 +7,7 @@ import { useMutation } from '@apollo/client'
 import { cartTotalPrice } from '../../utils'
 import { useCartState } from '../../utils'
 import { currentUserQuery, useCurrentUser } from '../../features/current-user'
-import createOrderMutation from '../../features/order'
+import { createOrderMutation } from '../../features/order'
 import { CheckoutFormStyles } from './Checkout.styled'
 
 const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY)
