@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client'
 import Image from 'next/image'
 import Head from 'next/head'
 import ErrorMessage from '../../utils'
-import { OrderStyles } from './Order.styled'
+import { OrderContainer, OrderItem, OrderItems, OrderWrapper } from './Order.styled'
 import { GBPCurrencyFormat } from '../../utils'
 import { singleOrderQuery } from '../../features/order'
 
@@ -15,47 +15,52 @@ const SingleOrderPage = ({ query }) => {
   if (error) return <ErrorMessage error={error} />
   const { order } = data
   return (
-    <OrderStyles>
+    <OrderContainer>
       <Head>
         <title>NXShop67 - Order:{order.id}</title>
       </Head>
 
-      <p>
-        <span>Order Id:</span>
+      <h3>
+        Order Id:
         <span>{order.id}</span>
-      </p>
-      <p>
-        <span>Charge:</span>
+      </h3>
+      <h5>
+        Transaction:
         <span>{order.charge}</span>
-      </p>
-      <p>
-        <span>Order Total:</span>
-        <span>{GBPCurrencyFormat(order.total)}</span>
-      </p>
-      <p>
-        <span>ItemCount:</span>
-        <span>{order.items.length}</span>
-      </p>
-      <div className="items">
-        {order.items.map(item => (
-          <div className="order-item" key={item.id}>
-            <Image
-              width={200}
-              height={200}
-              src={item.photo.image.publicUrlTransformed}
-              alt={item.title}
-            />
-            <div className="item-details">
-              <h2>{item.name}</h2>
-              <p>Qty: {item.quantity}</p>
-              <p>Each: {GBPCurrencyFormat(item.price)}</p>
-              <p>Sub Total: {GBPCurrencyFormat(item.price * item.quantity)}</p>
-              <p>{item.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </OrderStyles>
+      </h5>
+      <OrderWrapper>
+        <h4>
+          Shøp67<span style={{ fontSize: '0.75rem', color: 'darkred' }}>®</span>
+        </h4>
+        <p>
+          Order Total:
+          <span>{GBPCurrencyFormat(order.total)}</span>
+        </p>
+        <p>
+          Total items:
+          <span>{order.items.length}</span>
+        </p>
+        <OrderItems>
+          {order.items.map(item => (
+            <OrderItem key={item.id}>
+              <Image
+                width={175}
+                height={175}
+                src={item.photo.image.publicUrlTransformed}
+                alt={item.title}
+              />
+              <div className="item-details">
+                <h2>{item.name}</h2>
+                <p>Qty: {item.quantity}</p>
+                <p>Each: {GBPCurrencyFormat(item.price)}</p>
+                <p>Sub Total: {GBPCurrencyFormat(item.price * item.quantity)}</p>
+                <p>{item.description}</p>
+              </div>
+            </OrderItem>
+          ))}
+        </OrderItems>
+      </OrderWrapper>
+    </OrderContainer>
   )
 }
 
