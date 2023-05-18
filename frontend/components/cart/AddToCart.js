@@ -2,6 +2,7 @@ import { useMutation } from '@apollo/client'
 import { currentUserQuery, useCurrentUser } from '../../features/current-user'
 import { addToCartMutation } from '../../features/cart'
 import { BsCartPlus } from 'react-icons/bs'
+import { AddButton } from './Cart.styled'
 
 const AddToCart = ({ id }) => {
   const { user } = useCurrentUser()
@@ -11,9 +12,17 @@ const AddToCart = ({ id }) => {
   })
 
   return (
-    <button disabled={!user} type="button" onClick={addToCart}>
-      Add to {loading && 'ing'} <BsCartPlus />
-    </button>
+    <>
+      {user ? (
+        <AddButton disabled={!user} user={user} type="button" onClick={addToCart}>
+          Add to {loading && 'ing'} <BsCartPlus />
+        </AddButton>
+      ) : (
+        <AddButton disabled={!user} user={user} type="button" onClick={addToCart}>
+          Signin to Add <BsCartPlus />
+        </AddButton>
+      )}
+    </>
   )
 }
 
