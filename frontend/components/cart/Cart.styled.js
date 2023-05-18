@@ -288,6 +288,34 @@ const RemoveItem = styled.span`
   }
 `
 
+const AddButton = styled.button`
+  background: var(--darkblue);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid var(--darkblue);
+  box-shadow: var(--bs5);
+  transform: skewX(1deg);
+  display: flex;
+  padding: 0 5px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  letter-spacing: 0.35px;
+  ${props =>
+    !props.user &&
+    `background: var(--gray);
+      width: 52% !important;
+      border: none;
+      box-shadow: var(--bs);
+      cursor: not-allowed;
+      &:hover {
+        background: var(--gray) !important;
+        border-color: var(--gray) !important;
+      }
+  `}
+`
+
 export {
   CartContainer,
   HeadingWrapper,
@@ -299,5 +327,6 @@ export {
   ShopCount,
   CartCountContainer,
   DeleteItem,
-  RemoveItem
+  RemoveItem,
+  AddButton
 }

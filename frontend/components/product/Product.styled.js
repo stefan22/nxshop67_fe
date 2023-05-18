@@ -30,22 +30,6 @@ const TitleContainer = styled.h3`
   }
 
   button {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-top: 1px solid var(--darkblue);
-    border-bottom: 1px solid var(--darkblue);
-    border-left: 1px solid var(--ghostwhite);
-    border-right: 1px solid var(--darkblue);
-    box-shadow: var(--bs5);
-    transform: skewX(1deg);
-    display: flex;
-    padding: 0 5px;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    letter-spacing: 0.35px;
-    background: var(--darkblue);
     width: 50%;
     svg {
       margin-left: 5px;
