@@ -8,6 +8,8 @@ import ErrorMessage from './ErrorMessage'
 import List from './List'
 import useFetch from './useFetch'
 import withApollo from './withData'
+import { launchFireworksBombs, launchFireworksFromSidelines } from './confetti'
+import Astronaut from './Astronaut'
 
 export {
   variants,
@@ -20,5 +22,8 @@ export {
   ErrorMessage,
   List,
   useFetch,
-  withApollo
+  withApollo,
+  launchFireworksBombs,
+  launchFireworksFromSidelines,
+  Astronaut
 }
