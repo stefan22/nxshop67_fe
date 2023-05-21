@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { launchFireworksFromSidelines } from '../../utils'
 import {
   ModalWrapper,
@@ -11,19 +11,19 @@ import {
 } from './Modal.styled'
 import { Astronaut } from '../../utils'
 import Link from 'next/link'
+import { useCurrentUser } from '../../features/current-user'
 
-const Modal = ({ setClose, close }) => {
+const Modal = () => {
+  const { user } = useCurrentUser()
+
+  const [close, setClose] = useState(false)
   const closeModal = () => {
     setClose(!close)
   }
 
   useEffect(() => {
-    window.addEventListener('keyup', event => {
-      if (event.key === 'Escape') {
-        closeModal()
-      }
-    })
-  })
+    if (!user) setClose(true)
+  }, [user])
 
   return (
     <ModalWrapper close={close}>
