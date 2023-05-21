@@ -7,8 +7,8 @@ const useCurrentUser = () => {
   const { data: user } = useQuery(currentUserQuery)
 
   useEffect(() => {
-    return setLoading(false)
-  }, [])
+    if (user) return setLoading(false)
+  }, [user])
 
   return {
     user: user?.authenticatedItem,
