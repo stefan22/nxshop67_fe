@@ -37,13 +37,13 @@ const Modal = () => {
 
         <ButtonBlue onClick={launchFireworksFromSidelines}>
           <Link href="/signin">
-            <a className="btn btnprimary">Click here to Signin now</a>
+            <a>Click here to Signin now</a>
           </Link>
         </ButtonBlue>
 
         <ButtonRed onClick={launchFireworksFromSidelines}>
           <Link href="/signup">
-            <a className="btn btnprimary">To Signup click here!</a>
+            <a>To Signup click here!</a>
           </Link>
         </ButtonRed>
       </ModalContent>
