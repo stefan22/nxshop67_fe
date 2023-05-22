@@ -16,8 +16,8 @@ import getConfig from 'next/config'
  * The publicRuntimeConfig is an object that stores the env variables pulled off next.config.jsfile.
  * */
 
-const { publicRuntimeConfig } = getConfig()
-const GQLEndPoint = publicRuntimeConfig.GQL_ENDPOINT
+const publicRuntimeConfig = getConfig()
+const GQLEndPoint = publicRuntimeConfig?.GQL_ENDPOINT
 
 /**
  * Creates new ApolloClient
