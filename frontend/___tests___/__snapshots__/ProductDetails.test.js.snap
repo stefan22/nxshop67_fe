@@ -3,6 +3,7 @@
 exports[`<DetailsItem /> renders product details data 1`] = `
 <div>
   <div
+    class="Productstyled__Details-sc-1ryevin-0 gwBhly"
     data-testid="product-details"
   >
     <picture>

@@ -17,6 +17,6 @@ const ProdDetails = ({ product }) => (
   </Details>
 )
 
-const productDetails = withLoading(ProdDetails, SkeleLoader)
+const ProductDetails = withLoading(ProdDetails, SkeleLoader)
 
-export default productDetails
+export default ProductDetails

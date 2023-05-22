@@ -1,4 +1,4 @@
-import { GBPCurrencyFormat } from '../lib/currencyFormat'
+import { GBPCurrencyFormat } from '../utils'
 
 describe('currencyFormat function', () => {
   it('should return a type string value of "£0.01" when given num 1', () => {

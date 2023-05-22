@@ -4,9 +4,9 @@
 
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import { singleProductQuery } from '../graphql/singleProductQuery'
+import { singleProductQuery } from '../features/single-product'
 import { MockedProvider } from '@apollo/react-testing'
-import Product from '@/components/product-details/ProductDetails'
+import ProductDetails from '../components/product-details'
 
 const singleProduct = () => ({
   id: 'abc123',
@@ -46,7 +46,7 @@ describe('<DetailsItem />', () => {
   it('renders product details data', async () => {
     const { container, debug } = render(
       <MockedProvider mocks={mocks}>
-        <Product product={vans} />
+        <ProductDetails product={vans} />
       </MockedProvider>
     )
     await screen.findByTestId('product-details')
