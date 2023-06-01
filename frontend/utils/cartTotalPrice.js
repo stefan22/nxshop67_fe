@@ -5,11 +5,9 @@
  *  @returns - the total value at the accumulator ( total price of all items in the cart)
  */
 
-const cartTotalPrice = cart => {
+export const cartTotalPrice = cart => {
   return cart.reduce((acc, cartItem) => {
     if (!cartItem.product) return acc
     return acc + cartItem.quantity * cartItem.product.price
   }, 0)
 }
-
-export { cartTotalPrice }

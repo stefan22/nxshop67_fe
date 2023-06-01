@@ -9,6 +9,7 @@ module.exports = {
     'react/display-name': 0,
     'import/no-unresolved': 0,
     'import/no-named-as-default': 0,
+    'no-restricted-imports': 0,
     '@typescript-eslint/no-unsafe-assignment': 0,
     'react/jsx-props-no-spreading': 0,
     'import/prefer-default-export': 0,

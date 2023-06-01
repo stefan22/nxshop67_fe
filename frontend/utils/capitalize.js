@@ -5,7 +5,5 @@
  *   @param {String} - the string to capitalize
  *   @returns {String} - the capitalized string or the string 'Username' when input not a string.
  * */
-const capitalize = str =>
+export const capitalize = str =>
   typeof str === 'string' ? str.charAt(0).toUpperCase() + str.slice(1) : 'Username'
-
-export default capitalize

@@ -2,9 +2,9 @@ import { useQuery } from '@apollo/client'
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import ErrorMessage from '../utils'
+import ErrorMessage from '../utils/ErrorMessage'
 import { OrderItemStyles, OrderUl, OrdersWrapper } from './order/Order.styled'
-import { GBPCurrencyFormat } from '../utils'
+import { GBPCurrencyFormat } from '../utils/currencyFormat'
 import { userOrdersQuery } from '../features/order'
 
 function countItemsInAnOrder(order) {

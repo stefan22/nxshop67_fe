@@ -1,4 +1,4 @@
-export const variants = {
+export const AnimationVariant = {
   enter: direction => {
     return {
       x: direction > 0 ? 1000 : -1000,
