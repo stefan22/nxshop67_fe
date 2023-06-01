@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useCurrentUser } from '../../features/current-user'
-import { capitalize } from '../../utils'
+import { capitalize } from '../../utils/capitalize'
 import { Items } from './Items'
 import {
   AccountContainer,

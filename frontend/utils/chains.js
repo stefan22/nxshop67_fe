@@ -20,7 +20,7 @@ export const mechain =
  *   provided arguments
  * */
 
-const not =
+export const not =
   fn =>
   (...args) =>
     !fn(...args)

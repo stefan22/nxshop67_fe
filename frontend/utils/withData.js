@@ -4,7 +4,7 @@ import { getDataFromTree } from '@apollo/client/react/ssr'
 import { createUploadLink } from 'apollo-upload-client'
 import withApollo from 'next-with-apollo'
 import { paginationField } from '../components/pagination'
-import getConfig from 'next/config'
+import Constants from './constants'
 
 /*
  * @function-  createClient returns a new instance of the ApolloClient class from the @apollo/client library.
@@ -16,8 +16,8 @@ import getConfig from 'next/config'
  * The publicRuntimeConfig is an object that stores the env variables pulled off next.config.jsfile.
  * */
 
-const { publicRuntimeConfig } = getConfig()
-const GQLEndPoint = publicRuntimeConfig.GQL_ENDPOINT
+const GQLEndPoint = Constants.SET_GQL_ENDPOINT
+const perPage = Constants.SET_PAGINATION_NAV_PER_PAGE
 
 /**
  * Creates new ApolloClient

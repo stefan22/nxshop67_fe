@@ -12,13 +12,6 @@ module.exports = {
   compiler: {
     styledComponents: true
   },
-  publicRuntimeConfig: {
-    // passing env to pgs (env set to 5/ default val 2)
-    GQL_PER_PAGE: process.env.GQL_PER_PAGE,
-    FRONTEND_URL: process.env.FRONTEND_URL,
-    BACKEND_URL: process.env.BACKEND_URL,
-    GQL_ENDPOINT: process.env.GQL_ENDPOINT
-  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // can't resolve fs module on the client

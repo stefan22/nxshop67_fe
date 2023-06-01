@@ -2,7 +2,7 @@
 import confetti from 'canvas-confetti'
 
 // Firework Animation
-const launchFireworksBombs = () => {
+export const launchFireworksBombs = () => {
   const duration = 5 * 1000
   const animationEnd = Date.now() + duration
   const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
@@ -35,12 +35,12 @@ const launchFireworksBombs = () => {
   }, 250)
 }
 
-const launchFireworksFromSidelines = () => {
-  const end = Date.now() + 1 * 1000
+export const launchFireworksFromSidelines = () => {
+  const end = Date.now() + 1000
 
   const colors = ['#f00a35', '#1b1a1a']
 
-  ;(function frame() {
+  function frame() {
     confetti({
       particleCount: 2,
       angle: 60,
@@ -57,9 +57,8 @@ const launchFireworksFromSidelines = () => {
     })
 
     if (Date.now() < end) {
-      requestAnimationFrame(frame)
+      return requestAnimationFrame(frame)
     }
-  })()
+  }
+  return frame()
 }
-
-export { launchFireworksFromSidelines, launchFireworksBombs }

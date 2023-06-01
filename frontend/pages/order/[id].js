@@ -2,9 +2,9 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import Image from 'next/image'
 import Head from 'next/head'
-import ErrorMessage from '../../utils'
+import ErrorMessage from '../../utils/ErrorMessage'
 import { OrderContainer, OrderItem, OrderItems, OrderWrapper } from './Order.styled'
-import { GBPCurrencyFormat } from '../../utils'
+import { GBPCurrencyFormat } from '../../utils/currencyFormat'
 import { singleOrderQuery } from '../../features/order'
 
 const SingleOrderPage = ({ query }) => {
