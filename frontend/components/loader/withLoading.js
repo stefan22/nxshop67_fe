@@ -5,13 +5,11 @@ const withLoading =
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-      let testTimeout
-      if (loading) {
-        testTimeout = setTimeout(function () {
-          setLoading(false)
-        }, 500)
-      }
-      return () => testTimeout
+      let testloader
+      testloader = setTimeout(() => {
+        if (loading) setLoading(false)
+      }, 250)
+      return () => clearTimeout(testloader)
     }, [loading])
 
     if (loading) return <LoadingComponent />

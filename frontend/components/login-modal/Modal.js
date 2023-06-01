@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
-import { launchFireworksFromSidelines } from '../../utils'
+import Link from 'next/link'
+import { launchFireworksFromSidelines } from '../../utils/confetti'
+import Astronaut from '../../utils/Astronaut'
+import { useCurrentUser } from '../../features/current-user'
 import {
   ModalWrapper,
   ModalContent,
@@ -9,9 +12,6 @@ import {
   ButtonBlue,
   ButtonRed
 } from './Modal.styled'
-import { Astronaut } from '../../utils'
-import Link from 'next/link'
-import { useCurrentUser } from '../../features/current-user'
 
 const Modal = () => {
   const { user } = useCurrentUser()

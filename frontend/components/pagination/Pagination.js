@@ -3,11 +3,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { paginationQuery } from '../../features/all-products'
 import { PaginationStyled } from './Pagination.styled'
-import getConfig from 'next/config'
+import Constants from '../../utils/constants'
 
 // env set to 5
-const { publicRuntimeConfig } = getConfig()
-const perPage = parseInt(publicRuntimeConfig.GQL_PER_PAGE) || 2
+const perPage = Constants.SET_PAGINATION_NAV_PER_PAGE
 
 const Pagination = ({ page }) => {
   const {
