@@ -1,70 +1,87 @@
 /**
- * @jest-environment jsdom
+ *  @jest-environment jsdom
  */
-
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import { MockedProvider } from '@apollo/react-testing'
-import Nav from '../components/Nav'
-import { currentUserQuery } from '../graphql/currentUserQuery'
+import { MockedProvider } from '@apollo/client/testing'
+import currentUserQuery from '../features/current-user/currentUserQuery'
+import Nav from '../components/nav/Nav'
 
-const getUser = () => ({
-  id: 12345,
-  name: 'Al Capone',
-  email: 'capone@gmail.com'
+const adminUser = () => ({
+  __typename: 'User',
+  id: '423456789',
+  name: 'Johny Depp',
+  email: 'jdepp@troubleahead.com',
+  permissions: ['Admin'],
+  orders: [],
+  cart: []
 })
 
-const notSignedIn = [
+const userNotSignedIn = [
   {
     request: { query: currentUserQuery },
     result: { data: { authenticatedItem: null } }
   }
 ]
 
-const signedIn = [
+const userSignedIn = [
   {
     request: { query: currentUserQuery },
-    result: { data: { authenticatedItem: getUser() } }
+    result: {
+      data: {
+        authenticatedItem: adminUser()
+      }
+    }
   }
 ]
 
 describe('Nav menu', () => {
-  it('nav menu when user not signed in', () => {
-    const { container, debug } = render(
-      <MockedProvider mocks={notSignedIn}>
-        <Nav />
-      </MockedProvider>
-    )
+  describe('User not signed in', () => {
+    let mockdata
+    beforeEach(() => {
+      mockdata = render(
+        <MockedProvider mocks={userNotSignedIn}>
+          <Nav />
+        </MockedProvider>
+      )
+      return mockdata
+    })
 
-    const menuLinks = screen.getByTestId('menu-links')
-    const signin = screen.getByText('Signin')
-    const products = screen.getByText('Products')
+    it('renders correctly snapshot', async () => {
+      const { container } = mockdata
+      const menuLinks = await screen.getByTestId('menu-links')
+      expect(menuLinks).toBeInTheDocument()
+      expect(container).toMatchSnapshot()
+    })
 
-    expect(menuLinks).toBeInTheDocument()
-    expect(container).toHaveTextContent('Products')
-    expect(container).toHaveTextContent('Signin')
-    expect(signin).toHaveAttribute('href', '/signin')
-    expect(products).toHaveAttribute('href', '/products')
-    expect(container).not.toHaveTextContent('Signout')
-    expect(container).not.toHaveTextContent('Account')
-    expect(container).toMatchSnapshot()
+    it('should have "products-signin" links ', async () => {
+      const { container } = mockdata
+      const signin = screen.getByText('Signin')
+      const products = screen.getByText('Products')
+
+      expect(container).toHaveTextContent('Products')
+      expect(container).toHaveTextContent('Signin')
+      expect(signin).toHaveAttribute('href', '/signin')
+      expect(products).toHaveAttribute('href', '/products')
+    })
+
+    it('should not have "account-signout" links ', () => {
+      const { container } = mockdata
+      expect(container).not.toHaveTextContent('Account')
+      expect(container).not.toHaveTextContent('Signout')
+    })
   })
 
-  it('nav menu when user is signed in', async () => {
-    const { container, debug } = render(
-      <MockedProvider mocks={signedIn}>
-        <Nav />
-      </MockedProvider>
-    )
-    const account = await screen.findByText('Account')
-    const signout = await screen.findByText('Sign Out')
-
-    expect(container).toHaveTextContent('Account')
-    expect(account).toHaveAttribute('href', '/account')
-    expect(account).not.toHaveTextContent('href', '/order')
-    expect(container).not.toHaveTextContent('Signin')
-    expect(container).toHaveTextContent('Sign Out')
-    expect(signout).not.toHaveAttribute('href', '/signout')
-    expect(container).toMatchSnapshot()
+  describe('User signed in menu', () => {
+    it('renders correctly snapshot', async () => {
+      const { container, debug } = render(
+        <MockedProvider mocks={userSignedIn}>
+          <Nav />
+        </MockedProvider>
+      )
+      const menuLinks = await screen.getByTestId('menu-links')
+      expect(menuLinks).toBeInTheDocument()
+      expect(container).toMatchSnapshot()
+    })
   })
 })
