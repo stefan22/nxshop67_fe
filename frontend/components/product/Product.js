@@ -26,6 +26,7 @@ const Product = ({ product }) => {
       >
         <picture>
           <Image
+            data-testid="product-image"
             layout="intrinsic"
             objectFit="cover"
             loading="lazy"
@@ -39,7 +40,7 @@ const Product = ({ product }) => {
       <PriceTag>{poundFormat(product?.price)}</PriceTag>
       <TitleContainer>
         <span>{product?.name}</span>
-        <AddToCart user={user} id={product.id} />
+        <AddToCart user={user || null} id={product.id} />
       </TitleContainer>
     </ItemContainer>
   )

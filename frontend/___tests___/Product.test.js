@@ -18,7 +18,8 @@ const singleProduct = () => ({
     image: {
       publicUrlTransformed: '/product-image.jpg',
       src: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
-    }
+    },
+    alt: 'Hey Sony'
   }
 })
 
@@ -48,7 +49,16 @@ describe('Product ', () => {
 
   it('renders product name in page', () => {
     const { container } = mockedData
-    const prodName = screen.getByText('Sony SDK')
+    const imgEleObj = screen.queryByTestId('product')
+    const productName = screen.getByText('Sony SDK')
+    expect(imgEleObj).toContainElement(productName)
+  })
+
+  it('renders product "OnSale" banner', () => {
+    const { container } = mockedData
+    const imgEleObj = screen.queryByTestId('product')
+    const onSale = screen.getByText('ON-SALE!')
+    expect(imgEleObj).toContainElement(onSale)
   })
 
   it('should render image "src" and "alt" values', () => {

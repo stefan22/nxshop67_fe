@@ -4,14 +4,13 @@ import { NavContainer } from './Nav.styled'
 import SignOut from '../signout'
 import Cart from '../cart'
 import { GrMoney, GrLogout, GrLogin, GrShop, GrUser } from 'react-icons/gr'
-import { useCartState } from '../../utils'
+import { useCartState } from '../../utils/cartContext'
 import { useCurrentUser } from '../../features/current-user'
 import CartCount from '../cart/CartCount'
 
 const Nav = () => {
-  const { user, loading } = useCurrentUser()
+  const { user } = useCurrentUser()
   const { close, setClose } = useCartState()
-  if (loading) return <p>Loading....</p>
 
   return (
     <>

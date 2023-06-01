@@ -7,8 +7,8 @@ import {
   FooterInfo
 } from './Cart.styled'
 import { useCurrentUser } from '../../features/current-user'
-import { GBPCurrencyFormat } from '../../utils'
-import { cartTotalPrice } from '../../utils'
+import { GBPCurrencyFormat } from '../../utils/currencyFormat'
+import { cartTotalPrice } from '../../utils/cartTotalPrice'
 import { GrClose, GrCreditCard, GrBasket } from 'react-icons/gr'
 import CartItem from './CartItem'
 import Checkout from '../checkout'

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import productsPaginationQuery from './productsPaginationQuery'
-import getConfig from 'next/config'
+import Constants from '../../utils/constants'
 
 const useProductsPagination = ({ page }) => {
   // env set to 5
-  const { publicRuntimeConfig } = getConfig()
-  const perPage = Number(publicRuntimeConfig.GQL_PER_PAGE) || 2
+  const perPage = Constants.SET_PAGINATION_NAV_PER_PAGE
 
   const { data: allProds } = useQuery(productsPaginationQuery, {
     variables: {
