@@ -4,7 +4,7 @@ xassets/
 .next
 .eslintignore
 .prettierignore
-
+coverage
 # .next/
 build/
 *.env
