@@ -1,7 +1,47 @@
 import { createGlobalStyle } from 'styled-components'
-import '@fontsource/be-vietnam'
+import { theme } from './theme'
 
 const GlobalStyled = createGlobalStyle`
+  @font-face {
+    font-family: BeVietnam;
+    src: local('Be Vietnam Pro ExtraLight'),
+    url('/fonts/BeVietnamPro-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-stretch: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: BeVietnam;
+    src: local('Be Vietnam Pro Light'),
+    url('/fonts/BeVietnamPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: BeVietnam;
+    src: local('Be Vietnam Pro Regular'),
+    url('/fonts/BeVietnamPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: BeVietnam;
+    src: local('Be Vietnam Pro Medium'),
+    url('/fonts/BeVietnamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   root, html {
     /* colors */
     --black: #212244;
@@ -77,14 +117,10 @@ const GlobalStyled = createGlobalStyle`
   
   body {
     font-size: var(--fontxt);
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: BeVietnam;
     line-height: var(--ratio);
     background-color: var(--offWhite);
     color: var(--black);
-  }
-
-  footer,header,main,nav {
-    display: block
   }
   
   button {
@@ -165,6 +201,8 @@ const GlobalStyled = createGlobalStyle`
     width: 100%;
     display: block;
   }
+ 
+
 `
 
 export default GlobalStyled

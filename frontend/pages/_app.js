@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import { ApolloProvider } from '@apollo/client'
 import Head from 'next/head'
+import { ThemeProvider } from 'styled-components'
 import routeNProgress from '../components/n-progress'
 import withApollo from '../utils/withData'
 import { CartContextProvider } from '../utils/cartContext'
 import Layout from '../components/layout'
 import '../styles/reset.css'
 import GlobalStyled from '../styles/GlobalStyled'
+import theme from '../styles/theme'
 
 const App = ({ Component, pageProps, apollo }) => {
   useEffect(() => {
@@ -14,7 +16,7 @@ const App = ({ Component, pageProps, apollo }) => {
   }, [])
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Head>
         <title>NxShop67</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -32,7 +34,7 @@ const App = ({ Component, pageProps, apollo }) => {
           </Layout>
         </CartContextProvider>
       </ApolloProvider>
-    </>
+    </ThemeProvider>
   )
 }
 

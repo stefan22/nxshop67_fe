@@ -9,10 +9,10 @@ import Nav from '../components/nav/Nav'
 
 const adminUser = () => ({
   __typename: 'User',
-  id: '423456789',
-  name: 'Johny Depp',
-  email: 'jdepp@troubleahead.com',
-  permissions: ['Admin'],
+  id: '6430b27bfad526e9ece78600',
+  name: 'Magnus',
+  email: 'magnus1@ethereal.email',
+  permissions: ['admin'],
   orders: [],
   cart: []
 })
